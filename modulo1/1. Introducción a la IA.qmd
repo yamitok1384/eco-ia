@@ -1,5 +1,5 @@
 ---
-title: "Introducción a la IA"
+title: "Introducción"
 description: "Conceptos Básicos y Realidad Actual"
 page-layout: article
 ---

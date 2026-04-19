@@ -59,3 +59,12 @@ format:
     number-sections: false
     code-copy: true
     css: styles.css
+    format-links: [pdf] # Esto crea los enlaces automáticamente
+  pdf:
+    documentclass: scrreprt
+    number-sections: true
+    keep-tex: false
+   
+
+
+
