@@ -1,0 +1,19 @@
+---
+title: "Clase X: [Nombre de la clase]"
+description: "[Subtítulo breve]"
+page-layout: article
+---
+
+> 🧩 *Objetivo:* en esta sesión aprenderás a…
+
+## 1. Introducción
+
+## 2. Desarrollo o explicación
+(con bloques de texto y figuras)
+
+## 3. Actividad práctica
+🛠️ *Ejercicio:* [enlace al Notebook o Colab]
+
+## 4. Cierre / autoevaluación
+
+> 💬 *Pregunta reflexiva:* ¿cómo aplicarías esto en tu sector?

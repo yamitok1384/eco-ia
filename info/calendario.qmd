@@ -1,0 +1,12 @@
+---
+title: "Calendario"
+---
+
+# Calendario del curso
+
+| Módulo | Contenido principal | Duración | Fechas aproximadas |
+| ------- | ------------------ | -------- | ------------------- |
+| Módulo 1 | Fundamentos de IA y ChatGPT | 10 h | Semana 1 |
+| Módulo 2 | Avances y desafíos en IA | 30 h | Semanas 2–3 |
+| Módulo 3 | Aplicaciones prácticas | 20 h | Semana 4 |
+**Nota:** Las fechas exactas se confirmarán al inicio del curso. Se recomienda a los participantes revisar el calendario regularmente para estar al tanto de cualquier actualización.

@@ -1,0 +1,11 @@
+---
+#title: "ChatGPT e Inteligencia Artificial"
+format: html
+---
+
+# Bienvenida
+
+Este curso forma parte del *Catálogo de Especialidades Formativas del Sistema Nacional de Empleo (IFCT0049)*.
+
+Selecciona un módulo en la barra lateral para comenzar.
+

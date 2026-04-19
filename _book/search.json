@@ -1,0 +1,122 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Bienvenida",
+    "section": "",
+    "text": "Bienvenida\nEste curso forma parte del Catálogo de Especialidades Formativas del Sistema Nacional de Empleo (IFCT0049).\nSelecciona un módulo en la barra lateral para comenzar.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Bienvenida</span>"
+    ]
+  },
+  {
+    "objectID": "info/info-general.html",
+    "href": "info/info-general.html",
+    "title": "Información general",
+    "section": "",
+    "text": "Información general\nEste curso se enmarca dentro del Catálogo de Especialidades Formativas (código: IFCT0049), con una duración de 60 horas.\nObjetivo general:\nAplicar ChatGPT y la Inteligencia Artificial a diversos sectores productivos, optimizando el rendimiento con enfoque ético.\nModalidades:\n- Presencial\n- Teleformación\nNivel de cualificación: 2",
+    "crumbs": [
+      "Información",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Información general</span>"
+    ]
+  },
+  {
+    "objectID": "info/calendario.html",
+    "href": "info/calendario.html",
+    "title": "Calendario",
+    "section": "",
+    "text": "Calendario del curso\n\n\n\nMódulo\nContenido principal\nDuración\nFechas aproximadas\n\n\n\n\nMódulo 1\nFundamentos de IA y ChatGPT\n10 h\nSemana 1\n\n\nMódulo 2\nAvances y desafíos en IA\n30 h\nSemanas 2–3\n\n\nMódulo 3\nAplicaciones prácticas\n20 h\nSemana 4\n\n\n\nNota: Las fechas exactas se confirmarán al inicio del curso. Se recomienda a los participantes revisar el calendario regularmente para estar al tanto de cualquier actualización.",
+    "crumbs": [
+      "Información",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Calendario</span>"
+    ]
+  },
+  {
+    "objectID": "modulo1/fundamentos.html",
+    "href": "modulo1/fundamentos.html",
+    "title": "Clase 1: Desmitificando la IA",
+    "section": "",
+    "text": "1. ¿Qué es la Inteligencia Artificial?\nLa IA es un campo de la informática que se enfoca en crear sistemas capaces de realizar tareas que normalmente requieren inteligencia humana, como el aprendizaje, la toma de decisiones y la resolución de problemas.",
+    "crumbs": [
+      "Módulo 1 · Fundamentos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Clase 1: Desmitificando la IA</span>"
+    ]
+  },
+  {
+    "objectID": "modulo1/fundamentos.html#la-ia-como-herramienta-de-predicción",
+    "href": "modulo1/fundamentos.html#la-ia-como-herramienta-de-predicción",
+    "title": "Clase 1: Desmitificando la IA",
+    "section": "2. La IA como Herramienta de Predicción",
+    "text": "2. La IA como Herramienta de Predicción\nLa IA se basa en algoritmos que analizan grandes cantidades de datos para identificar patrones y hacer predicciones. Esto es fundamental para aplicaciones como la predicción del clima, recomendaciones de productos y detección de fraudes.\n\n\n\n\n\n\nNeurona Biológica\n\n\n\n\n\n\n\nNeurona Artificial\n\n\n\n\n\n\nEjemplo: Predicción del clima, recomendaciones de productos, detección de fraudes.\n\n\n💡 Nota: La IA aprende de ejemplos, no de reglas fijas.\n\n….. ## 3. Algoritmos Tradicionales vs. Modelos de Aprendizaje ⚙️ ### 💻 Recurso Interactivo: El Salto Tecnológico\nObservad la diferencia entre dar una orden rígida y dejar que el sistema aprenda.\n\n1. Programación Tradicional (Reglas fijas)\nEn este modelo, si el programador olvida una regla (ej. “vistas al mar”), el precio nunca cambiará aunque la casa sea preciosa.\n\n\nRecurso Interactivo: El Salto Tecnológico\nAquí compararemos un sistema basado en reglas (If-Else) frente a uno predictivo.\n🛠️ Recurso Práctico: De las Reglas a la Predicción Para experimentar con estos conceptos, utilizaremos Google Colab, una herramienta que te permite ejecutar código en la nube sin instalar nada en tu ordenador.\n\n# Ejemplo de programación tradicional\ndef tasador_manual(metros, zona):\n    precio_base = metros * 1500\n    \n    # Aquí definimos las \"reglas\"\n    if zona == \"Centro\":\n        return precio_base + 50000\n    elif zona == \"Playa\":\n        return precio_base + 80000\n    else:\n        return precio_base\n\n# Prueba cambiando los valores abajo:\nresultado = tasador_manual(80, \"Centro\")\nprint(f\"Precio calculado por reglas: {resultado}€\")\n\nPrecio calculado por reglas: 170000€\n\n\nEn este ejemplo, el modelo de aprendizaje puede ajustar su predicción basándose en los datos, mientras que la programación tradicional no puede adaptarse a nuevas situaciones sin modificar el código.\n\nEl modelo de “IA” (Aprendizaje Automático) 🧠 Ahora, en lugar de escribir reglas, vamos a darle ejemplos a la IA para que ella “deduzca” cuánto vale cada característica. Verás que no es magia, sino un ajuste matemático de pesos.\n\n\nimport numpy as np\nfrom sklearn.linear_model import LinearRegression\n# Datos de ejemplo: metros cuadrados, zona (0=Interior, 1=Playa), precio\nX = np.array([[80, 0], [80, 1], [100, 0], [100, 1], [120, 0], [120, 1]])\ny = np.array([120000, 200000, 150000, 250000, 180000, 300000])      \n# Entrenamos el modelo\nmodelo = LinearRegression() \nmodelo.fit(X, y)\n# Prueba con nuevos datos\nnueva_casa = np.array([[90, 1]])  # 90 metros en zona de playa\nprediccion = modelo.predict(nueva_casa)\nprint(f\"Precio predicho por IA: {prediccion[0]:.2f}€\")\n\nPrecio predicho por IA: 230000.00€",
+    "crumbs": [
+      "Módulo 1 · Fundamentos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Clase 1: Desmitificando la IA</span>"
+    ]
+  },
+  {
+    "objectID": "modulo1/fundamentos.html#ia-de-película-vs.-ia-de-bolsillo",
+    "href": "modulo1/fundamentos.html#ia-de-película-vs.-ia-de-bolsillo",
+    "title": "Clase 1: Desmitificando la IA",
+    "section": "4. IA de Película vs. IA de Bolsillo",
+    "text": "4. IA de Película vs. IA de Bolsillo\n\nIA General (Ficción): El mito de Terminator.\nIA Estrecha (Realidad): Netflix, Google Maps y ChatGPT.",
+    "crumbs": [
+      "Módulo 1 · Fundamentos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Clase 1: Desmitificando la IA</span>"
+    ]
+  },
+  {
+    "objectID": "modulo1/fundamentos.html#cierre-tu-primer-prompt-efectivo",
+    "href": "modulo1/fundamentos.html#cierre-tu-primer-prompt-efectivo",
+    "title": "Clase 1: Desmitificando la IA",
+    "section": "5. Cierre: Tu primer Prompt efectivo ✍️",
+    "text": "5. Cierre: Tu primer Prompt efectivo ✍️\nPara que la IA pase de darnos respuestas genéricas a soluciones brillantes, usaremos la fórmula R-T-C:\n\nRol: Dile quién debe ser (ej: “Actúa como un experto en…”)\nTarea: Qué quieres que haga exactamente (ej: “Escribe un resumen de…”)\nContexto: Detalles que limitan o guían (ej: “Para un público principiante y en menos de 100 palabras”).\n\n\n🚀 ¡Pruébalo ahora!\nCopia y completa este ejemplo en ChatGPT: &gt; “Actúa como un [Rol: Profesor de secundaria]. Explica [Tarea: qué es una neurona artificial] usando una analogía sobre [Contexto: el funcionamiento de una fábrica].”",
+    "crumbs": [
+      "Módulo 1 · Fundamentos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Clase 1: Desmitificando la IA</span>"
+    ]
+  },
+  {
+    "objectID": "modulo1/1. Introducción a la IA.html",
+    "href": "modulo1/1. Introducción a la IA.html",
+    "title": "Introducción a la IA",
+    "section": "",
+    "text": "1. ¿Qué es la Inteligencia Artificial?\nLa IA es un campo de la informática que se enfoca en crear sistemas capaces de realizar tareas que normalmente requieren inteligencia humana, como el aprendizaje, la toma de decisiones y la resolución de problemas.",
+    "crumbs": [
+      "Módulo 1 · Fundamentos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Introducción a la IA</span>"
+    ]
+  },
+  {
+    "objectID": "modulo1/1. Introducción a la IA.html#la-ia-como-herramienta-de-predicción",
+    "href": "modulo1/1. Introducción a la IA.html#la-ia-como-herramienta-de-predicción",
+    "title": "Introducción a la IA",
+    "section": "2. La IA como Herramienta de Predicción",
+    "text": "2. La IA como Herramienta de Predicción\nLa IA se basa en algoritmos que analizan grandes cantidades de datos para identificar patrones y hacer predicciones. Esto es fundamental para aplicaciones como la predicción del clima, recomendaciones de productos y detección de fraudes.\n\n\n\n\n\n\nNeurona Biológica\n\n\n\n\n\n\n\nNeurona Artificial\n\n\n\n\n\n\nEjemplo: Predicción del clima, recomendaciones de productos, detección de fraudes.\n\n\n💡 Nota: La IA aprende de ejemplos, no de reglas fijas.\n\n….. ## 3. Algoritmos Tradicionales vs. Modelos de Aprendizaje ⚙️ ### 💻 Recurso Interactivo: El Salto Tecnológico\nObservad la diferencia entre dar una orden rígida y dejar que el sistema aprenda.\n\n1. Programación Tradicional (Reglas fijas)\nEn este modelo, si el programador olvida una regla (ej. “vistas al mar”), el precio nunca cambiará aunque la casa sea preciosa.\n\n\nRecurso Interactivo: El Salto Tecnológico\nAquí compararemos un sistema basado en reglas (If-Else) frente a uno predictivo.\n🛠️ Recurso Práctico: De las Reglas a la Predicción Para experimentar con estos conceptos, utilizaremos Google Colab, una herramienta que te permite ejecutar código en la nube sin instalar nada en tu ordenador.\n\n# Ejemplo de programación tradicional\ndef tasador_manual(metros, zona):\n    precio_base = metros * 1500\n    \n    # Aquí definimos las \"reglas\"\n    if zona == \"Centro\":\n        return precio_base + 50000\n    elif zona == \"Playa\":\n        return precio_base + 80000\n    else:\n        return precio_base\n\n# Prueba cambiando los valores abajo:\nresultado = tasador_manual(80, \"Centro\")\nprint(f\"Precio calculado por reglas: {resultado}€\")\n\nPrecio calculado por reglas: 170000€\n\n\nEn este ejemplo, el modelo de aprendizaje puede ajustar su predicción basándose en los datos, mientras que la programación tradicional no puede adaptarse a nuevas situaciones sin modificar el código.\n\nEl modelo de “IA” (Aprendizaje Automático) 🧠 Ahora, en lugar de escribir reglas, vamos a darle ejemplos a la IA para que ella “deduzca” cuánto vale cada característica. Verás que no es magia, sino un ajuste matemático de pesos.\n\n\nimport numpy as np\nfrom sklearn.linear_model import LinearRegression\n# Datos de ejemplo: metros cuadrados, zona (0=Interior, 1=Playa), precio\nX = np.array([[80, 0], [80, 1], [100, 0], [100, 1], [120, 0], [120, 1]])\ny = np.array([120000, 200000, 150000, 250000, 180000, 300000])      \n# Entrenamos el modelo\nmodelo = LinearRegression() \nmodelo.fit(X, y)\n# Prueba con nuevos datos\nnueva_casa = np.array([[90, 1]])  # 90 metros en zona de playa\nprediccion = modelo.predict(nueva_casa)\nprint(f\"Precio predicho por IA: {prediccion[0]:.2f}€\")\n\nPrecio predicho por IA: 230000.00€",
+    "crumbs": [
+      "Módulo 1 · Fundamentos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Introducción a la IA</span>"
+    ]
+  },
+  {
+    "objectID": "modulo1/1. Introducción a la IA.html#ia-de-película-vs.-ia-de-bolsillo",
+    "href": "modulo1/1. Introducción a la IA.html#ia-de-película-vs.-ia-de-bolsillo",
+    "title": "Introducción a la IA",
+    "section": "4. IA de Película vs. IA de Bolsillo",
+    "text": "4. IA de Película vs. IA de Bolsillo\n\nIA General (Ficción): El mito de Terminator.\nIA Estrecha (Realidad): Netflix, Google Maps y ChatGPT.",
+    "crumbs": [
+      "Módulo 1 · Fundamentos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Introducción a la IA</span>"
+    ]
+  },
+  {
+    "objectID": "modulo1/1. Introducción a la IA.html#cierre-tu-primer-prompt-efectivo",
+    "href": "modulo1/1. Introducción a la IA.html#cierre-tu-primer-prompt-efectivo",
+    "title": "Introducción a la IA",
+    "section": "5. Cierre: Tu primer Prompt efectivo ✍️",
+    "text": "5. Cierre: Tu primer Prompt efectivo ✍️\nPara que la IA pase de darnos respuestas genéricas a soluciones brillantes, usaremos la fórmula R-T-C:\n\nRol: Dile quién debe ser (ej: “Actúa como un experto en…”)\nTarea: Qué quieres que haga exactamente (ej: “Escribe un resumen de…”)\nContexto: Detalles que limitan o guían (ej: “Para un público principiante y en menos de 100 palabras”).\n\n\n🚀 ¡Pruébalo ahora!\nCopia y completa este ejemplo en ChatGPT: &gt; “Actúa como un [Rol: Profesor de secundaria]. Explica [Tarea: qué es una neurona artificial] usando una analogía sobre [Contexto: el funcionamiento de una fábrica].”",
+    "crumbs": [
+      "Módulo 1 · Fundamentos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Introducción a la IA</span>"
+    ]
+  }
+]

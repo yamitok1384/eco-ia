@@ -1,0 +1,53 @@
+{
+  "about.qmd": {
+    "about.html": "09566084"
+  },
+  "index.qmd": {
+    "index.html": "6d27caa4"
+  },
+  "modulo1/fundamentos.qmd": {
+    "fundamentos.html": "91459903"
+  },
+  "modulo2/desafios.qmd": {
+    "desafios.html": "65c2a52b"
+  },
+  "modulo3/practicas.qmd": {
+    "practicas.html": "91df6873"
+  },
+  "recursos.qmd": {
+    "recursos.html": "c758c11f"
+  },
+  "info/info-general.qmd": {
+    "info-general.html": "3b3ce2ca"
+  },
+  "info/calendario.qmd": {
+    "calendario.html": "b42bca28"
+  },
+  "modulo1/Lección 1.1. Introducción a la IA.qmd": {
+    "Lección 1.1. Introducción a la IA.html": "edc20b3e"
+  },
+  "modulo1/1. Introducción a la IA.qmd": {
+    "1. Introducción a la IA.html": "0d4323c5"
+  },
+  "modulo1/2. Tipos de Inteligencia Artificial.qmd": {
+    "2. Tipos de Inteligencia Artificial.html": "16456ba0"
+  },
+  "modulo1/2. Tipos de IA.qmd": {
+    "2. Tipos de IA.html": "d9bc106f"
+  },
+  "modulo1/3. Funcionamiento del ChatGPT.qmd": {
+    "3. Funcionamiento del ChatGPT.html": "806b48ae"
+  },
+  "modulo1/4. Procesamiento del lenguaje natural (NLP).qmd": {
+    "4. Procesamiento del lenguaje natural (NLP).html": "02369320"
+  },
+  "modulo1/5. Entrenamiento y fine-tuning de modelos.qmd": {
+    "5. Entrenamiento y fine-tuning de modelos.html": "ac220e16"
+  },
+  "modulo1/4. Procesamiento del (NLP).qmd": {
+    "4. Procesamiento del (NLP).html": "b20b364c"
+  },
+  "modulo1/5. Entrenamiento y fine-tuning.qmd": {
+    "5. Entrenamiento y fine-tuning.html": "cb2333ca"
+  }
+}

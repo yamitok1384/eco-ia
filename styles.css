@@ -1,0 +1,120 @@
+/* ======== PALETA Y TIPOGRAFÍA ======== */
+:root {
+  --inaem-rojo: #003366;
+  --inaem-gris: #f2f2f2;
+  --inaem-azul: #003366;
+  --bs-primary: var(--inaem-rojo);
+  --bs-link-color: var(--inaem-azul);
+}
+
+body {
+  font-family: "Segoe UI", Roboto, sans-serif;
+  background: #fff;
+}
+
+/* ======== BANNER SUPERIOR ======== */
+#title-block-header {
+  background: url("img/geralt-banner.jpg") center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 3.5rem 2rem;
+  margin: 0;
+  position: relative;
+}
+
+/* Logo del INAEM arriba a la derecha */
+#title-block-header::after {
+  content: "";
+  /*background: url("img/logo-inaem.png") left top / 150px no-repeat;*/
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+  width: 150px;
+  height: 60px;
+}
+
+/* Sombra o cortina semitransparente sobre el banner */
+#title-block-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* Texto del banner por encima del fondo */
+#title-block-header h1,
+#title-block-header p {
+  position: relative;
+  z-index: 2;
+}
+
+/* ======== SIDEBAR ======== */
+.sidebar {
+  background-color: var(--inaem-gris);
+  border-right: 2px solid var(--inaem-gris);
+  /* Deja que Quarto gestione la posición fija */
+  z-index: 100;
+}
+
+
+/* Hace que los títulos ocupen todo el ancho sin cortarse ni salirse */
+.sidebar .sidebar-item, 
+.sidebar .sidebar-item .chapter-title {
+  white-space: normal;
+  word-wrap: break-word;
+  text-overflow: unset;
+}
+/* Reduce el tamaño de letra de los títulos para mantener equilibrio */
+.sidebar .chapter-title {
+  font-size: 0.95rem;
+  line-height: 1.3rem;
+}
+/* Aplica un espaciado visual más armónico */
+.sidebar .sidebar-item {
+  padding-right: 0.8em;
+}
+/* Para pantallas pequeñas: que se adapte en responsive */
+@media (max-width: 980px) {
+  .sidebar {
+    width: 200px;
+  }
+  .sidebar .chapter-title {
+    font-size: 0.9rem;
+  }
+}
+
+.note {
+  background: #f0f7fa;
+  border-left: 4px solid #0077b6;
+  padding: 0.6em 1em;
+  border-radius: 4px;
+  margin: 1em 0;
+}
+
+.ejemplo {
+  background: #fff7e6;
+  border-left: 4px solid #f39c12;
+  padding: 0.6em 1em;
+}
+
+.aviso {
+  background: #fdecea;
+  border-left: 4px solid #c4161c;
+  color: #600;
+  padding: 0.6em 1em;
+}
+
+
+/* ======== PIE DE PÁGINA ======== */
+footer {
+  background-color: var(--inaem-rojo);
+  color: white !important;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: underline;
+}

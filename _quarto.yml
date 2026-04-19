@@ -1,0 +1,60 @@
+lang: es
+date-format: "d 'de' MMMM 'de' yyyy"
+project:
+  type: book
+
+
+book:
+  #title: "ChatGPT e Inteligencia Artificial"
+  subtitle: "Programa Formativo IFCT0049"
+  author: "Profesora Yamilka Toca Díaz"
+  date: "Abril 2026"
+  #cover-image: "img/geralt-banner.jpg"     # Banner superior del curso
+  favicon: "img/logo-inaem.png"      # Icono del sitio (pestaña)
+  page-navigation: true
+  sidebar:
+    logo: "img/logo-inaem.png"
+    style: "docked"                  # Barra lateral fija
+    search: true
+    background: light
+  chapters:
+    - index.qmd
+    # Grupo de información general
+    - part: "Información"
+      chapters:
+        - info/info-general.qmd
+        - info/calendario.qmd
+    # Módulos formativos
+    - part: "Módulo 1 · Fundamentos"
+      chapters:
+        #- modulo1/fundamentos.qmd
+        - modulo1/1. Introducción a la IA.qmd
+        - modulo1/2. Tipos de IA.qmd
+        - modulo1/3. Funcionamiento del ChatGPT.qmd
+        - modulo1/4. Procesamiento del (NLP).qmd
+        - modulo1/5. Entrenamiento y fine-tuning.qmd
+    - part: "Módulo 2 · Desafíos y Avances"
+      chapters:
+        - modulo2/desafios.qmd
+        #- modulo2/casos.qmd
+    - part: "Módulo 3 · Aplicaciones Prácticas"
+      chapters:
+        - modulo3/practicas.qmd
+        #- modulo3/integracion.qmd
+    - recursos.qmd
+  page-footer: 
+    left: |
+      © 2026  Y. Toca – INAEM
+    right: |
+      Material docente protegido.  
+      Licencia **CC BY-NC-SA 4.0** ![](https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-sa.png){width=80px}  
+      Uso docente no comercial permitido con atribución y licencia compartida.
+
+
+format:
+  html:
+    theme: flatly
+    toc: true
+    number-sections: false
+    code-copy: true
+    css: styles.css

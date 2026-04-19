@@ -1,0 +1,16 @@
+---
+title: "Información general"
+---
+
+# Información general
+
+Este curso se enmarca dentro del **Catálogo de Especialidades Formativas** (código: IFCT0049), con una duración de **60 horas**.
+
+**Objetivo general:**  
+Aplicar ChatGPT y la Inteligencia Artificial a diversos sectores productivos, optimizando el rendimiento con enfoque ético.
+
+**Modalidades:**  
+- Presencial  
+- Teleformación  
+
+**Nivel de cualificación:** 2
