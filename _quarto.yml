@@ -28,7 +28,7 @@ book:
     # Módulos formativos
     - part: "Módulo 1 · Fundamentos"
       chapters:
-        - modulo1/Inteligencia A.qmd
+        - modulo1/1. Introducción a la Inteligencia Artificial.qmd
         - modulo1/2. Tipos de IA.qmd
         - modulo1/3. Funcionamiento del ChatGPT.qmd
         - modulo1/4. Procesamiento del (NLP).qmd
