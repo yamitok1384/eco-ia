@@ -5,7 +5,7 @@
       "metadata": {},
       "source": [
         "---\n",
-        "title: \"Clase 1: Desmitificando la IA\"\n",
+        "title: \"Introducción a la IA\"\n",
         "description: \"Conceptos Básicos y Realidad Actual\"\n",
         "page-layout: article\n",
         "---\n",
@@ -45,7 +45,7 @@
         "🛠️ Recurso Práctico: De las Reglas a la Predicción\n",
         "Para experimentar con estos conceptos, utilizaremos Google Colab, una herramienta que te permite ejecutar código en la nube sin instalar nada en tu ordenador."
       ],
-      "id": "d328be76"
+      "id": "9d9c2011"
     },
     {
       "cell_type": "code",
@@ -67,7 +67,7 @@
         "resultado = tasador_manual(80, \"Centro\")\n",
         "print(f\"Precio calculado por reglas: {resultado}€\")"
       ],
-      "id": "97ede048",
+      "id": "354c81d8",
       "execution_count": null,
       "outputs": []
     },
@@ -80,7 +80,7 @@
         "2. El modelo de \"IA\" (Aprendizaje Automático) 🧠\n",
         "Ahora, en lugar de escribir reglas, vamos a darle ejemplos a la IA para que ella \"deduzca\" cuánto vale cada característica. Verás que no es magia, sino un ajuste matemático de pesos."
       ],
-      "id": "b1193a8f"
+      "id": "9ec30175"
     },
     {
       "cell_type": "code",
@@ -99,7 +99,7 @@
         "prediccion = modelo.predict(nueva_casa)\n",
         "print(f\"Precio predicho por IA: {prediccion[0]:.2f}€\")"
       ],
-      "id": "a85dd4c4",
+      "id": "10b4498e",
       "execution_count": null,
       "outputs": []
     },
@@ -124,7 +124,7 @@
         "Copia y completa este ejemplo en ChatGPT:\n",
         "> *\"Actúa como un **[Rol: Profesor de secundaria]**. Explica **[Tarea: qué es una neurona artificial]** usando una analogía sobre **[Contexto: el funcionamiento de una fábrica]**.\"*"
       ],
-      "id": "5c896e5f"
+      "id": "c6d1efc0"
     }
   ],
   "metadata": {
