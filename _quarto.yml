@@ -13,6 +13,11 @@ book:
   #cover-image: "img/geralt-banner.jpg"     # Banner superior del curso
   favicon: "img/logo-inaem.png"      # Icono del sitio (pestaña)
   page-navigation: true
+  navbar:
+    right:
+      - icon: file-pdf
+        href: chatgpt-curso.pdf
+        text: "Descargar PDF"
   sidebar:
     logo: "img/logo-inaem.png"
     style: "docked"                  # Barra lateral fija
@@ -58,7 +63,8 @@ format:
     number-sections: false
     code-copy: true
     css: styles.css
-    format-links: [pdf] 
+    #format-links: [pdf] 
+    downloads: [pdf]
   pdf:
     documentclass: scrreprt
     number-sections: true
