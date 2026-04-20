@@ -3,6 +3,10 @@ date-format: "d 'de' MMMM 'de' yyyy"
 project:
   type: book
   output-dir: docs
+# Configuración de Referencias (AQUÍ ES DONDE VA)
+crossref:
+  fig-prefix: "Figura"
+  chapters: false  
 
 
 book:
@@ -16,13 +20,15 @@ book:
   navbar:
     right:
       - icon: file-pdf
-        href: chatgpt-curso.pdf
+        href: /chatgpt-curso.pdf
         text: "Descargar PDF"
   sidebar:
     logo: "img/logo-inaem.png"
     style: "docked"                  # Barra lateral fija
     search: true
     background: light
+
+  #breadcrumbs: true  # elimina la navegación superior 
   chapters:
     - index.qmd
     # Grupo de información general
@@ -34,7 +40,7 @@ book:
     - part: "Módulo 1 · Fundamentos"
       chapters:
         - modulo1/1. Introducción a la Inteligencia Artificial.qmd
-        - modulo1/2. Tipos de IA.qmd
+        - modulo1/2. Diferenciando Tipos de IA.qmd
         - modulo1/3. Funcionamiento del ChatGPT.qmd
         - modulo1/4. Procesamiento del (NLP).qmd
         - modulo1/5. Entrenamiento y fine-tuning.qmd
@@ -63,7 +69,7 @@ format:
     number-sections: false
     code-copy: true
     css: styles.css
-    #format-links: [pdf] 
+    format-links: [pdf, revealjs] 
     downloads: [pdf]
   pdf:
     documentclass: scrreprt

@@ -1,0 +1,50 @@
+/* ===== Estilo institucional INAEM para RevealJS ===== */
+
+:root {
+  --inaem-rojo: #c4161c;
+  --inaem-gris: #f2f2f2;
+}
+
+/* Fondo general */
+.reveal {
+  background: radial-gradient(circle at bottom left, #fafafa 0%, #e5e5e5 100%);
+  color: #111;
+}
+
+/* Título grande centrado */
+h1 {
+  color: var(--inaem-rojo);
+  font-size: 2.6em !important;
+}
+
+/* Subtítulo */
+h2 {
+  color: #333;
+  font-size: 1.8em !important;
+}
+
+/* Pie de página */
+.reveal .footer {
+  color: #555;
+  font-size: 0.6em;
+  border-top: 2px solid var(--inaem-rojo);
+  padding-top: 0.5em;
+}
+
+/* Logo en la esquina superior derecha */
+.reveal .slides::after {
+  content: "";
+  position: fixed;
+  top: 0.8em;
+  right: 1.2em;
+  width: 120px;
+  height: 40px;
+  background: url("../img/logo-inaem.png") no-repeat right/contain;
+  opacity: 0.9;
+}
+
+/* Botones o enlaces visuales */
+a {
+  color: var(--inaem-rojo);
+  font-weight: 600;
+}

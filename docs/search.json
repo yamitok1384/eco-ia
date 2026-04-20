@@ -81,5 +81,173 @@
       "Módulo 1 · Fundamentos",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>1. Introducción a la Inteligencia Artificial</span>"
     ]
+  },
+  {
+    "objectID": "modulo1/1. Introducción a la Inteligencia Artificial.html#qué-es-la-inteligencia-artificial",
+    "href": "modulo1/1. Introducción a la Inteligencia Artificial.html#qué-es-la-inteligencia-artificial",
+    "title": "1. Introducción a la Inteligencia Artificial",
+    "section": "",
+    "text": "“La IA es la ciencia de hacer que las máquinas hagan cosas que requerirían inteligencia si las hiciera un humano.” — Marvin Minsky",
+    "crumbs": [
+      "Descargar PDF",
+      "Módulo 1 · Fundamentos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>1. Introducción a la Inteligencia Artificial</span>"
+    ]
+  },
+  {
+    "objectID": "modulo1/1. Introducción a la Inteligencia Artificial.html#un-poco-de-historia-para-no-dormir",
+    "href": "modulo1/1. Introducción a la Inteligencia Artificial.html#un-poco-de-historia-para-no-dormir",
+    "title": "1. Introducción a la Inteligencia Artificial",
+    "section": "Un poco de historia (para no dormir)",
+    "text": "Un poco de historia (para no dormir)\n\n\n\n\n\n\nFigura 1:  Principales hitos en la evolución de la Inteligencia Artificial (1950–2024)",
+    "crumbs": [
+      "Descargar PDF",
+      "Módulo 1 · Fundamentos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>1. Introducción a la Inteligencia Artificial</span>"
+    ]
+  },
+  {
+    "objectID": "modulo1/1. Introducción a la Inteligencia Artificial.html#sabías-que-curiosidades",
+    "href": "modulo1/1. Introducción a la Inteligencia Artificial.html#sabías-que-curiosidades",
+    "title": "1. Introducción a la Inteligencia Artificial",
+    "section": "¿Sabías que…? (Curiosidades)",
+    "text": "¿Sabías que…? (Curiosidades)\n\nAjedrez: En 1997, IBM demostró que la fuerza bruta de cálculo podía vencer a la intuición humana.\nEl término: La palabra “Inteligencia Artificial” se acuñó en 1956 en la Conferencia de Dartmouth.\n\n\n“La IA ya no se limita a simular el análisis de la información; hoy, simula la creación misma, generando contenido original (textos, arte, código) que antes era terreno exclusivo del ser humano.”\n\n\n\n\n\n\n\nImportante🧠 Gran Debate: ¿La IA piensa o solo calcula?\n\n\n\n“Si la IA ya simula la creación tan bien que nos cuesta distinguirla, ¿la línea que nos separa de las máquinas está en lo que hacemos o en cómo lo hacemos?”",
+    "crumbs": [
+      "Descargar PDF",
+      "Módulo 1 · Fundamentos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>1. Introducción a la Inteligencia Artificial</span>"
+    ]
+  },
+  {
+    "objectID": "modulo1/1. Introducción a la Inteligencia Artificial.html#dinámica-de-clase-el-oráculo-de-la-ia",
+    "href": "modulo1/1. Introducción a la Inteligencia Artificial.html#dinámica-de-clase-el-oráculo-de-la-ia",
+    "title": "1. Introducción a la Inteligencia Artificial",
+    "section": "Dinámica de clase: El Oráculo de la IA",
+    "text": "Dinámica de clase: El Oráculo de la IA\n¿Qué creéis que la IA NUNCA podrá sustituir en vuestro trabajo diario? (Anotar las respuestas en la pizarra para debatirlas al final de la jornada).\n\n“La IA ya no se limita a simular el análisis de la información; hoy, simula la creación misma, generando contenido original (textos, arte, código) que antes era terreno exclusivo del ser humano.”\n\n\n¿Qué significa esto en el día a día?\n\nAntes: La IA nos decía si un correo era Spam.\nAhora: La IA escribe el correo por nosotros, imitando nuestro estilo.\n\n\nPregunta para la clase: Si una máquina puede simular perfectamente tu trabajo creativo… ¿cuál es tu nuevo valor añadido como profesional?\n\n\n\n\n\n\n\nImportante🧠 Gran Debate: ¿La IA piensa o solo calcula?\n\n\n\nMuchos dicen que la IA ya “piensa”. Otros, que es solo una simulación matemática extremadamente avanzada.\n¿Qué creen ustedes? ¿Puede una máquina realmente “entender” o solo imita patrones?",
+    "crumbs": [
+      "Descargar PDF",
+      "Módulo 1 · Fundamentos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>1. Introducción a la Inteligencia Artificial</span>"
+    ]
+  },
+  {
+    "objectID": "modulo1/1. Introducción a la Inteligencia Artificial.html#guía-de-hitos-línea-del-tiempo-de-la-ia",
+    "href": "modulo1/1. Introducción a la Inteligencia Artificial.html#guía-de-hitos-línea-del-tiempo-de-la-ia",
+    "title": "1. Introducción a la Inteligencia Artificial",
+    "section": "📜 Guía de hitos: Línea del tiempo de la IA",
+    "text": "📜 Guía de hitos: Línea del tiempo de la IA\n\n\n\n\n\n\nFigura 1:  Principales hitos en la evolución de la Inteligencia Artificial (1950–2024)\n\n\n\n\n\n\n🧠 1950 – El Test de Turing\nAlan Turing propuso que una máquina podía considerarse “inteligente” si un ser humano, al conversar con ella, no podía distinguirla de otra persona.\n\n\n🔬 1956 – Conferencia de Dartmouth\nConsiderada el nacimiento oficial del término Inteligencia Artificial. Un grupo de científicos planteó que las máquinas podrían resolver problemas hasta entonces exclusivos de los humanos.\n\n\n🤖 1961 – Unimate\nEl primer robot industrial. Trabajaba en la cadena de montaje de General Motors, realizando tareas repetitivas y peligrosas.\n\n\n💬 1966 – ELIZA\nEl primer chatbot. Aunque simple y basado en reglas, demostró el poder del lenguaje natural e hizo creer a muchas personas que “tenía sentimientos”.\n\n\n🧊 Invierno de la IA\nPeriodo de frustración (años 70 – 80) donde las expectativas superaron la tecnología disponible; los proyectos se estancaron por falta de resultados.\n\n\n♟️ 1997 – Deep Blue vence a Kasparov\nUn momento histórico para la humanidad. Por primera vez una computadora derrotó al campeón mundial de ajedrez, mostrando la capacidad de cálculo de la IA.\n\n\n🧩 2011 – Watson gana Jeopardy!\nIBM creó una IA capaz de entender preguntas, bromas y dobles sentidos, para ganar el famoso un famoso concurso de preguntas en TV\n\n\n🕹️ 2016 – AlphaGo derrota al campeón mundial de Go\nEl Go, mucho más complejo que el ajedrez, fue conquistado por la IA de Google DeepMind, que usó estrategias nunca vistas por humanos.\n\n\n🤖 2024 – IA Generativa\nLa era actual: La IA ha evolucionado: ya no solo simula el análisis de datos existentes, sino que ahora simula la capacidad creativa para generar imágenes, música y textos desde cero.\n\n\n🚀 El futuro – AGI (Inteligencia Artificial General)\nEl gran objetivo: una IA capaz de aprender y realizar cualquier tarea intelectual humana de forma autónoma.",
+    "crumbs": [
+      "Descargar PDF",
+      "Módulo 1 · Fundamentos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>1. Introducción a la Inteligencia Artificial</span>"
+    ]
+  },
+  {
+    "objectID": "modulo1/2. Tipos de IA.html",
+    "href": "modulo1/2. Tipos de IA.html",
+    "title": "",
+    "section": "",
+    "text": "“Todo esto que estamos viendo (ChatGPT, Midjourney) es increíble, pero sigue siendo IA Débil. Aunque simule crear, solo sabe hacer esa tarea. No es la IA Fuerte de las películas que tiene una inteligencia general.”",
+    "crumbs": [
+      "Descargar PDF",
+      "Módulo 1 · Fundamentos",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>2. Tipos de IA.html</span>"
+    ]
+  },
+  {
+    "objectID": "modulo1/2. Diferenciando Tipos de IA.html",
+    "href": "modulo1/2. Diferenciando Tipos de IA.html",
+    "title": "2. Diferenciando Tipos de Inteligencia Artificial",
+    "section": "",
+    "text": "IA Débil\nLa IA débil, también denominada IA estrecha, es la forma más común y extendida de IA. Está diseñada para realizar tareas específicas con precisión y eficiencia, sin comprender realmente lo que hace. Desde asistentes de voz hasta algoritmos de recomendación, esta tecnología ya está presente en casi todos los aspectos de nuestra vida cotidiana.\nA diferencia de la IA General (AGI), que busca igualar la inteligencia humana en múltiples ámbitos, la IA Débil se enfoca en una tarea concreta. No tiene consciencia ni capacidad de aprendizaje más allá de los datos que le han suministrado.\nEsta tecnología se basa en modelos de Machine Learning y Deep Learning, que permiten mejorar su precisión con el tiempo, pero sin alcanzar una verdadera autonomía.",
+    "crumbs": [
+      "Descargar PDF",
+      "Módulo 1 · Fundamentos",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>2. Diferenciando Tipos de Inteligencia Artificial</span>"
+    ]
+  },
+  {
+    "objectID": "modulo1/2. Diferenciando Tipos de IA.html#ia-débil-narrow-ai",
+    "href": "modulo1/2. Diferenciando Tipos de IA.html#ia-débil-narrow-ai",
+    "title": "2. Diferenciando Tipos de Inteligencia Artificial",
+    "section": "",
+    "text": "Ejemplos en tu bolsillo:\n\nFiltros de Spam: Solo deciden si un mail es basura.\nReconocimiento facial: Solo compara puntos de tu cara.\nChatGPT: Aunque parece que sabe de todo, su “tarea única” es la predicción lingüística.\n\n\n\n\n\n\n\nAdvertenciaEl gran malentendido\n\n\n\nQue una IA sea “Débil” no significa que sea poco potente. Significa que no tiene autonomía mental fuera de su función.",
+    "crumbs": [
+      "Descargar PDF",
+      "Módulo 1 · Fundamentos",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>2. Diferenciando Tipos de Inteligencia Artificial</span>"
+    ]
+  },
+  {
+    "objectID": "modulo1/2. Diferenciando Tipos de IA.html#ia-fuerte-general-ai---agi",
+    "href": "modulo1/2. Diferenciando Tipos de IA.html#ia-fuerte-general-ai---agi",
+    "title": "2. Diferenciando Tipos de Inteligencia Artificial",
+    "section": "IA Fuerte (General AI - AGI)",
+    "text": "IA Fuerte (General AI - AGI)\nSería una IA capaz de realizar cualquier tarea intelectual humana.\n\nMultitarea real: Podría aprender a cocinar, programar y escribir poesía por iniciativa propia.\nAutonomía: Tendría objetivos propios, no solo los que le programamos.\nEstado: Actualmente es ciencia ficción, aunque empresas como OpenAI trabajan para alcanzarla.",
+    "crumbs": [
+      "Descargar PDF",
+      "Módulo 1 · Fundamentos",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>2. Diferenciando Tipos de Inteligencia Artificial</span>"
+    ]
+  },
+  {
+    "objectID": "modulo1/2. Diferenciando Tipos de IA.html#comparativa-rápida",
+    "href": "modulo1/2. Diferenciando Tipos de IA.html#comparativa-rápida",
+    "title": "2. Diferenciando Tipos de Inteligencia Artificial",
+    "section": "Comparativa Rápida",
+    "text": "Comparativa Rápida\n\n\n\nCaracterística\nIA Débil (Hoy)\nIA Fuerte (Futuro?)\n\n\n\n\nHabilidad\nEspecializada\nUniversal\n\n\nConsciencia\nNo (Simulación)\nSe debate si sería necesaria\n\n\nEjemplo\nGoogle Maps\nJarvis (Iron Man)\n\n\nPropósito\nResolver tareas\nPensar como humano",
+    "crumbs": [
+      "Descargar PDF",
+      "Módulo 1 · Fundamentos",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>2. Diferenciando Tipos de Inteligencia Artificial</span>"
+    ]
+  },
+  {
+    "objectID": "modulo1/2. Diferenciando Tipos de IA.html#dinámica-es-ia-débil-o-fuerte",
+    "href": "modulo1/2. Diferenciando Tipos de IA.html#dinámica-es-ia-débil-o-fuerte",
+    "title": "2. Diferenciando Tipos de Inteligencia Artificial",
+    "section": "Dinámica: “¿Es IA Débil o Fuerte?”",
+    "text": "Dinámica: “¿Es IA Débil o Fuerte?”\nSi mañana un robot limpia tu casa perfectamente, pero si le pides que te ayude con la declaración de la renta te dice que no sabe de qué hablas…\n¿Es una IA Débil o Fuerte? (Respuesta: Débil, porque está limitada a su función de limpieza).",
+    "crumbs": [
+      "Descargar PDF",
+      "Módulo 1 · Fundamentos",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>2. Diferenciando Tipos de Inteligencia Artificial</span>"
+    ]
+  },
+  {
+    "objectID": "modulo1/2. Diferenciando Tipos de IA.html#ia-débil",
+    "href": "modulo1/2. Diferenciando Tipos de IA.html#ia-débil",
+    "title": "2. Diferenciando Tipos de Inteligencia Artificial",
+    "section": "",
+    "text": "Ejemplos en tu día a día:\n\nFiltros de Spam: Solo deciden si un mail es basura.\nReconocimiento facial: Solo compara puntos de tu cara para desbloquear el móvil.\nChatGPT: Aunque parece que sabe de todo, su “tarea única” es la predicción lingüística.",
+    "crumbs": [
+      "Descargar PDF",
+      "Módulo 1 · Fundamentos",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>2. Diferenciando Tipos de Inteligencia Artificial</span>"
+    ]
+  },
+  {
+    "objectID": "modulo1/2. Diferenciando Tipos de IA.html#aplicaciones-de-la-inteligencia-artificial-débil",
+    "href": "modulo1/2. Diferenciando Tipos de IA.html#aplicaciones-de-la-inteligencia-artificial-débil",
+    "title": "2. Diferenciando Tipos de Inteligencia Artificial",
+    "section": "Aplicaciones de la Inteligencia Artificial Débil",
+    "text": "Aplicaciones de la Inteligencia Artificial Débil\nLa IA débil es la más utilizada porque lleva años integrándose en nuestras vidas. Aunque sus aplicaciones son archiconocidas, es vital recordar cómo impactan en cada sector:\n\n🏢 Automatización y Empresa\nEl uso de Chatbots inteligentes para atención al cliente y herramientas de análisis que procesan grandes volúmenes de datos para optimizar decisiones de negocio.\n\n\n📱 Asistentes Virtuales\nSistemas como Siri o Google Assistant que procesan comandos de voz para facilitar tareas diarias, mejorando continuamente gracias al aprendizaje profundo.\n\n\n💰 Finanzas y algoritmos\n\nDetección de fraude: Bancos que analizan patrones sospechosos en segundos.\nRecomendación: El algoritmo de TikTok, Spotify o Amazon que personaliza lo que ves para mejorar tu experiencia.\n\n\n\n🏥 Medicina y Salud\nLa ANI permite diagnósticos más rápidos. Los algoritmos de imagen médica ayudan a detectar enfermedades como el cáncer en etapas muy tempranas, salvando vidas gracias a su precisión.\n\n\n“La IA débil no intenta ser un humano; intenta ser la mejor herramienta posible para una tarea específica.”\n\nEl Motor de la IA Débil: Machine Learning Gran parte del éxito de la IA Débil (ANI) no reside en una programación rígida, sino en su capacidad para extraer conocimiento de los datos. No es magia, sino matemáticas aplicadas a través de tres enfoques fundamentales que definen cómo “aprende” un algoritmo:\n\nAprendizaje Supervisado\n\n\nEs el método más común, donde el sistema aprende a partir de un conjunto de datos etiquetados. El ser humano actúa como un guía, proporcionando la respuesta correcta (entrada y salida) para que el modelo aprenda a predecir resultados futuros.\n\n\nContexto: Se utiliza principalmente para tareas de clasificación y regresión.\n\n\nCaso típico: La detección de spam en el correo electrónico, donde entrenamos al sistema con millones de ejemplos de mensajes basura frente a mensajes legítimos.\n\n\nAprendizaje No Supervisado\n\n\nEn este enfoque, la máquina se enfrenta a los datos sin etiquetas ni instrucciones previas. Su objetivo es descubrir estructuras, patrones o agrupaciones ocultas de forma autónoma.\n\n\nContexto:: Ideal para el descubrimiento de patrones que el ojo humano no detecta a simple vista.\n\n\nCaso típico: La segmentación de clientes en marketing, donde la IA agrupa perfiles con comportamientos de compra similares para personalizar campañas.\n\n\nAprendizaje por Refuerzo\n\n\nA diferencia de los anteriores, aquí la IA aprende mediante la interacción con un entorno. El algoritmo toma decisiones y recibe “premios” por los aciertos o “penalizaciones” por los errores, optimizando su comportamiento mediante el ensayo y error.\n\n\nContexto: Se aplica en entornos dinámicos donde se busca una estrategia óptima a largo plazo.\n\n\nCaso típico: La optimización de rutas logísticas en tiempo real o el entrenamiento de sistemas para juegos de estrategia complejos.\n\n\n📺 Recursos Audiovisuales para hoy\n\nSimulación visual: Sora OpenAI\nSimulación de voz/trato: Google Duplex\nSimulación creativa: Música con Suno AI\n\n\n\n🎵 Experimentación en vivo: Creación con Suno AI\nVamos a poner a prueba la IA Generativa creando una pieza musical desde cero.\nsuno.com\n\nPaso 1: Elegimos un tema común de la clase.\nPaso 2: Definimos el estilo musical (¿Flamenco? ¿Heavy Metal? ¿Trap?).\nPaso 3: Observamos cómo la IA simula la composición, la voz y la instrumentación.\n\nReflexión post-audición: ¿Podríais distinguir esta canción de una real en la radio? Si la respuesta es “no”, ¿cambia vuestra definición de “creatividad”?\n\n\nLa versión gratuita tiene créditos limitados.\nPrivacidad: Recuérdales (esto queda muy bien como profesor) que al usar estas herramientas “gratuitas” a menudo estamos regalando nuestros datos para entrenar a sus modelos.\n\n\n🧠 La Trampa de la Creatividad\nAl ver a Suno crear una canción desde cero, es fácil pensar: “¡Esto ya es inteligencia real!”.\nSin embargo, Suno sigue siendo IA Débil. 1. No hay consciencia: No sabe qué es la tristeza aunque componga un blues triste; solo replica patrones matemáticos de otros blues. 2. Sin versatilidad: No puede salir de su función musical. Una IA Fuerte podría componer la canción y luego explicarte por qué eligió esos acordes basándose en su propia “experiencia de vida”.",
+    "crumbs": [
+      "Descargar PDF",
+      "Módulo 1 · Fundamentos",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>2. Diferenciando Tipos de Inteligencia Artificial</span>"
+    ]
+  },
+  {
+    "objectID": "modulo1/2. Diferenciando Tipos de IA.html#el-motor-de-la-ia-débil",
+    "href": "modulo1/2. Diferenciando Tipos de IA.html#el-motor-de-la-ia-débil",
+    "title": "2. Diferenciando Tipos de Inteligencia Artificial",
+    "section": "El motor de la IA Débil",
+    "text": "El motor de la IA Débil\nGran parte del éxito de la IA Débil (ANI) proviene del aprendizaje automático o Machine Learning. No es magia, son matemáticas aplicadas a través de tres enfoques principales:",
+    "crumbs": [
+      "Descargar PDF",
+      "Módulo 1 · Fundamentos",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>2. Diferenciando Tipos de Inteligencia Artificial</span>"
+    ]
   }
 ]

@@ -2,11 +2,104 @@
 title: "1. Introducción a la Inteligencia Artificial"
 description: "Conceptos Básicos y Realidad Actual"
 page-layout: article
+
+# format:
+#   revealjs:
+#     theme: simple
+#     css: plantillas/inaem-presentacion.css
 ---
 
 
+
+
 ## 1. ¿Qué es la Inteligencia Artificial? 
+
+> "La IA es la ciencia de hacer que las máquinas hagan cosas que requerirían inteligencia si las hiciera un humano." — *Marvin Minsky*
+
 La IA es un campo de la informática que se enfoca en crear sistemas capaces de realizar tareas que normalmente requieren inteligencia humana, como el aprendizaje, la toma de decisiones y la resolución de problemas.
+
+## 📜 Guía de hitos: Línea del tiempo de la IA
+
+::: {#fig-historia}
+
+![](../img/IAhistoria.png){width="100%" fig-align="center"}
+
+ Principales hitos en la evolución de la Inteligencia Artificial (1950–2024)
+:::
+
+
+
+
+
+::: {.note}
+
+---
+
+### 🧠 1950 – **El Test de Turing**
+Alan Turing propuso que una máquina podía considerarse “inteligente” si un ser humano, al conversar con ella, no podía distinguirla de otra persona.
+
+### 🔬 1956 – **Conferencia de Dartmouth**
+Considerada el nacimiento oficial del término *Inteligencia Artificial*. Un grupo de científicos planteó que las máquinas podrían resolver problemas hasta entonces exclusivos de los humanos.
+
+### 🤖 1961 – **Unimate**
+El primer robot industrial. Trabajaba en la cadena de montaje de General Motors, realizando tareas repetitivas y peligrosas.
+
+### 💬 1966 – **ELIZA**
+El primer *chatbot*. Aunque simple y basado en reglas, demostró el poder del lenguaje natural e hizo creer a muchas personas que “tenía sentimientos”.
+
+### 🧊 **Invierno de la IA**
+Periodo de frustración (años 70 – 80) donde las expectativas superaron la tecnología disponible; los proyectos se estancaron por falta de resultados.
+
+### ♟️ 1997 – **Deep Blue vence a Kasparov**
+Un momento histórico para la humanidad. Por primera vez una computadora derrotó al campeón mundial de ajedrez, mostrando la capacidad de cálculo de la IA.
+
+### 🧩 2011 – **Watson gana Jeopardy!**
+IBM creó una IA capaz de entender preguntas, bromas y dobles sentidos, para ganar el famoso un famoso concurso de preguntas en TV
+
+### 🕹️ 2016 – **AlphaGo derrota al campeón mundial de Go**
+El Go, mucho más complejo que el ajedrez, fue conquistado por la IA de Google DeepMind, que usó estrategias nunca vistas por humanos.
+
+### 🤖 2024 – **IA Generativa**
+La era actual: La IA ha evolucionado: ya no solo simula el análisis de datos existentes, sino que ahora simula la capacidad creativa para generar imágenes, música y textos desde cero.
+
+### 🚀 **El futuro – AGI (Inteligencia Artificial General)**
+El gran objetivo: una IA capaz de aprender y realizar cualquier tarea intelectual humana de forma autónoma.
+:::
+
+
+## ¿Sabías que...? (Curiosidades)
+* **Ajedrez:** En 1997, IBM demostró que la fuerza bruta de cálculo podía vencer a la intuición humana.
+* **El término:** La palabra "Inteligencia Artificial" se acuñó en 1956 en la Conferencia de Dartmouth.
+
+> "La IA ya no se limita a **simular el análisis** de la información; hoy, **simula la creación** misma, generando contenido original (textos, arte, código) que antes era terreno exclusivo del ser humano."
+
+::: {.callout-important}
+### 🧠 Gran Debate: ¿La IA piensa o solo calcula?
+"Si la IA ya simula la creación tan bien que nos cuesta distinguirla, ¿la línea que nos separa de las máquinas está en lo que hacemos o en cómo lo hacemos?"
+:::
+
+
+
+## Dinámica de clase: El Oráculo de la IA
+*¿Qué creéis que la IA NUNCA podrá sustituir en vuestro trabajo diario?*
+(Anotar las respuestas en la pizarra para debatirlas al final de la jornada).
+
+> "La IA ya no se limita a **simular el análisis** de la información; hoy, **simula la creación** misma, generando contenido original (textos, arte, código) que antes era terreno exclusivo del ser humano."
+
+### ¿Qué significa esto en el día a día?
+* **Antes:** La IA nos decía si un correo era Spam.
+* **Ahora:** La IA escribe el correo por nosotros, imitando nuestro estilo.
+
+::: {.fragment .fade-up}
+**Pregunta para la clase:** Si una máquina puede simular perfectamente tu trabajo creativo... ¿cuál es tu nuevo valor añadido como profesional?
+:::
+
+::: {.callout-important}
+### 🧠 Gran Debate: ¿La IA piensa o solo calcula?
+Muchos dicen que la IA ya "piensa". Otros, que es solo una simulación matemática extremadamente avanzada. 
+
+**¿Qué creen ustedes?** ¿Puede una máquina realmente "entender" o solo imita patrones?
+:::
 
 ## 2. La IA como Herramienta de Predicción 
 La IA se basa en algoritmos que analizan grandes cantidades de datos para identificar patrones y hacer predicciones. Esto es fundamental para aplicaciones como la predicción del clima, recomendaciones de productos y detección de fraudes.

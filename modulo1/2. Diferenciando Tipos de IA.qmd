@@ -1,0 +1,156 @@
+
+---
+title: "2. Diferenciando Tipos de Inteligencia Artificial"
+description: "De la herramienta cotidiana a la ciencia ficción"
+page-layout: article
+
+# format:
+#   revealjs:
+#     theme: simple
+#     css: plantillas/inaem-presentacion.css
+---
+
+## IA Débil {background-color="#e3f2fd"}
+
+La IA débil, también denominada IA estrecha, es la forma más común y extendida de IA. Está diseñada para realizar tareas específicas con precisión y eficiencia, sin comprender realmente lo que hace. Desde asistentes de voz hasta algoritmos de recomendación, esta tecnología ya está presente en casi todos los aspectos de nuestra vida cotidiana.
+
+A diferencia de la IA General (AGI), que busca igualar la inteligencia humana en múltiples ámbitos, la IA Débil se enfoca en una tarea concreta. No tiene consciencia ni capacidad de aprendizaje más allá de los datos que le han suministrado.
+
+::: {.ejemplo}
+**Ejemplos en tu día a día:**
+
+* **Filtros de Spam:** Solo deciden si un mail es basura.
+* **Reconocimiento facial:** Solo compara puntos de tu cara para desbloquear el móvil.
+* **ChatGPT:** Aunque parece que sabe de todo, su "tarea única" es la predicción lingüística.
+:::
+
+Esta tecnología se basa en modelos de Machine Learning y Deep Learning, que permiten mejorar su precisión con el tiempo, pero sin alcanzar una verdadera autonomía.
+
+## Aplicaciones de la Inteligencia Artificial Débil
+
+La IA débil es la más utilizada porque lleva años integrándose en nuestras vidas. Aunque sus aplicaciones son archiconocidas, es vital recordar cómo impactan en cada sector:
+
+::: {.note}
+### 🏢 Automatización y Empresa
+El uso de **Chatbots inteligentes** para atención al cliente y herramientas de análisis que procesan grandes volúmenes de datos para optimizar decisiones de negocio.
+:::
+
+::: {.note}
+### 📱 Asistentes Virtuales
+Sistemas como **Siri o Google Assistant** que procesan comandos de voz para facilitar tareas diarias, mejorando continuamente gracias al aprendizaje profundo.
+:::
+
+::: {.note}
+### 💰 Finanzas y algoritmos
+* **Detección de fraude:** Bancos que analizan patrones sospechosos en segundos.
+* **Recomendación:** El algoritmo de **TikTok, Spotify o Amazon** que personaliza lo que ves para mejorar tu experiencia.
+:::
+
+::: {.note}
+### 🏥 Medicina y Salud
+La ANI permite diagnósticos más rápidos. Los algoritmos de imagen médica ayudan a detectar enfermedades como el cáncer en etapas muy tempranas, salvando vidas gracias a su precisión.
+:::
+
+::: {.cita-formal}
+"La IA débil no intenta ser un humano; intenta ser la mejor herramienta posible para una tarea específica."
+:::
+
+
+El Motor de la IA Débil: Machine Learning
+Gran parte del éxito de la IA Débil (ANI) no reside en una programación rígida, sino en su capacidad para extraer conocimiento de los datos. No es magia, sino matemáticas aplicadas a través de tres enfoques fundamentales que definen cómo "aprende" un algoritmo:
+
+1. Aprendizaje Supervisado
+* Es el método más común, donde el sistema aprende a partir de un conjunto de datos etiquetados. El ser humano actúa como un guía, proporcionando la respuesta correcta (entrada y salida) para que el modelo aprenda a predecir resultados futuros.
+
+::: {.note}
+**Contexto:** Se utiliza principalmente para tareas de clasificación y regresión.
+
+:::
+
+::: {.ejemplo  }
+Caso típico: La detección de spam en el correo electrónico, donde entrenamos al sistema con millones de ejemplos de mensajes basura frente a mensajes legítimos.
+:::
+
+2. Aprendizaje No Supervisado
+* En este enfoque, la máquina se enfrenta a los datos sin etiquetas ni instrucciones previas. Su objetivo es descubrir estructuras, patrones o agrupaciones ocultas de forma autónoma.
+
+::: {.note}
+
+**Contexto:**: Ideal para el descubrimiento de patrones que el ojo humano no detecta a simple vista.
+:::
+
+::: {.ejemplo  }
+Caso típico: La segmentación de clientes en marketing, donde la IA agrupa perfiles con comportamientos de compra similares para personalizar campañas.
+:::
+
+3. Aprendizaje por Refuerzo
+* A diferencia de los anteriores, aquí la IA aprende mediante la interacción con un entorno. El algoritmo toma decisiones y recibe "premios" por los aciertos o "penalizaciones" por los errores, optimizando su comportamiento mediante el ensayo y error.
+
+::: {.note}
+**Contexto:** Se aplica en entornos dinámicos donde se busca una estrategia óptima a largo plazo.
+:::
+
+::: {.ejemplo  }
+Caso típico: La optimización de rutas logísticas en tiempo real o el entrenamiento de sistemas para juegos de estrategia complejos.
+:::
+
+::: {.note}
+### 📺 Recursos Audiovisuales para hoy
+* **Simulación visual:** [Sora OpenAI](https://www.youtube.com/watch?v=HK6y8DAPN_0)
+* **Simulación de voz/trato:** [Google Duplex](https://www.youtube.com/watch?v=D5VN56jQMWM)
+* **Simulación creativa:** [Música con Suno AI](https://www.youtube.com/watch?v=2_W6S78Xf68)
+:::
+
+::: {.ejemplo}
+### 🎵 Experimentación en vivo: Creación con Suno AI
+Vamos a poner a prueba la **IA Generativa** creando una pieza musical desde cero.
+
+suno.com
+
+* **Paso 1:** Elegimos un tema común de la clase.
+* **Paso 2:** Definimos el estilo musical (¿Flamenco? ¿Heavy Metal? ¿Trap?).
+* **Paso 3:** Observamos cómo la IA **simula** la composición, la voz y la instrumentación.
+
+**Reflexión post-audición:**
+¿Podríais distinguir esta canción de una real en la radio? Si la respuesta es "no", ¿cambia vuestra definición de "creatividad"?
+:::
+
+:::{.alert .alert-warning}
+
+La versión gratuita tiene créditos limitados.
+
+
+Privacidad: Recuérdales (esto queda muy bien como profesor) que al usar estas herramientas "gratuitas" a menudo estamos regalando nuestros datos para entrenar a sus modelos.
+::: 
+
+::: {.aviso}
+### 🧠 La Trampa de la Creatividad
+Al ver a Suno crear una canción desde cero, es fácil pensar: *"¡Esto ya es inteligencia real!"*. 
+
+Sin embargo, **Suno sigue siendo IA Débil**. 
+1. **No hay consciencia:** No sabe qué es la tristeza aunque componga un blues triste; solo replica patrones matemáticos de otros blues.
+2. **Sin versatilidad:** No puede salir de su función musical. Una IA Fuerte podría componer la canción y luego explicarte por qué eligió esos acordes basándose en su propia "experiencia de vida".
+:::
+
+## IA Fuerte (General AI - AGI) {background-color="#212121"}
+
+Sería una IA capaz de realizar **cualquier tarea intelectual** humana.
+
+* **Multitarea real:** Podría aprender a cocinar, programar y escribir poesía por iniciativa propia.
+* **Autonomía:** Tendría objetivos propios, no solo los que le programamos.
+* **Estado:** Actualmente es **ciencia ficción**, aunque empresas como OpenAI trabajan para alcanzarla.
+
+## Comparativa Rápida
+
+| Característica | IA Débil (Hoy) | IA Fuerte (Futuro?) |
+| :--- | :--- | :--- |
+| **Habilidad** | Especializada | Universal |
+| **Consciencia** | No (Simulación) | Se debate si sería necesaria |
+| **Ejemplo** | Google Maps | Jarvis (Iron Man) |
+| **Propósito** | Resolver tareas | Pensar como humano |
+
+## Dinámica: "¿Es IA Débil o Fuerte?"
+*Si mañana un robot limpia tu casa perfectamente, pero si le pides que te ayude con la declaración de la renta te dice que no sabe de qué hablas...*
+
+**¿Es una IA Débil o Fuerte?**
+*(Respuesta: Débil, porque está limitada a su función de limpieza).*
