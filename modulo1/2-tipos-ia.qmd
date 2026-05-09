@@ -154,3 +154,12 @@ Sería una IA capaz de realizar **cualquier tarea intelectual** humana.
 
 **¿Es una IA Débil o Fuerte?**
 *(Respuesta: Débil, porque está limitada a su función de limpieza).*
+
+## 6. Evaluación ✍️
+
+### Ejercicio práctico: Crea tu propio Prompt
+
+
+## 7. Entraga de la solución
+
+### A través de Moodle: Subir un documento con el prompt que has creado y la respuesta que te ha dado la IA.

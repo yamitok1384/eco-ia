@@ -61,5 +61,44 @@
   },
   "modulo1/2. Diferenciando Tipos de IA.qmd": {
     "2. Diferenciando Tipos de IA.html": "6fced178"
+  },
+  "info/justificacion.qmd": {
+    "justificacion.html": "5497caf2"
+  },
+  "info/objetivos-competencias.qmd": {
+    "objetivos-competencias.html": "ffc4af84"
+  },
+  "info/metodologia.qmd": {
+    "metodologia.html": "1f97fa66"
+  },
+  "info/guia-docente.qmd": {
+    "guia-docente.html": "35ebf080"
+  },
+  "practicas/lab-modulo1.qmd": {
+    "lab-modulo1.html": "8714f7b7"
+  },
+  "practicas/lab-modulo2.qmd": {
+    "lab-modulo2.html": "4f867f58"
+  },
+  "practicas/lab-modulo3.qmd": {
+    "lab-modulo3.html": "18709e2a"
+  },
+  "practicas/proyecto-final.qmd": {
+    "proyecto-final.html": "4d77823c"
+  },
+  "modulo1/1-introduccion-ia.qmd": {
+    "1-introduccion-ia.html": "62782277"
+  },
+  "modulo1/2-tipos-ia.qmd": {
+    "2-tipos-ia.html": "4aa9f5b5"
+  },
+  "modulo1/3-funcionamiento-chatgpt.qmd": {
+    "3-funcionamiento-chatgpt.html": "7956c3aa"
+  },
+  "modulo1/4-procesamiento-nlp.qmd": {
+    "4-procesamiento-nlp.html": "73a1bf12"
+  },
+  "modulo1/5-Entrenamiento-fine-tuning.qmd": {
+    "5-Entrenamiento-fine-tuning.html": "65d665bb"
   }
 }

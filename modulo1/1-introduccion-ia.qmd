@@ -2,7 +2,9 @@
 title: "1. Introducción a la Inteligencia Artificial"
 description: "Conceptos Básicos y Realidad Actual"
 page-layout: article
-
+format:
+    pdf:
+        output-ext: "pdf"
 # format:
 #   revealjs:
 #     theme: simple
@@ -173,7 +175,7 @@ print(f"Precio predicho por IA: {prediccion[0]:.2f}€")
 * **IA General (Ficción):** El mito de Terminator.
 * **IA Estrecha (Realidad):** Netflix, Google Maps y ChatGPT.
 
-## 5. Cierre: Tu primer Prompt efectivo ✍️
+## 5. Cierre: Tu primer Prompt efectivo 
 
 Para que la IA pase de darnos respuestas genéricas a soluciones brillantes, usaremos la fórmula **R-T-C**:
 
@@ -184,3 +186,12 @@ Para que la IA pase de darnos respuestas genéricas a soluciones brillantes, usa
 ### 🚀 ¡Pruébalo ahora!
 Copia y completa este ejemplo en ChatGPT:
 > *"Actúa como un **[Rol: Profesor de secundaria]**. Explica **[Tarea: qué es una neurona artificial]** usando una analogía sobre **[Contexto: el funcionamiento de una fábrica]**."*
+
+## 6. Evaluación ✍️
+
+### Ejercicio práctico: Crea tu propio Prompt
+
+
+## 7. Entraga de la solución
+
+### A través de Moodle: Subir un documento con el prompt que has creado y la respuesta que te ha dado la IA.    

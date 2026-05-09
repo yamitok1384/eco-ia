@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="De la herramienta cotidiana a la ciencia ficción">
 
-<title>desafios</title>
+<title>2. Diferenciando Tipos de Inteligencia Artificial</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -33,8 +34,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../modulo3/practicas.html" rel="next">
-<link href="../modulo1/5-Entrenamiento-fine-tuning.html" rel="prev">
+<link href="../modulo1/3-funcionamiento-chatgpt.html" rel="next">
+<link href="../modulo1/1-introduccion-ia.html" rel="prev">
 <link href="../img/logo_uz.svg" rel="icon" type="image/svg+xml">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -106,7 +107,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../modulo2/desafios.html">Módulo 2 · Desafíos y Avances</a></li><li class="breadcrumb-item"><a href="../modulo2/desafios.html"><span class="chapter-title">desafios.html</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../modulo1/1-introduccion-ia.html">Módulo 1 · Fundamentos</a></li><li class="breadcrumb-item"><a href="../modulo1/2-tipos-ia.html"><span class="chapter-title">2. Diferenciando Tipos de IA.qmd</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -194,7 +195,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../modulo1/2-tipos-ia.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">2. Diferenciando Tipos de IA.qmd</span></a>
+  <a href="../modulo1/2-tipos-ia.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">2. Diferenciando Tipos de IA.qmd</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -225,7 +226,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../modulo2/desafios.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">desafios.html</span></a>
+  <a href="../modulo2/desafios.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">desafios.html</span></a>
   </div>
 </li>
       </ul>
@@ -287,17 +288,225 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Tabla de contenidos</h2>
+   
+  <ul>
+  <li><a href="#ia-débil" id="toc-ia-débil" class="nav-link active" data-scroll-target="#ia-débil">IA Débil</a></li>
+  <li><a href="#aplicaciones-de-la-inteligencia-artificial-débil" id="toc-aplicaciones-de-la-inteligencia-artificial-débil" class="nav-link" data-scroll-target="#aplicaciones-de-la-inteligencia-artificial-débil">Aplicaciones de la Inteligencia Artificial Débil</a>
+  <ul class="collapse">
+  <li><a href="#automatización-y-empresa" id="toc-automatización-y-empresa" class="nav-link" data-scroll-target="#automatización-y-empresa">🏢 Automatización y Empresa</a></li>
+  <li><a href="#asistentes-virtuales" id="toc-asistentes-virtuales" class="nav-link" data-scroll-target="#asistentes-virtuales">📱 Asistentes Virtuales</a></li>
+  <li><a href="#finanzas-y-algoritmos" id="toc-finanzas-y-algoritmos" class="nav-link" data-scroll-target="#finanzas-y-algoritmos">💰 Finanzas y algoritmos</a></li>
+  <li><a href="#medicina-y-salud" id="toc-medicina-y-salud" class="nav-link" data-scroll-target="#medicina-y-salud">🏥 Medicina y Salud</a></li>
+  <li><a href="#recursos-audiovisuales-para-hoy" id="toc-recursos-audiovisuales-para-hoy" class="nav-link" data-scroll-target="#recursos-audiovisuales-para-hoy">📺 Recursos Audiovisuales para hoy</a></li>
+  <li><a href="#experimentación-en-vivo-creación-con-suno-ai" id="toc-experimentación-en-vivo-creación-con-suno-ai" class="nav-link" data-scroll-target="#experimentación-en-vivo-creación-con-suno-ai">🎵 Experimentación en vivo: Creación con Suno AI</a></li>
+  <li><a href="#la-trampa-de-la-creatividad" id="toc-la-trampa-de-la-creatividad" class="nav-link" data-scroll-target="#la-trampa-de-la-creatividad">🧠 La Trampa de la Creatividad</a></li>
+  </ul></li>
+  <li><a href="#ia-fuerte-general-ai---agi" id="toc-ia-fuerte-general-ai---agi" class="nav-link" data-scroll-target="#ia-fuerte-general-ai---agi">IA Fuerte (General AI - AGI)</a></li>
+  <li><a href="#comparativa-rápida" id="toc-comparativa-rápida" class="nav-link" data-scroll-target="#comparativa-rápida">Comparativa Rápida</a></li>
+  <li><a href="#dinámica-es-ia-débil-o-fuerte" id="toc-dinámica-es-ia-débil-o-fuerte" class="nav-link" data-scroll-target="#dinámica-es-ia-débil-o-fuerte">Dinámica: “¿Es IA Débil o Fuerte?”</a></li>
+  <li><a href="#evaluación" id="toc-evaluación" class="nav-link" data-scroll-target="#evaluación">6. Evaluación ✍️</a>
+  <ul class="collapse">
+  <li><a href="#ejercicio-práctico-crea-tu-propio-prompt" id="toc-ejercicio-práctico-crea-tu-propio-prompt" class="nav-link" data-scroll-target="#ejercicio-práctico-crea-tu-propio-prompt">Ejercicio práctico: Crea tu propio Prompt</a></li>
+  </ul></li>
+  <li><a href="#entraga-de-la-solución" id="toc-entraga-de-la-solución" class="nav-link" data-scroll-target="#entraga-de-la-solución">7. Entraga de la solución</a>
+  <ul class="collapse">
+  <li><a href="#a-través-de-moodle-subir-un-documento-con-el-prompt-que-has-creado-y-la-respuesta-que-te-ha-dado-la-ia." id="toc-a-través-de-moodle-subir-un-documento-con-el-prompt-que-has-creado-y-la-respuesta-que-te-ha-dado-la-ia." class="nav-link" data-scroll-target="#a-través-de-moodle-subir-un-documento-con-el-prompt-que-has-creado-y-la-respuesta-que-te-ha-dado-la-ia.">A través de Moodle: Subir un documento con el prompt que has creado y la respuesta que te ha dado la IA.</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../modulo2/desafios.html">Módulo 2 · Desafíos y Avances</a></li><li class="breadcrumb-item"><a href="../modulo2/desafios.html"><span class="chapter-title">desafios.html</span></a></li></ol></nav></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../modulo1/1-introduccion-ia.html">Módulo 1 · Fundamentos</a></li><li class="breadcrumb-item"><a href="../modulo1/2-tipos-ia.html"><span class="chapter-title">2. Diferenciando Tipos de IA.qmd</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-title">2. Diferenciando Tipos de Inteligencia Artificial</span></h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
 
 
+</header>
 
+
+<section id="ia-débil" class="level2" data-background-color="#e3f2fd">
+<h2 data-background-color="#e3f2fd" class="anchored" data-anchor-id="ia-débil">IA Débil</h2>
+<p>La IA débil, también denominada IA estrecha, es la forma más común y extendida de IA. Está diseñada para realizar tareas específicas con precisión y eficiencia, sin comprender realmente lo que hace. Desde asistentes de voz hasta algoritmos de recomendación, esta tecnología ya está presente en casi todos los aspectos de nuestra vida cotidiana.</p>
+<p>A diferencia de la IA General (AGI), que busca igualar la inteligencia humana en múltiples ámbitos, la IA Débil se enfoca en una tarea concreta. No tiene consciencia ni capacidad de aprendizaje más allá de los datos que le han suministrado.</p>
+<div class="ejemplo">
+<p><strong>Ejemplos en tu día a día:</strong></p>
+<ul>
+<li><strong>Filtros de Spam:</strong> Solo deciden si un mail es basura.</li>
+<li><strong>Reconocimiento facial:</strong> Solo compara puntos de tu cara para desbloquear el móvil.</li>
+<li><strong>ChatGPT:</strong> Aunque parece que sabe de todo, su “tarea única” es la predicción lingüística.</li>
+</ul>
+</div>
+<p>Esta tecnología se basa en modelos de Machine Learning y Deep Learning, que permiten mejorar su precisión con el tiempo, pero sin alcanzar una verdadera autonomía.</p>
+</section>
+<section id="aplicaciones-de-la-inteligencia-artificial-débil" class="level2">
+<h2 class="anchored" data-anchor-id="aplicaciones-de-la-inteligencia-artificial-débil">Aplicaciones de la Inteligencia Artificial Débil</h2>
+<p>La IA débil es la más utilizada porque lleva años integrándose en nuestras vidas. Aunque sus aplicaciones son archiconocidas, es vital recordar cómo impactan en cada sector:</p>
+<section id="automatización-y-empresa" class="level3 note">
+<h3 class="anchored" data-anchor-id="automatización-y-empresa">🏢 Automatización y Empresa</h3>
+<p>El uso de <strong>Chatbots inteligentes</strong> para atención al cliente y herramientas de análisis que procesan grandes volúmenes de datos para optimizar decisiones de negocio.</p>
+</section>
+<section id="asistentes-virtuales" class="level3 note">
+<h3 class="anchored" data-anchor-id="asistentes-virtuales">📱 Asistentes Virtuales</h3>
+<p>Sistemas como <strong>Siri o Google Assistant</strong> que procesan comandos de voz para facilitar tareas diarias, mejorando continuamente gracias al aprendizaje profundo.</p>
+</section>
+<section id="finanzas-y-algoritmos" class="level3 note">
+<h3 class="anchored" data-anchor-id="finanzas-y-algoritmos">💰 Finanzas y algoritmos</h3>
+<ul>
+<li><strong>Detección de fraude:</strong> Bancos que analizan patrones sospechosos en segundos.</li>
+<li><strong>Recomendación:</strong> El algoritmo de <strong>TikTok, Spotify o Amazon</strong> que personaliza lo que ves para mejorar tu experiencia.</li>
+</ul>
+</section>
+<section id="medicina-y-salud" class="level3 note">
+<h3 class="anchored" data-anchor-id="medicina-y-salud">🏥 Medicina y Salud</h3>
+<p>La ANI permite diagnósticos más rápidos. Los algoritmos de imagen médica ayudan a detectar enfermedades como el cáncer en etapas muy tempranas, salvando vidas gracias a su precisión.</p>
+</section>
+<div class="cita-formal">
+<p>“La IA débil no intenta ser un humano; intenta ser la mejor herramienta posible para una tarea específica.”</p>
+</div>
+<p>El Motor de la IA Débil: Machine Learning Gran parte del éxito de la IA Débil (ANI) no reside en una programación rígida, sino en su capacidad para extraer conocimiento de los datos. No es magia, sino matemáticas aplicadas a través de tres enfoques fundamentales que definen cómo “aprende” un algoritmo:</p>
+<ol type="1">
+<li>Aprendizaje Supervisado</li>
+</ol>
+<ul>
+<li>Es el método más común, donde el sistema aprende a partir de un conjunto de datos etiquetados. El ser humano actúa como un guía, proporcionando la respuesta correcta (entrada y salida) para que el modelo aprenda a predecir resultados futuros.</li>
+</ul>
+<div class="note">
+<p><strong>Contexto:</strong> Se utiliza principalmente para tareas de clasificación y regresión.</p>
+</div>
+<div class="ejemplo">
+<p>Caso típico: La detección de spam en el correo electrónico, donde entrenamos al sistema con millones de ejemplos de mensajes basura frente a mensajes legítimos.</p>
+</div>
+<ol start="2" type="1">
+<li>Aprendizaje No Supervisado</li>
+</ol>
+<ul>
+<li>En este enfoque, la máquina se enfrenta a los datos sin etiquetas ni instrucciones previas. Su objetivo es descubrir estructuras, patrones o agrupaciones ocultas de forma autónoma.</li>
+</ul>
+<div class="note">
+<p><strong>Contexto:</strong>: Ideal para el descubrimiento de patrones que el ojo humano no detecta a simple vista.</p>
+</div>
+<div class="ejemplo">
+<p>Caso típico: La segmentación de clientes en marketing, donde la IA agrupa perfiles con comportamientos de compra similares para personalizar campañas.</p>
+</div>
+<ol start="3" type="1">
+<li>Aprendizaje por Refuerzo</li>
+</ol>
+<ul>
+<li>A diferencia de los anteriores, aquí la IA aprende mediante la interacción con un entorno. El algoritmo toma decisiones y recibe “premios” por los aciertos o “penalizaciones” por los errores, optimizando su comportamiento mediante el ensayo y error.</li>
+</ul>
+<div class="note">
+<p><strong>Contexto:</strong> Se aplica en entornos dinámicos donde se busca una estrategia óptima a largo plazo.</p>
+</div>
+<div class="ejemplo">
+<p>Caso típico: La optimización de rutas logísticas en tiempo real o el entrenamiento de sistemas para juegos de estrategia complejos.</p>
+</div>
+<section id="recursos-audiovisuales-para-hoy" class="level3 note">
+<h3 class="anchored" data-anchor-id="recursos-audiovisuales-para-hoy">📺 Recursos Audiovisuales para hoy</h3>
+<ul>
+<li><strong>Simulación visual:</strong> <a href="https://www.youtube.com/watch?v=HK6y8DAPN_0">Sora OpenAI</a></li>
+<li><strong>Simulación de voz/trato:</strong> <a href="https://www.youtube.com/watch?v=D5VN56jQMWM">Google Duplex</a></li>
+<li><strong>Simulación creativa:</strong> <a href="https://www.youtube.com/watch?v=2_W6S78Xf68">Música con Suno AI</a></li>
+</ul>
+</section>
+<section id="experimentación-en-vivo-creación-con-suno-ai" class="level3 ejemplo">
+<h3 class="anchored" data-anchor-id="experimentación-en-vivo-creación-con-suno-ai">🎵 Experimentación en vivo: Creación con Suno AI</h3>
+<p>Vamos a poner a prueba la <strong>IA Generativa</strong> creando una pieza musical desde cero.</p>
+<p>suno.com</p>
+<ul>
+<li><strong>Paso 1:</strong> Elegimos un tema común de la clase.</li>
+<li><strong>Paso 2:</strong> Definimos el estilo musical (¿Flamenco? ¿Heavy Metal? ¿Trap?).</li>
+<li><strong>Paso 3:</strong> Observamos cómo la IA <strong>simula</strong> la composición, la voz y la instrumentación.</li>
+</ul>
+<p><strong>Reflexión post-audición:</strong> ¿Podríais distinguir esta canción de una real en la radio? Si la respuesta es “no”, ¿cambia vuestra definición de “creatividad”?</p>
+</section>
+<div class="alert alert-warning">
+<p>La versión gratuita tiene créditos limitados.</p>
+<p>Privacidad: Recuérdales (esto queda muy bien como profesor) que al usar estas herramientas “gratuitas” a menudo estamos regalando nuestros datos para entrenar a sus modelos.</p>
+</div>
+<section id="la-trampa-de-la-creatividad" class="level3 aviso">
+<h3 class="anchored" data-anchor-id="la-trampa-de-la-creatividad">🧠 La Trampa de la Creatividad</h3>
+<p>Al ver a Suno crear una canción desde cero, es fácil pensar: <em>“¡Esto ya es inteligencia real!”</em>.</p>
+<p>Sin embargo, <strong>Suno sigue siendo IA Débil</strong>. 1. <strong>No hay consciencia:</strong> No sabe qué es la tristeza aunque componga un blues triste; solo replica patrones matemáticos de otros blues. 2. <strong>Sin versatilidad:</strong> No puede salir de su función musical. Una IA Fuerte podría componer la canción y luego explicarte por qué eligió esos acordes basándose en su propia “experiencia de vida”.</p>
+</section>
+</section>
+<section id="ia-fuerte-general-ai---agi" class="level2" data-background-color="#212121">
+<h2 data-background-color="#212121" class="anchored" data-anchor-id="ia-fuerte-general-ai---agi">IA Fuerte (General AI - AGI)</h2>
+<p>Sería una IA capaz de realizar <strong>cualquier tarea intelectual</strong> humana.</p>
+<ul>
+<li><strong>Multitarea real:</strong> Podría aprender a cocinar, programar y escribir poesía por iniciativa propia.</li>
+<li><strong>Autonomía:</strong> Tendría objetivos propios, no solo los que le programamos.</li>
+<li><strong>Estado:</strong> Actualmente es <strong>ciencia ficción</strong>, aunque empresas como OpenAI trabajan para alcanzarla.</li>
+</ul>
+</section>
+<section id="comparativa-rápida" class="level2">
+<h2 class="anchored" data-anchor-id="comparativa-rápida">Comparativa Rápida</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Característica</th>
+<th style="text-align: left;">IA Débil (Hoy)</th>
+<th style="text-align: left;">IA Fuerte (Futuro?)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Habilidad</strong></td>
+<td style="text-align: left;">Especializada</td>
+<td style="text-align: left;">Universal</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Consciencia</strong></td>
+<td style="text-align: left;">No (Simulación)</td>
+<td style="text-align: left;">Se debate si sería necesaria</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Ejemplo</strong></td>
+<td style="text-align: left;">Google Maps</td>
+<td style="text-align: left;">Jarvis (Iron Man)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Propósito</strong></td>
+<td style="text-align: left;">Resolver tareas</td>
+<td style="text-align: left;">Pensar como humano</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="dinámica-es-ia-débil-o-fuerte" class="level2">
+<h2 class="anchored" data-anchor-id="dinámica-es-ia-débil-o-fuerte">Dinámica: “¿Es IA Débil o Fuerte?”</h2>
+<p><em>Si mañana un robot limpia tu casa perfectamente, pero si le pides que te ayude con la declaración de la renta te dice que no sabe de qué hablas…</em></p>
+<p><strong>¿Es una IA Débil o Fuerte?</strong> <em>(Respuesta: Débil, porque está limitada a su función de limpieza).</em></p>
+</section>
+<section id="evaluación" class="level2">
+<h2 class="anchored" data-anchor-id="evaluación">6. Evaluación ✍️</h2>
+<section id="ejercicio-práctico-crea-tu-propio-prompt" class="level3">
+<h3 class="anchored" data-anchor-id="ejercicio-práctico-crea-tu-propio-prompt">Ejercicio práctico: Crea tu propio Prompt</h3>
+</section>
+</section>
+<section id="entraga-de-la-solución" class="level2">
+<h2 class="anchored" data-anchor-id="entraga-de-la-solución">7. Entraga de la solución</h2>
+<section id="a-través-de-moodle-subir-un-documento-con-el-prompt-que-has-creado-y-la-respuesta-que-te-ha-dado-la-ia." class="level3">
+<h3 class="anchored" data-anchor-id="a-través-de-moodle-subir-un-documento-con-el-prompt-que-has-creado-y-la-respuesta-que-te-ha-dado-la-ia.">A través de Moodle: Subir un documento con el prompt que has creado y la respuesta que te ha dado la IA.</h3>
+
+
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -702,13 +911,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../modulo1/5-Entrenamiento-fine-tuning.html" class="pagination-link" aria-label="5. Entrenamiento y Fine-tuning">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">5. Entrenamiento y Fine-tuning</span></span>
+      <a href="../modulo1/1-introduccion-ia.html" class="pagination-link" aria-label="1. Introducción a la Inteligencia Artificial">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">1. Introducción a la Inteligencia Artificial</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../modulo3/practicas.html" class="pagination-link" aria-label="practicas.html">
-        <span class="nav-page-text"><span class="chapter-title">practicas.html</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../modulo1/3-funcionamiento-chatgpt.html" class="pagination-link" aria-label="3. Funcionamiento del ChatGPT">
+        <span class="nav-page-text"><span class="chapter-title">3. Funcionamiento del ChatGPT</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

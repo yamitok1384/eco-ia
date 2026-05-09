@@ -15,7 +15,7 @@ book:
   author: "Profesora Yamilka Toca Díaz"
   date: "Abril 2026"
   #cover-image: "img/geralt-banner.jpg"     # Banner superior del curso
-  favicon: "img/logo-inaem.png"      # Icono del sitio (pestaña)
+  favicon: "img/logo_uz.svg"      # Icono del sitio (pestaña)
   page-navigation: true
   navbar:
     right:
@@ -23,7 +23,7 @@ book:
         href: /chatgpt-curso.pdf
         text: "Descargar PDF"
   sidebar:
-    logo: "img/logo-inaem.png"
+    logo: "img/logo_uz.svg"  # Logo en la barra lateral
     style: "docked"                  # Barra lateral fija
     search: true
     background: light
@@ -34,16 +34,26 @@ book:
     # Grupo de información general
     - part: "Información"
       chapters:
+        
         - info/info-general.qmd
+        - info/guia-docente.qmd
+        - info/justificacion.qmd      # Justificación y necesidad (Causas de la intervención)
+        - info/objetivos-competencias.qmd # Objetivos y Competencias clave/Saberes básicos
+        - info/metodologia.qmd        # Metodología (ABP y herramientas utilizadas)
         - info/calendario.qmd
     # Módulos formativos
     - part: "Módulo 1 · Fundamentos"
       chapters:
-        - modulo1/1. Introducción a la Inteligencia Artificial.qmd
-        - modulo1/2. Diferenciando Tipos de IA.qmd
-        - modulo1/3. Funcionamiento del ChatGPT.qmd
-        - modulo1/4. Procesamiento del (NLP).qmd
-        - modulo1/5. Entrenamiento y fine-tuning.qmd
+        - file: modulo1/1-introduccion-ia.qmd
+          text: "1. Introducción a la Inteligencia Artificial"  
+        - file: modulo1/2-tipos-ia.qmd 
+          text: "2. Diferenciando Tipos de IA.qmd"
+        - file: modulo1/3-funcionamiento-chatgpt.qmd
+          text: "3. Funcionamiento del ChatGPT"
+        - file: modulo1/4-procesamiento-nlp.qmd
+          text: "4. Procesamiento del (NLP)"
+        - file: modulo1/5-Entrenamiento-fine-tuning.qmd
+          text: "5. Entrenamiento y Fine-tuning"
     - part: "Módulo 2 · Desafíos y Avances"
       chapters:
         - modulo2/desafios.qmd
@@ -52,7 +62,13 @@ book:
       chapters:
         - modulo3/practicas.qmd
         #- modulo3/integracion.qmd
-    - recursos.qmd
+    - part: "Laboratorio y Evaluación"  # Nombre más dinámico para Innovación
+      chapters:
+        - practicas/lab-modulo1.qmd  # Práctica y Test del M1
+        - practicas/lab-modulo2.qmd  # Práctica y Test del M2
+        - practicas/lab-modulo3.qmd  # Práctica y Test del M3
+        - practicas/proyecto-final.qmd # El reto que une todo 
+    - recursos.qmd # Referencias bibliográficas y anexos
   page-footer: 
     left: |
       © 2026  Y. Toca – INAEM
