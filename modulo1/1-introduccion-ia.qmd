@@ -30,50 +30,32 @@ La IA es un campo de la informática que se enfoca en crear sistemas capaces de 
 :::
 
 
+::: {.callout-note collapse="true"}
+### Detalle de los hitos históricos (Click para expandir)
 
-
-
-::: {.note}
-
----
-
-### 🧠 1950 – **El Test de Turing**
-Alan Turing propuso que una máquina podía considerarse “inteligente” si un ser humano, al conversar con ella, no podía distinguirla de otra persona.
-
-### 🔬 1956 – **Conferencia de Dartmouth**
-Considerada el nacimiento oficial del término *Inteligencia Artificial*. Un grupo de científicos planteó que las máquinas podrían resolver problemas hasta entonces exclusivos de los humanos.
-
-### 🤖 1961 – **Unimate**
-El primer robot industrial. Trabajaba en la cadena de montaje de General Motors, realizando tareas repetitivas y peligrosas.
-
-### 💬 1966 – **ELIZA**
-El primer *chatbot*. Aunque simple y basado en reglas, demostró el poder del lenguaje natural e hizo creer a muchas personas que “tenía sentimientos”.
-
-### 🧊 **Invierno de la IA**
-Periodo de frustración (años 70 – 80) donde las expectativas superaron la tecnología disponible; los proyectos se estancaron por falta de resultados.
-
-### ♟️ 1997 – **Deep Blue vence a Kasparov**
-Un momento histórico para la humanidad. Por primera vez una computadora derrotó al campeón mundial de ajedrez, mostrando la capacidad de cálculo de la IA.
-
-### 🧩 2011 – **Watson gana Jeopardy!**
-IBM creó una IA capaz de entender preguntas, bromas y dobles sentidos, para ganar el famoso un famoso concurso de preguntas en TV
-
-### 🕹️ 2016 – **AlphaGo derrota al campeón mundial de Go**
-El Go, mucho más complejo que el ajedrez, fue conquistado por la IA de Google DeepMind, que usó estrategias nunca vistas por humanos.
-
-### 🤖 2024 – **IA Generativa**
-La era actual: La IA ha evolucionado: ya no solo simula el análisis de datos existentes, sino que ahora simula la capacidad creativa para generar imágenes, música y textos desde cero.
-
-### 🚀 **El futuro – AGI (Inteligencia Artificial General)**
-El gran objetivo: una IA capaz de aprender y realizar cualquier tarea intelectual humana de forma autónoma.
+| Año | Hito | Descripción |
+|------|------|-------------|
+| **1950** | Test de Turing | Alan Turing propuso que una máquina podía considerarse “inteligente” si un ser humano, al conversar con ella, no podía distinguirla de otra persona. |
+| **1956** | Conferencia de Dartmouth | Considerada el nacimiento oficial del término *Inteligencia Artificial*. Un grupo de científicos planteó que las máquinas podrían resolver problemas hasta entonces exclusivos de los humanos. |
+| **1961** | Unimate | El primer robot industrial. Trabajaba en la cadena de montaje de General Motors, realizando tareas repetitivas y peligrosas. |
+| **1966** | ELIZA | El primer *chatbot*. Aunque simple y basado en reglas, demostró el poder del lenguaje natural e hizo creer a muchas personas que “tenía sentimientos”. |
+| **1970** | Invierno de la IA | Periodo de frustración (años 70 – 80) donde las expectativas superaron la tecnología disponible; los proyectos se estancaron por falta de resultados. |
+| **1997** | Deep Blue vence a Kasparov | Un momento histórico para la humanidad. Por primera vez una computadora derrotó al campeón mundial de ajedrez, mostrando la capacidad de cálculo de la IA. |
+| **2011** | Watson gana Jeopardy! | IBM creó una IA capaz de entender preguntas, bromas y dobles sentidos, para ganar el famoso un famoso concurso de preguntas en TV. | 
+| **2016** | AlphaGo derrota al campeón mundial de Go | El Go, mucho más complejo que el ajedrez, fue conquistado por la IA de Google DeepMind, que usó estrategias nunca vistas por humanos. |
+| **2024** | IA Generativa | La era actual: La IA ha evolucionado: ya no solo simula el análisis de datos existentes, sino que ahora simula la capacidad creativa para generar imágenes, música y textos desde cero. |
 :::
 
 
 ## ¿Sabías que...? (Curiosidades)
 * **Ajedrez:** En 1997, IBM demostró que la fuerza bruta de cálculo podía vencer a la intuición humana.
-* **El término:** La palabra "Inteligencia Artificial" se acuñó en 1956 en la Conferencia de Dartmouth.
+* **El término:** La palabra "Inteligencia Artificial" fue acuñado en 1956 por John McCarthy durante la Conferencia de Dartmouth, marcando el inicio formal del campo de estudio.
 
 > "La IA ya no se limita a **simular el análisis** de la información; hoy, **simula la creación** misma, generando contenido original (textos, arte, código) que antes era terreno exclusivo del ser humano."
+
+###  **El futuro – AGI (Inteligencia Artificial General)**
+El gran objetivo: una IA capaz de aprender y realizar cualquier tarea intelectual humana de forma autónoma.
+Aunque aún estamos lejos de lograrlo, el avance hacia la AGI plantea preguntas profundas sobre la naturaleza de la inteligencia y el papel de los humanos en un mundo cada vez más automatizado.
 
 ::: {.callout-important}
 ### 🧠 Gran Debate: ¿La IA piensa o solo calcula?
@@ -103,7 +85,7 @@ Muchos dicen que la IA ya "piensa". Otros, que es solo una simulación matemáti
 **¿Qué creen ustedes?** ¿Puede una máquina realmente "entender" o solo imita patrones?
 :::
 
-## 2. La IA como Herramienta de Predicción 
+## 1.1. La IA como Herramienta de Predicción 
 La IA se basa en algoritmos que analizan grandes cantidades de datos para identificar patrones y hacer predicciones. Esto es fundamental para aplicaciones como la predicción del clima, recomendaciones de productos y detección de fraudes.
 
 
@@ -114,6 +96,61 @@ La IA se basa en algoritmos que analizan grandes cantidades de datos para identi
 :::
 
 * **Ejemplo:** Predicción del clima, recomendaciones de productos, detección de fraudes.
+
+## 2. La IA como Herramienta de Predicción {#sec-prediccion}
+
+[cite_start]La Inteligencia Artificial moderna no opera mediante reglas rígidas, sino que se basa en algoritmos que analizan grandes volúmenes de datos para identificar patrones y generar **predicciones** probabilísticas[cite: 26]. [cite_start]Este enfoque es el que permite aplicaciones críticas como la detección de fraudes, recomendaciones personalizadas o la predicción climática[cite: 27, 28].
+
+### El Modelo Fundacional: La Neurona Artificial
+
+[cite_start]Para comprender cómo predice una máquina, debemos observar su unidad básica de cálculo, la cual imita el comportamiento de las neuronas biológicas[cite: 32].
+
+::: {.column-page}
+![Comparación entre la estructura de una neurona biológica y el modelo matemático de un perceptrón (neurona artificial).](../img/comparativa_neuronas.png){#fig-neuronas fig-align="center"}
+:::
+
+#### ¿Cómo funciona este proceso?
+
+[cite_start]Una neurona artificial es una unidad de cálculo que procesa información siguiendo estos pasos lógicos[cite: 32]:
+
+1.  [cite_start]**Entradas ($x$):** Recibe un vector de datos provenientes del exterior o de otras neuronas[cite: 32].
+2.  [cite_start]**Pesos ($w$):** Cada entrada tiene un peso asociado que indica su importancia relativa en el proceso de decisión[cite: 32].
+3.  [cite_start]**Regla de Propagación:** El sistema multiplica cada entrada por su peso, suma todos los resultados y añade un **sesgo ($b$)** para ajustar la sensibilidad del modelo[cite: 32].
+4.  [cite_start]**Función de Activación ($f$):** El resultado final se pasa por una función que decide si la neurona se "excita" (genera una salida activa) o permanece inactiva[cite: 32]. [cite_start]Este resultado final es lo que conocemos como **activación**[cite: 32].
+
+::: {.callout-important}
+### Concepto Clave: Aprendizaje vs. Reglas
+A diferencia de la programación tradicional, la IA **aprende de ejemplos**. [cite_start]No se le dictan reglas fijas; el sistema ajusta automáticamente sus **pesos ($w$)** hasta que sus predicciones coinciden con la realidad[cite: 29, 36, 37].
+:::
+
+---
+
+### Aplicación Práctica: De las Reglas a la Predicción
+
+[cite_start]Para visualizar este "salto tecnológico", comparamos un sistema de tasación inmobiliaria basado en reglas manuales frente a uno que utiliza aprendizaje automático[cite: 31, 32].
+
+::: {.panel-tabset}
+
+### 💻 Programación Tradicional (Rígida)
+Se basa en sentencias `if-else`. [cite_start]Si el programador olvida incluir una variable (como "vistas al mar"), el sistema es incapaz de valorar esa característica por sí solo[cite: 31].
+
+```{python}
+#| echo: true
+def tasador_manual(metros, zona):
+    precio_base = metros * 1500
+    if zona == "Centro":
+        return precio_base + 50000
+    elif zona == "Playa":
+        return precio_base + 80000
+    else:
+        return precio_base
+
+print(f"Precio (Reglas): {tasador_manual(80, 'Centro')}€")
+
+```
+
+:::
+
 
 ::: {.note}
 💡 **Nota:** La IA aprende de ejemplos, no de reglas fijas.
@@ -149,8 +186,8 @@ def tasador_manual(metros, zona):
 # Prueba cambiando los valores abajo:
 resultado = tasador_manual(80, "Centro")
 print(f"Precio calculado por reglas: {resultado}€")
-
 ```
+
 En este ejemplo, el modelo de aprendizaje puede ajustar su predicción basándose en los datos, mientras que la programación tradicional no puede adaptarse a nuevas situaciones sin modificar el código.
 
 2. El modelo de "IA" (Aprendizaje Automático) 🧠

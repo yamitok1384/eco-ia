@@ -1,0 +1,37 @@
+---
+title: "¿Por qué Quarto ?"
+---
+
+## Quarto como motor de Recursos Educativos Abiertos (REA)
+
+Un **REA** no es solo un material gratuito, es un recurso que debe garantizar las **"5 R"** del conocimiento abierto. Quarto no solo cumple con ellas, sino que las potencia mediante tecnología de vanguardia.
+
+| Dimensión REA | ¿Cómo lo cumple Quarto? | Beneficio Pedagógico |
+|:---:|:---:|:---:|
+| **Retener** | Formatos abiertos (.qmd, .md) | El docente es dueño real de su material para siempre. |
+| **Reutilizar** | Multi-plataforma (Web, PDF, ePub) | Se adapta a cualquier dispositivo o entorno de aprendizaje. |
+| **Revisar** | Texto plano y legible | Facilidad para corregir y actualizar contenidos al instante. |
+| **Remezclar** | Modularidad | Permite combinar capítulos de diferentes autores sin errores. |
+| **Redistribuir** | Integración nativa con GitHub | Difusión global gratuita y control de versiones profesional. |
+
+---
+
+### Análisis detallado de las 5 R en ECO-IA
+
+::: {.panel-tabset}
+
+## 1. Retener y Reutilizar
+Al trabajar con archivos `.qmd` (Markdown), el contenido es independiente del software. A diferencia de las plataformas cerradas (como Canva o Genially), si Quarto desapareciera mañana, tus archivos siguen siendo legibles y convertibles. Además, un mismo archivo fuente genera una **Web interactiva** para clase y un **PDF estático** para alumnos sin conexión.
+
+## 2. Revisar y Remezclar
+La estructura modular de Quarto (definida en el archivo `_quarto.yml`) permite que otros docentes puedan "bajar" el proyecto desde GitHub, seleccionar solo los módulos que necesitan (por ejemplo, solo el Laboratorio de Monty Hall) y mezclarlos con sus propios materiales.
+
+## 3. Redistribuir (El poder de la comunidad)
+Gracias a la vinculación con **GitHub Pages**, el coste de distribución es **cero**. Esto garantiza la democratización del acceso al conocimiento: cualquier centro educativo de Aragón puede acceder al recurso sin pagar licencias de servidor ni de software.
+
+:::
+
+::: {.callout-tip}
+### Conclusión para la Innovación
+Elegí Quarto porque transforma el material docente en un **ecosistema transparente**. Cumple con la filosofía REA al 100%, asegurando que el contenido sea **interoperable, accesible y duradero**.
+:::

@@ -1,0 +1,15 @@
+---
+title: "Objetivos y Competencias"
+---
+
+## Objetivos Estratégicos
+
+1. **Desmitificar la IA:** Comprender los modelos predictivos mediante la experimentación directa.
+2. **Conciencia Crítica (Green AI):** Desarrollar un uso ético y sostenible de la tecnología, minimizando la huella de carbono digital.
+3. **Ingeniería de Prompts (Método R-T-C):** Optimizar la interacción humano-máquina para obtener resultados precisos en una sola iteración.
+4. **Ecosistema Abierto:** Implementar materiales interactivos usando Quarto y GitHub para garantizar el acceso universal (REA).
+
+## Competencias Clave
+- Competencia Digital (CDIG).
+- Pensamiento Crítico y Resolución de Problemas.
+- Conciencia y Expresión Cultural en entornos digitales.

@@ -1,0 +1,169 @@
+---
+title: "Laboratorio 1: El Problema de Monty Hall"
+subtitle: "Probabilidad, simulación e intuición"
+format:
+  html:
+    theme: cosmo
+    toc: true
+execute:
+  echo: false
+---
+
+# ¿Podrás vencer a la probabilidad?
+
+Este experimento muestra por qué la IA y la estadística se basan en datos y no en “corazonadas”.
+
+::: {.callout-note}
+## Cómo jugar
+
+1. Elige el número de puertas (3 es el caso clásico).
+2. Elige tu estrategia:
+   - **Quedarse** con la primera puerta.
+   - **Cambiar** después de que el presentador abra puertas vacías.
+3. Pulsa el botón para simular 1.000 partidas.
+:::
+
+```{ojs}
+//| panel: sidebar
+//| label: controles
+
+viewof puertas = Inputs.range(
+  [3, 15],
+  {
+    label: "Número de puertas:",
+    step: 1,
+    value: 3
+  }
+)
+
+viewof estrategia = Inputs.radio(
+  ["Quedarse", "Cambiar"],
+  {
+    label: "Estrategia:",
+    value: "Cambiar"
+  }
+)
+
+viewof ejecutar = Inputs.button("Simular 1.000 partidas")
+```
+
+## Resultados de la simulación
+
+```{ojs}
+//| label: simulacion
+
+ejecutar
+
+const partidas = 1000
+let victorias = 0
+
+for (let i = 0; i < partidas; i++) {
+
+  // Puerta con premio
+  const premio = Math.floor(Math.random() * puertas)
+
+  // Primera elección del jugador
+  const eleccion = Math.floor(Math.random() * puertas)
+
+  // Estrategia
+  if (estrategia === "Quedarse") {
+    if (eleccion === premio) victorias++
+  } else {
+    // Cambiar gana siempre que la elección inicial NO fuera correcta
+    if (eleccion !== premio) victorias++
+  }
+}
+
+const porcentaje_simulado = (victorias / partidas) * 100
+
+const porcentaje_teorico =
+  estrategia === "Quedarse"
+    ? (1 / puertas) * 100
+    : ((puertas - 1) / puertas) * 100
+
+display({
+  simulado: porcentaje_simulado,
+  teorico: porcentaje_teorico
+})
+```
+
+```{ojs}
+//| label: grafico
+
+Plot.plot({
+  title: "Simulación vs Probabilidad Teórica",
+  width: 700,
+  height: 450,
+
+  marks: [
+    Plot.barY(
+      [
+        {
+          tipo: "Simulación",
+          valor: simulado
+        },
+        {
+          tipo: "Teoría",
+          valor: teorico
+        }
+      ],
+      {
+        x: "tipo",
+        y: "valor"
+      }
+    ),
+
+    Plot.text(
+      [
+        {
+          tipo: "Simulación",
+          valor: simulado
+        },
+        {
+          tipo: "Teoría",
+          valor: teorico
+        }
+      ],
+      {
+        x: "tipo",
+        y: "valor",
+        text: d => `${d.valor.toFixed(1)}%`,
+        dy: -10
+      }
+    ),
+
+    Plot.ruleY([0])
+  ],
+
+  y: {
+    domain: [0, 100],
+    label: "% de victorias",
+    grid: true
+  }
+})
+```
+
+## ¿Qué está ocurriendo?
+
+Cuando eliges una puerta al inicio:
+
+- Tu probabilidad inicial de acertar es:
+
+$$
+\frac{1}{n}
+$$
+
+- La probabilidad de que el premio esté en alguna de las otras puertas es:
+
+$$
+\frac{n-1}{n}
+$$
+
+Al abrir puertas vacías, esa probabilidad se concentra en la puerta restante.
+
+### Caso clásico: 3 puertas
+
+- Quedarse → 33.3%
+- Cambiar → 66.6%
+
+Por eso **cambiar de puerta duplica la probabilidad de ganar**.

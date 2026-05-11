@@ -3,9 +3,11 @@
 format: html
 ---
 
-# Bienvenida
+# Bienvenido al Proyecto ECO-IA.
 
-Este curso forma parte del *Catálogo de Especialidades Formativas del Sistema Nacional de Empleo (IFCT0049)*.
+"Rediseño metodológico transversal para la alfabetización en IA generativa mediante entornos interactivos Quarto y computación en la nube sostenible"
+
+**ECO-IA** es un ecosistema de aprendizaje diseñado para rediseñar la forma en que entendemos y utilizamos la Inteligencia Artificial Generativa. Este proyecto no solo enseña a usar herramientas como ChatGPT, sino que invita a los estudiantes a comprender la tecnología desde su base matemática, ética y sostenible.
 
 Selecciona un módulo en la barra lateral para comenzar.
 

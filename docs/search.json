@@ -1,21 +1,10 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Bienvenida",
-    "section": "",
-    "text": "Bienvenida\nEste curso forma parte del Catálogo de Especialidades Formativas del Sistema Nacional de Empleo (IFCT0049).\nSelecciona un módulo en la barra lateral para comenzar.",
-    "crumbs": [
-      "Descargar PDF",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Bienvenida</span>"
-    ]
-  },
-  {
     "objectID": "info/info-general.html",
     "href": "info/info-general.html",
     "title": "Información general",
     "section": "",
-    "text": "Información general\nEste curso se enmarca dentro del Catálogo de Especialidades Formativas (código: IFCT0049), con una duración de 60 horas.\nObjetivo general:\nAplicar ChatGPT y la Inteligencia Artificial a diversos sectores productivos, optimizando el rendimiento con enfoque ético.\nModalidades:\n- Presencial\n- Teleformación\nNivel de cualificación: 2",
+    "text": "Proyecto ECO-IA. Rediseño metodológico transversal para la alfabetización en IA generativa mediante entornos interactivos Quarto y computación en la nube sostenible”",
     "crumbs": [
       "Descargar PDF",
       "Información",
@@ -23,231 +12,170 @@
     ]
   },
   {
-    "objectID": "info/calendario.html",
-    "href": "info/calendario.html",
-    "title": "Calendario",
-    "section": "",
-    "text": "Calendario del curso\n\n\n\nMódulo\nContenido principal\nDuración\nFechas aproximadas\n\n\n\n\nMódulo 1\nFundamentos de IA y ChatGPT\n10 h\nSemana 1\n\n\nMódulo 2\nAvances y desafíos en IA\n30 h\nSemanas 2–3\n\n\nMódulo 3\nAplicaciones prácticas\n20 h\nSemana 4\n\n\n\nNota: Las fechas exactas se confirmarán al inicio del curso. Se recomienda a los participantes revisar el calendario regularmente para estar al tanto de cualquier actualización.",
+    "objectID": "info/info-general.html#qué-aprenderás-en-este-curso",
+    "href": "info/info-general.html#qué-aprenderás-en-este-curso",
+    "title": "Información general",
+    "section": "¿Qué aprenderás en este curso?",
+    "text": "¿Qué aprenderás en este curso?\nEste recurso está estructurado para llevarte desde los conceptos más básicos hasta el desarrollo de un pensamiento crítico avanzado sobre la los diferentes modelos de IA.\n\nLos Tres Pilares de este recurso:\n\nInteractividad (IA Transparente): A diferencia de un libro de texto estático, aquí utilizarás laboratorios interactivos que t eperititán entender que la IA no es magia.\nSostenibilidad (Green AI): Aprenderás que cada prompt tiene un coste energético. Nuestro objetivo es la máxima eficiencia: obtener el mejor resultado con el menor número de interacciones.\nPensamiento Computacional: Utilizarás el método R-T-C (Rol-Tarea-Contexto) para dominar la ingeniería de prompts, transformando la IA en una aliada estratégica para tu aprendizaje.",
     "crumbs": [
       "Descargar PDF",
       "Información",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Calendario</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Información general</span>"
     ]
   },
   {
-    "objectID": "modulo1/1-introduccion-ia.html",
-    "href": "modulo1/1-introduccion-ia.html",
-    "title": "1. Introducción a la Inteligencia Artificial",
+    "objectID": "info/info-general.html#metodología-del-recurso",
+    "href": "info/info-general.html#metodología-del-recurso",
+    "title": "Información general",
+    "section": "Metodología del Recurso",
+    "text": "Metodología del Recurso\nEste sitio web es un Recurso Educativo Abierto (REA) construido con Quarto. Esto significa que: - El contenido es dinámico y ejecutable. - Puedes descargar la versión en PDF para estudiar desconectado. - El código es abierto, fomentando la colaboración y la transparencia.\n\n\n\n\n\n\nNotaPara quién es este curso\n\n\n\nEste curso está diseñado para estudiantes de Formación Profesional y Educación Secundaria, pero su enfoque práctico lo hace útil para cualquier persona interesada en una alfabetización digital profunda y responsable.",
+    "crumbs": [
+      "Descargar PDF",
+      "Información",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Información general</span>"
+    ]
+  },
+  {
+    "objectID": "info/info-general.html#estructura-del-curso",
+    "href": "info/info-general.html#estructura-del-curso",
+    "title": "Información general",
+    "section": "Estructura del curso",
+    "text": "Estructura del curso\nEl curso se organiza en tres bloques principales: - Módulo 1: Fundamentos y funcionamiento interno de la IA. - Módulo 2: Desafíos éticos y el impacto de la “Green AI”. - Módulo 3: Aplicaciones prácticas y proyectos finales.",
+    "crumbs": [
+      "Descargar PDF",
+      "Información",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Información general</span>"
+    ]
+  },
+  {
+    "objectID": "practicas/lab-modulo1.html",
+    "href": "practicas/lab-modulo1.html",
+    "title": "Laboratorio 1: El Problema de Monty Hall",
     "section": "",
-    "text": "1. ¿Qué es la Inteligencia Artificial?\nLa IA es un campo de la informática que se enfoca en crear sistemas capaces de realizar tareas que normalmente requieren inteligencia humana, como el aprendizaje, la toma de decisiones y la resolución de problemas.",
+    "text": "¿Podrás vencer a la probabilidad?",
     "crumbs": [
       "Descargar PDF",
-      "Módulo 1 · Fundamentos",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>1. Introducción a la Inteligencia Artificial</span>"
+      "Laboratorio y Evaluación",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Laboratorio 1: El Problema de Monty Hall</span>"
     ]
   },
   {
-    "objectID": "modulo1/1-introduccion-ia.html#qué-es-la-inteligencia-artificial",
-    "href": "modulo1/1-introduccion-ia.html#qué-es-la-inteligencia-artificial",
-    "title": "1. Introducción a la Inteligencia Artificial",
+    "objectID": "practicas/lab-modulo1.html#resultados-de-la-simulación",
+    "href": "practicas/lab-modulo1.html#resultados-de-la-simulación",
+    "title": "Laboratorio 1: El Problema de Monty Hall",
+    "section": "Resultados de la simulación",
+    "text": "Resultados de la simulación\n\n```{ojs}\n//| label: simulacion\n\nejecutar\n\nconst partidas = 1000\nlet victorias = 0\n\nfor (let i = 0; i &lt; partidas; i++) {\n\n  // Puerta con premio\n  const premio = Math.floor(Math.random() * puertas)\n\n  // Primera elección del jugador\n  const eleccion = Math.floor(Math.random() * puertas)\n\n  // Estrategia\n  if (estrategia === \"Quedarse\") {\n    if (eleccion === premio) victorias++\n  } else {\n    // Cambiar gana siempre que la elección inicial NO fuera correcta\n    if (eleccion !== premio) victorias++\n  }\n}\n\nconst porcentaje_simulado = (victorias / partidas) * 100\n\nconst porcentaje_teorico =\n  estrategia === \"Quedarse\"\n    ? (1 / puertas) * 100\n    : ((puertas - 1) / puertas) * 100\n\ndisplay({\n  simulado: porcentaje_simulado,\n  teorico: porcentaje_teorico\n})\n```\n\n\n\n\n\n\n\nImportanteOJS Syntax Error (line 57, column 1)Unexpected token\n\n\n\n\n\n\n\n\n\nPlot.plot({\n  title: \"Simulación vs Probabilidad Teórica\",\n  width: 700,\n  height: 450,\n\n  marks: [\n    Plot.barY(\n      [\n        {\n          tipo: \"Simulación\",\n          valor: simulado\n        },\n        {\n          tipo: \"Teoría\",\n          valor: teorico\n        }\n      ],\n      {\n        x: \"tipo\",\n        y: \"valor\"\n      }\n    ),\n\n    Plot.text(\n      [\n        {\n          tipo: \"Simulación\",\n          valor: simulado\n        },\n        {\n          tipo: \"Teoría\",\n          valor: teorico\n        }\n      ],\n      {\n        x: \"tipo\",\n        y: \"valor\",\n        text: d =&gt; `${d.valor.toFixed(1)}%`,\n        dy: -10\n      }\n    ),\n\n    Plot.ruleY([0])\n  ],\n\n  y: {\n    domain: [0, 100],\n    label: \"% de victorias\",\n    grid: true\n  }\n})",
+    "crumbs": [
+      "Descargar PDF",
+      "Laboratorio y Evaluación",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Laboratorio 1: El Problema de Monty Hall</span>"
+    ]
+  },
+  {
+    "objectID": "practicas/lab-modulo1.html#qué-está-ocurriendo",
+    "href": "practicas/lab-modulo1.html#qué-está-ocurriendo",
+    "title": "Laboratorio 1: El Problema de Monty Hall",
+    "section": "¿Qué está ocurriendo?",
+    "text": "¿Qué está ocurriendo?\nCuando eliges una puerta al inicio:\n\nTu probabilidad inicial de acertar es:\n\n\\[\n\\frac{1}{n}\n\\]\n\nLa probabilidad de que el premio esté en alguna de las otras puertas es:\n\n\\[\n\\frac{n-1}{n}\n\\]\nAl abrir puertas vacías, esa probabilidad se concentra en la puerta restante.\n\nCaso clásico: 3 puertas\n\nQuedarse → 33.3%\nCambiar → 66.6%\n\nPor eso cambiar de puerta duplica la probabilidad de ganar.",
+    "crumbs": [
+      "Descargar PDF",
+      "Laboratorio y Evaluación",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Laboratorio 1: El Problema de Monty Hall</span>"
+    ]
+  },
+  {
+    "objectID": "info/info-general.html#flexibilidad-del-proyecto",
+    "href": "info/info-general.html#flexibilidad-del-proyecto",
+    "title": "Información General",
+    "section": "Flexibilidad del Proyecto",
+    "text": "Flexibilidad del Proyecto\nGracias a la estructura en Quarto, el recurso puede ser utilizado tanto de forma presencial en el aula como en modalidades híbridas, garantizando la interoperabilidad en cualquier dispositivo del alumnado.",
+    "crumbs": [
+      "Descargar PDF",
+      "Información",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Información general</span>"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Bienvenido al Proyecto ECO-IA.",
     "section": "",
-    "text": "“La IA es la ciencia de hacer que las máquinas hagan cosas que requerirían inteligencia si las hiciera un humano.” — Marvin Minsky",
+    "text": "Bienvenido al Proyecto ECO-IA.\n“Rediseño metodológico transversal para la alfabetización en IA generativa mediante entornos interactivos Quarto y computación en la nube sostenible”\nECO-IA es un ecosistema de aprendizaje diseñado para rediseñar la forma en que entendemos y utilizamos la Inteligencia Artificial Generativa. Este proyecto no solo enseña a usar herramientas como ChatGPT, sino que invita a los estudiantes a comprender la tecnología desde su base matemática, ética y sostenible.\nSelecciona un módulo en la barra lateral para comenzar.",
     "crumbs": [
       "Descargar PDF",
-      "Módulo 1 · Fundamentos",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>1. Introducción a la Inteligencia Artificial</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Bienvenido al Proyecto ECO-IA.</span>"
     ]
   },
   {
-    "objectID": "modulo1/1-introduccion-ia.html#guía-de-hitos-línea-del-tiempo-de-la-ia",
-    "href": "modulo1/1-introduccion-ia.html#guía-de-hitos-línea-del-tiempo-de-la-ia",
-    "title": "1. Introducción a la Inteligencia Artificial",
-    "section": "📜 Guía de hitos: Línea del tiempo de la IA",
-    "text": "📜 Guía de hitos: Línea del tiempo de la IA\n\n\n\n\n\n\nFigura 1:  Principales hitos en la evolución de la Inteligencia Artificial (1950–2024)\n\n\n\n\n\n\n🧠 1950 – El Test de Turing\nAlan Turing propuso que una máquina podía considerarse “inteligente” si un ser humano, al conversar con ella, no podía distinguirla de otra persona.\n\n\n🔬 1956 – Conferencia de Dartmouth\nConsiderada el nacimiento oficial del término Inteligencia Artificial. Un grupo de científicos planteó que las máquinas podrían resolver problemas hasta entonces exclusivos de los humanos.\n\n\n🤖 1961 – Unimate\nEl primer robot industrial. Trabajaba en la cadena de montaje de General Motors, realizando tareas repetitivas y peligrosas.\n\n\n💬 1966 – ELIZA\nEl primer chatbot. Aunque simple y basado en reglas, demostró el poder del lenguaje natural e hizo creer a muchas personas que “tenía sentimientos”.\n\n\n🧊 Invierno de la IA\nPeriodo de frustración (años 70 – 80) donde las expectativas superaron la tecnología disponible; los proyectos se estancaron por falta de resultados.\n\n\n♟️ 1997 – Deep Blue vence a Kasparov\nUn momento histórico para la humanidad. Por primera vez una computadora derrotó al campeón mundial de ajedrez, mostrando la capacidad de cálculo de la IA.\n\n\n🧩 2011 – Watson gana Jeopardy!\nIBM creó una IA capaz de entender preguntas, bromas y dobles sentidos, para ganar el famoso un famoso concurso de preguntas en TV\n\n\n🕹️ 2016 – AlphaGo derrota al campeón mundial de Go\nEl Go, mucho más complejo que el ajedrez, fue conquistado por la IA de Google DeepMind, que usó estrategias nunca vistas por humanos.\n\n\n🤖 2024 – IA Generativa\nLa era actual: La IA ha evolucionado: ya no solo simula el análisis de datos existentes, sino que ahora simula la capacidad creativa para generar imágenes, música y textos desde cero.\n\n\n🚀 El futuro – AGI (Inteligencia Artificial General)\nEl gran objetivo: una IA capaz de aprender y realizar cualquier tarea intelectual humana de forma autónoma.",
-    "crumbs": [
-      "Descargar PDF",
-      "Módulo 1 · Fundamentos",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>1. Introducción a la Inteligencia Artificial</span>"
-    ]
-  },
-  {
-    "objectID": "modulo1/1-introduccion-ia.html#sabías-que-curiosidades",
-    "href": "modulo1/1-introduccion-ia.html#sabías-que-curiosidades",
-    "title": "1. Introducción a la Inteligencia Artificial",
-    "section": "¿Sabías que…? (Curiosidades)",
-    "text": "¿Sabías que…? (Curiosidades)\n\nAjedrez: En 1997, IBM demostró que la fuerza bruta de cálculo podía vencer a la intuición humana.\nEl término: La palabra “Inteligencia Artificial” se acuñó en 1956 en la Conferencia de Dartmouth.\n\n\n“La IA ya no se limita a simular el análisis de la información; hoy, simula la creación misma, generando contenido original (textos, arte, código) que antes era terreno exclusivo del ser humano.”\n\n\n\n\n\n\n\nImportante🧠 Gran Debate: ¿La IA piensa o solo calcula?\n\n\n\n“Si la IA ya simula la creación tan bien que nos cuesta distinguirla, ¿la línea que nos separa de las máquinas está en lo que hacemos o en cómo lo hacemos?”",
-    "crumbs": [
-      "Descargar PDF",
-      "Módulo 1 · Fundamentos",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>1. Introducción a la Inteligencia Artificial</span>"
-    ]
-  },
-  {
-    "objectID": "modulo1/1-introduccion-ia.html#dinámica-de-clase-el-oráculo-de-la-ia",
-    "href": "modulo1/1-introduccion-ia.html#dinámica-de-clase-el-oráculo-de-la-ia",
-    "title": "1. Introducción a la Inteligencia Artificial",
-    "section": "Dinámica de clase: El Oráculo de la IA",
-    "text": "Dinámica de clase: El Oráculo de la IA\n¿Qué creéis que la IA NUNCA podrá sustituir en vuestro trabajo diario? (Anotar las respuestas en la pizarra para debatirlas al final de la jornada).\n\n“La IA ya no se limita a simular el análisis de la información; hoy, simula la creación misma, generando contenido original (textos, arte, código) que antes era terreno exclusivo del ser humano.”\n\n\n¿Qué significa esto en el día a día?\n\nAntes: La IA nos decía si un correo era Spam.\nAhora: La IA escribe el correo por nosotros, imitando nuestro estilo.\n\n\nPregunta para la clase: Si una máquina puede simular perfectamente tu trabajo creativo… ¿cuál es tu nuevo valor añadido como profesional?\n\n\n\n\n\n\n\nImportante🧠 Gran Debate: ¿La IA piensa o solo calcula?\n\n\n\nMuchos dicen que la IA ya “piensa”. Otros, que es solo una simulación matemática extremadamente avanzada.\n¿Qué creen ustedes? ¿Puede una máquina realmente “entender” o solo imita patrones?",
-    "crumbs": [
-      "Descargar PDF",
-      "Módulo 1 · Fundamentos",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>1. Introducción a la Inteligencia Artificial</span>"
-    ]
-  },
-  {
-    "objectID": "modulo1/1-introduccion-ia.html#la-ia-como-herramienta-de-predicción",
-    "href": "modulo1/1-introduccion-ia.html#la-ia-como-herramienta-de-predicción",
-    "title": "1. Introducción a la Inteligencia Artificial",
-    "section": "2. La IA como Herramienta de Predicción",
-    "text": "2. La IA como Herramienta de Predicción\nLa IA se basa en algoritmos que analizan grandes cantidades de datos para identificar patrones y hacer predicciones. Esto es fundamental para aplicaciones como la predicción del clima, recomendaciones de productos y detección de fraudes.\n\n\n\n\n\n\nNeurona Biológica\n\n\n\n\n\n\n\nNeurona Artificial\n\n\n\n\n\n\nEjemplo: Predicción del clima, recomendaciones de productos, detección de fraudes.\n\n\n💡 Nota: La IA aprende de ejemplos, no de reglas fijas.\n\n….. ## 3. Algoritmos Tradicionales vs. Modelos de Aprendizaje ⚙️ ### 💻 Recurso Interactivo: El Salto Tecnológico\nObservad la diferencia entre dar una orden rígida y dejar que el sistema aprenda.\n\n1. Programación Tradicional (Reglas fijas)\nEn este modelo, si el programador olvida una regla (ej. “vistas al mar”), el precio nunca cambiará aunque la casa sea preciosa.\n\n\nRecurso Interactivo: El Salto Tecnológico\nAquí compararemos un sistema basado en reglas (If-Else) frente a uno predictivo.\n🛠️ Recurso Práctico: De las Reglas a la Predicción Para experimentar con estos conceptos, utilizaremos Google Colab, una herramienta que te permite ejecutar código en la nube sin instalar nada en tu ordenador.\n\n# Ejemplo de programación tradicional\ndef tasador_manual(metros, zona):\n    precio_base = metros * 1500\n    \n    # Aquí definimos las \"reglas\"\n    if zona == \"Centro\":\n        return precio_base + 50000\n    elif zona == \"Playa\":\n        return precio_base + 80000\n    else:\n        return precio_base\n\n# Prueba cambiando los valores abajo:\nresultado = tasador_manual(80, \"Centro\")\nprint(f\"Precio calculado por reglas: {resultado}€\")\n\nPrecio calculado por reglas: 170000€\n\n\nEn este ejemplo, el modelo de aprendizaje puede ajustar su predicción basándose en los datos, mientras que la programación tradicional no puede adaptarse a nuevas situaciones sin modificar el código.\n\nEl modelo de “IA” (Aprendizaje Automático) 🧠 Ahora, en lugar de escribir reglas, vamos a darle ejemplos a la IA para que ella “deduzca” cuánto vale cada característica. Verás que no es magia, sino un ajuste matemático de pesos.\n\n\nimport numpy as np\nfrom sklearn.linear_model import LinearRegression\n# Datos de ejemplo: metros cuadrados, zona (0=Interior, 1=Playa), precio\nX = np.array([[80, 0], [80, 1], [100, 0], [100, 1], [120, 0], [120, 1]])\ny = np.array([120000, 200000, 150000, 250000, 180000, 300000])      \n# Entrenamos el modelo\nmodelo = LinearRegression() \nmodelo.fit(X, y)\n# Prueba con nuevos datos\nnueva_casa = np.array([[90, 1]])  # 90 metros en zona de playa\nprediccion = modelo.predict(nueva_casa)\nprint(f\"Precio predicho por IA: {prediccion[0]:.2f}€\")\n\nPrecio predicho por IA: 230000.00€",
-    "crumbs": [
-      "Descargar PDF",
-      "Módulo 1 · Fundamentos",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>1. Introducción a la Inteligencia Artificial</span>"
-    ]
-  },
-  {
-    "objectID": "modulo1/1-introduccion-ia.html#ia-de-película-vs.-ia-de-bolsillo",
-    "href": "modulo1/1-introduccion-ia.html#ia-de-película-vs.-ia-de-bolsillo",
-    "title": "1. Introducción a la Inteligencia Artificial",
-    "section": "4. IA de Película vs. IA de Bolsillo",
-    "text": "4. IA de Película vs. IA de Bolsillo\n\nIA General (Ficción): El mito de Terminator.\nIA Estrecha (Realidad): Netflix, Google Maps y ChatGPT.",
-    "crumbs": [
-      "Descargar PDF",
-      "Módulo 1 · Fundamentos",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>1. Introducción a la Inteligencia Artificial</span>"
-    ]
-  },
-  {
-    "objectID": "modulo1/1-introduccion-ia.html#cierre-tu-primer-prompt-efectivo",
-    "href": "modulo1/1-introduccion-ia.html#cierre-tu-primer-prompt-efectivo",
-    "title": "1. Introducción a la Inteligencia Artificial",
-    "section": "5. Cierre: Tu primer Prompt efectivo",
-    "text": "5. Cierre: Tu primer Prompt efectivo\nPara que la IA pase de darnos respuestas genéricas a soluciones brillantes, usaremos la fórmula R-T-C:\n\nRol: Dile quién debe ser (ej: “Actúa como un experto en…”)\nTarea: Qué quieres que haga exactamente (ej: “Escribe un resumen de…”)\nContexto: Detalles que limitan o guían (ej: “Para un público principiante y en menos de 100 palabras”).\n\n\n🚀 ¡Pruébalo ahora!\nCopia y completa este ejemplo en ChatGPT: &gt; “Actúa como un [Rol: Profesor de secundaria]. Explica [Tarea: qué es una neurona artificial] usando una analogía sobre [Contexto: el funcionamiento de una fábrica].”",
-    "crumbs": [
-      "Descargar PDF",
-      "Módulo 1 · Fundamentos",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>1. Introducción a la Inteligencia Artificial</span>"
-    ]
-  },
-  {
-    "objectID": "modulo1/1-introduccion-ia.html#evaluación",
-    "href": "modulo1/1-introduccion-ia.html#evaluación",
-    "title": "1. Introducción a la Inteligencia Artificial",
-    "section": "6. Evaluación ✍️",
-    "text": "6. Evaluación ✍️\n\nEjercicio práctico: Crea tu propio Prompt",
-    "crumbs": [
-      "Descargar PDF",
-      "Módulo 1 · Fundamentos",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>1. Introducción a la Inteligencia Artificial</span>"
-    ]
-  },
-  {
-    "objectID": "modulo1/1-introduccion-ia.html#entraga-de-la-solución",
-    "href": "modulo1/1-introduccion-ia.html#entraga-de-la-solución",
-    "title": "1. Introducción a la Inteligencia Artificial",
-    "section": "7. Entraga de la solución",
-    "text": "7. Entraga de la solución\n\nA través de Moodle: Subir un documento con el prompt que has creado y la respuesta que te ha dado la IA.",
-    "crumbs": [
-      "Descargar PDF",
-      "Módulo 1 · Fundamentos",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>1. Introducción a la Inteligencia Artificial</span>"
-    ]
-  },
-  {
-    "objectID": "modulo1/2-tipos-ia.html",
-    "href": "modulo1/2-tipos-ia.html",
-    "title": "2. Diferenciando Tipos de Inteligencia Artificial",
+    "objectID": "info/justificacion.html",
+    "href": "info/justificacion.html",
+    "title": "Justificación del Proyecto",
     "section": "",
-    "text": "IA Débil\nLa IA débil, también denominada IA estrecha, es la forma más común y extendida de IA. Está diseñada para realizar tareas específicas con precisión y eficiencia, sin comprender realmente lo que hace. Desde asistentes de voz hasta algoritmos de recomendación, esta tecnología ya está presente en casi todos los aspectos de nuestra vida cotidiana.\nA diferencia de la IA General (AGI), que busca igualar la inteligencia humana en múltiples ámbitos, la IA Débil se enfoca en una tarea concreta. No tiene consciencia ni capacidad de aprendizaje más allá de los datos que le han suministrado.\nEsta tecnología se basa en modelos de Machine Learning y Deep Learning, que permiten mejorar su precisión con el tiempo, pero sin alcanzar una verdadera autonomía.",
+    "text": "¿Por qué ECO-IA?\nLa alfabetización en Inteligencia Artificial no puede limitarse al uso de herramientas; debe abordar la comprensión profunda y la sostenibilidad.",
     "crumbs": [
       "Descargar PDF",
-      "Módulo 1 · Fundamentos",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>2. Diferenciando Tipos de IA.qmd</span>"
+      "Información",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Justificación del Proyecto</span>"
     ]
   },
   {
-    "objectID": "modulo1/2-tipos-ia.html#ia-débil",
-    "href": "modulo1/2-tipos-ia.html#ia-débil",
-    "title": "2. Diferenciando Tipos de Inteligencia Artificial",
+    "objectID": "info/justificacion.html#por-qué-eco-ia",
+    "href": "info/justificacion.html#por-qué-eco-ia",
+    "title": "Justificación del Proyecto",
     "section": "",
-    "text": "Ejemplos en tu día a día:\n\nFiltros de Spam: Solo deciden si un mail es basura.\nReconocimiento facial: Solo compara puntos de tu cara para desbloquear el móvil.\nChatGPT: Aunque parece que sabe de todo, su “tarea única” es la predicción lingüística.",
+    "text": "El Problema\n\nOpacidad algorítmica: Los estudiantes usan la IA como una “caja negra” sin entender la probabilidad subyacente.\nImpacto Ambiental: El uso ineficiente de modelos generativos conlleva un coste energético oculto.\n\n\n\nLa Solución: Quarto como Ecosistema\nHe seleccionado Quarto para este proyecto porque permite: - Transparencia: Integrar código ejecutable junto a la teoría. - Interactividad: Crear laboratorios que demuestran conceptos abstractos (como el azar y la predicción). - Eficiencia: Desplegar recursos ligeros que fomentan el ahorro de cómputo.",
     "crumbs": [
       "Descargar PDF",
-      "Módulo 1 · Fundamentos",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>2. Diferenciando Tipos de IA.qmd</span>"
+      "Información",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Justificación del Proyecto</span>"
     ]
   },
   {
-    "objectID": "modulo1/2-tipos-ia.html#aplicaciones-de-la-inteligencia-artificial-débil",
-    "href": "modulo1/2-tipos-ia.html#aplicaciones-de-la-inteligencia-artificial-débil",
-    "title": "2. Diferenciando Tipos de Inteligencia Artificial",
-    "section": "Aplicaciones de la Inteligencia Artificial Débil",
-    "text": "Aplicaciones de la Inteligencia Artificial Débil\nLa IA débil es la más utilizada porque lleva años integrándose en nuestras vidas. Aunque sus aplicaciones son archiconocidas, es vital recordar cómo impactan en cada sector:\n\n🏢 Automatización y Empresa\nEl uso de Chatbots inteligentes para atención al cliente y herramientas de análisis que procesan grandes volúmenes de datos para optimizar decisiones de negocio.\n\n\n📱 Asistentes Virtuales\nSistemas como Siri o Google Assistant que procesan comandos de voz para facilitar tareas diarias, mejorando continuamente gracias al aprendizaje profundo.\n\n\n💰 Finanzas y algoritmos\n\nDetección de fraude: Bancos que analizan patrones sospechosos en segundos.\nRecomendación: El algoritmo de TikTok, Spotify o Amazon que personaliza lo que ves para mejorar tu experiencia.\n\n\n\n🏥 Medicina y Salud\nLa ANI permite diagnósticos más rápidos. Los algoritmos de imagen médica ayudan a detectar enfermedades como el cáncer en etapas muy tempranas, salvando vidas gracias a su precisión.\n\n\n“La IA débil no intenta ser un humano; intenta ser la mejor herramienta posible para una tarea específica.”\n\nEl Motor de la IA Débil: Machine Learning Gran parte del éxito de la IA Débil (ANI) no reside en una programación rígida, sino en su capacidad para extraer conocimiento de los datos. No es magia, sino matemáticas aplicadas a través de tres enfoques fundamentales que definen cómo “aprende” un algoritmo:\n\nAprendizaje Supervisado\n\n\nEs el método más común, donde el sistema aprende a partir de un conjunto de datos etiquetados. El ser humano actúa como un guía, proporcionando la respuesta correcta (entrada y salida) para que el modelo aprenda a predecir resultados futuros.\n\n\nContexto: Se utiliza principalmente para tareas de clasificación y regresión.\n\n\nCaso típico: La detección de spam en el correo electrónico, donde entrenamos al sistema con millones de ejemplos de mensajes basura frente a mensajes legítimos.\n\n\nAprendizaje No Supervisado\n\n\nEn este enfoque, la máquina se enfrenta a los datos sin etiquetas ni instrucciones previas. Su objetivo es descubrir estructuras, patrones o agrupaciones ocultas de forma autónoma.\n\n\nContexto:: Ideal para el descubrimiento de patrones que el ojo humano no detecta a simple vista.\n\n\nCaso típico: La segmentación de clientes en marketing, donde la IA agrupa perfiles con comportamientos de compra similares para personalizar campañas.\n\n\nAprendizaje por Refuerzo\n\n\nA diferencia de los anteriores, aquí la IA aprende mediante la interacción con un entorno. El algoritmo toma decisiones y recibe “premios” por los aciertos o “penalizaciones” por los errores, optimizando su comportamiento mediante el ensayo y error.\n\n\nContexto: Se aplica en entornos dinámicos donde se busca una estrategia óptima a largo plazo.\n\n\nCaso típico: La optimización de rutas logísticas en tiempo real o el entrenamiento de sistemas para juegos de estrategia complejos.\n\n\n📺 Recursos Audiovisuales para hoy\n\nSimulación visual: Sora OpenAI\nSimulación de voz/trato: Google Duplex\nSimulación creativa: Música con Suno AI\n\n\n\n🎵 Experimentación en vivo: Creación con Suno AI\nVamos a poner a prueba la IA Generativa creando una pieza musical desde cero.\nsuno.com\n\nPaso 1: Elegimos un tema común de la clase.\nPaso 2: Definimos el estilo musical (¿Flamenco? ¿Heavy Metal? ¿Trap?).\nPaso 3: Observamos cómo la IA simula la composición, la voz y la instrumentación.\n\nReflexión post-audición: ¿Podríais distinguir esta canción de una real en la radio? Si la respuesta es “no”, ¿cambia vuestra definición de “creatividad”?\n\n\nLa versión gratuita tiene créditos limitados.\nPrivacidad: Recuérdales (esto queda muy bien como profesor) que al usar estas herramientas “gratuitas” a menudo estamos regalando nuestros datos para entrenar a sus modelos.\n\n\n🧠 La Trampa de la Creatividad\nAl ver a Suno crear una canción desde cero, es fácil pensar: “¡Esto ya es inteligencia real!”.\nSin embargo, Suno sigue siendo IA Débil. 1. No hay consciencia: No sabe qué es la tristeza aunque componga un blues triste; solo replica patrones matemáticos de otros blues. 2. Sin versatilidad: No puede salir de su función musical. Una IA Fuerte podría componer la canción y luego explicarte por qué eligió esos acordes basándose en su propia “experiencia de vida”.",
+    "objectID": "info/objetivos-competencias.html",
+    "href": "info/objetivos-competencias.html",
+    "title": "Objetivos y Competencias",
+    "section": "",
+    "text": "Objetivos Estratégicos",
     "crumbs": [
       "Descargar PDF",
-      "Módulo 1 · Fundamentos",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>2. Diferenciando Tipos de IA.qmd</span>"
+      "Información",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Objetivos y Competencias</span>"
     ]
   },
   {
-    "objectID": "modulo1/2-tipos-ia.html#ia-fuerte-general-ai---agi",
-    "href": "modulo1/2-tipos-ia.html#ia-fuerte-general-ai---agi",
-    "title": "2. Diferenciando Tipos de Inteligencia Artificial",
-    "section": "IA Fuerte (General AI - AGI)",
-    "text": "IA Fuerte (General AI - AGI)\nSería una IA capaz de realizar cualquier tarea intelectual humana.\n\nMultitarea real: Podría aprender a cocinar, programar y escribir poesía por iniciativa propia.\nAutonomía: Tendría objetivos propios, no solo los que le programamos.\nEstado: Actualmente es ciencia ficción, aunque empresas como OpenAI trabajan para alcanzarla.",
+    "objectID": "info/objetivos-competencias.html#objetivos-estratégicos",
+    "href": "info/objetivos-competencias.html#objetivos-estratégicos",
+    "title": "Objetivos y Competencias",
+    "section": "",
+    "text": "Desmitificar la IA: Comprender los modelos predictivos mediante la experimentación directa.\nConciencia Crítica (Green AI): Desarrollar un uso ético y sostenible de la tecnología, minimizando la huella de carbono digital.\nIngeniería de Prompts (Método R-T-C): Optimizar la interacción humano-máquina para obtener resultados precisos en una sola iteración.\nEcosistema Abierto: Implementar materiales interactivos usando Quarto y GitHub para garantizar el acceso universal (REA).",
     "crumbs": [
       "Descargar PDF",
-      "Módulo 1 · Fundamentos",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>2. Diferenciando Tipos de IA.qmd</span>"
+      "Información",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Objetivos y Competencias</span>"
     ]
   },
   {
-    "objectID": "modulo1/2-tipos-ia.html#comparativa-rápida",
-    "href": "modulo1/2-tipos-ia.html#comparativa-rápida",
-    "title": "2. Diferenciando Tipos de Inteligencia Artificial",
-    "section": "Comparativa Rápida",
-    "text": "Comparativa Rápida\n\n\n\nCaracterística\nIA Débil (Hoy)\nIA Fuerte (Futuro?)\n\n\n\n\nHabilidad\nEspecializada\nUniversal\n\n\nConsciencia\nNo (Simulación)\nSe debate si sería necesaria\n\n\nEjemplo\nGoogle Maps\nJarvis (Iron Man)\n\n\nPropósito\nResolver tareas\nPensar como humano",
+    "objectID": "info/objetivos-competencias.html#competencias-clave",
+    "href": "info/objetivos-competencias.html#competencias-clave",
+    "title": "Objetivos y Competencias",
+    "section": "Competencias Clave",
+    "text": "Competencias Clave\n\nCompetencia Digital (CDIG).\nPensamiento Crítico y Resolución de Problemas.\nConciencia y Expresión Cultural en entornos digitales.",
     "crumbs": [
       "Descargar PDF",
-      "Módulo 1 · Fundamentos",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>2. Diferenciando Tipos de IA.qmd</span>"
+      "Información",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Objetivos y Competencias</span>"
     ]
   },
   {
-    "objectID": "modulo1/2-tipos-ia.html#dinámica-es-ia-débil-o-fuerte",
-    "href": "modulo1/2-tipos-ia.html#dinámica-es-ia-débil-o-fuerte",
-    "title": "2. Diferenciando Tipos de Inteligencia Artificial",
-    "section": "Dinámica: “¿Es IA Débil o Fuerte?”",
-    "text": "Dinámica: “¿Es IA Débil o Fuerte?”\nSi mañana un robot limpia tu casa perfectamente, pero si le pides que te ayude con la declaración de la renta te dice que no sabe de qué hablas…\n¿Es una IA Débil o Fuerte? (Respuesta: Débil, porque está limitada a su función de limpieza).",
+    "objectID": "info/justificacion.html#quarto-como-motor-de-recursos-educativos-abiertos-rea",
+    "href": "info/justificacion.html#quarto-como-motor-de-recursos-educativos-abiertos-rea",
+    "title": "¿Por qué Quarto ?",
+    "section": "",
+    "text": "Dimensión REA\n¿Cómo lo cumple Quarto?\nBeneficio Pedagógico\n\n\n\n\nRetener\nFormatos abiertos (.qmd, .md)\nEl docente es dueño real de su material para siempre.\n\n\nReutilizar\nMulti-plataforma (Web, PDF, ePub)\nSe adapta a cualquier dispositivo o entorno de aprendizaje.\n\n\nRevisar\nTexto plano y legible\nFacilidad para corregir y actualizar contenidos al instante.\n\n\nRemezclar\nModularidad\nPermite combinar capítulos de diferentes autores sin errores.\n\n\nRedistribuir\nIntegración nativa con GitHub\nDifusión global gratuita y control de versiones profesional.\n\n\n\n\n\nAnálisis detallado de las 5 R en ECO-IA\n\n1. Retener y Reutilizar2. Revisar y Remezclar3. Redistribuir (El poder de la comunidad)\n\n\nAl trabajar con archivos .qmd (Markdown), el contenido es independiente del software. A diferencia de las plataformas cerradas (como Canva o Genially), si Quarto desapareciera mañana, tus archivos siguen siendo legibles y convertibles. Además, un mismo archivo fuente genera una Web interactiva para clase y un PDF estático para alumnos sin conexión.\n\n\nLa estructura modular de Quarto (definida en el archivo _quarto.yml) permite que otros docentes puedan “bajar” el proyecto desde GitHub, seleccionar solo los módulos que necesitan (por ejemplo, solo el Laboratorio de Monty Hall) y mezclarlos con sus propios materiales.\n\n\nGracias a la vinculación con GitHub Pages, el coste de distribución es cero. Esto garantiza la democratización del acceso al conocimiento: cualquier centro educativo de Aragón puede acceder al recurso sin pagar licencias de servidor ni de software.\n\n\n\n\n\n\n\n\n\nTipConclusión para la Innovación\n\n\n\nElegí Quarto porque transforma el material docente en un ecosistema transparente. Cumple con la filosofía REA al 100%, asegurando que el contenido sea interoperable, accesible y duradero.",
     "crumbs": [
       "Descargar PDF",
-      "Módulo 1 · Fundamentos",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>2. Diferenciando Tipos de IA.qmd</span>"
-    ]
-  },
-  {
-    "objectID": "modulo1/2-tipos-ia.html#evaluación",
-    "href": "modulo1/2-tipos-ia.html#evaluación",
-    "title": "2. Diferenciando Tipos de Inteligencia Artificial",
-    "section": "6. Evaluación ✍️",
-    "text": "6. Evaluación ✍️\n\nEjercicio práctico: Crea tu propio Prompt",
-    "crumbs": [
-      "Descargar PDF",
-      "Módulo 1 · Fundamentos",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>2. Diferenciando Tipos de IA.qmd</span>"
-    ]
-  },
-  {
-    "objectID": "modulo1/2-tipos-ia.html#entraga-de-la-solución",
-    "href": "modulo1/2-tipos-ia.html#entraga-de-la-solución",
-    "title": "2. Diferenciando Tipos de Inteligencia Artificial",
-    "section": "7. Entraga de la solución",
-    "text": "7. Entraga de la solución\n\nA través de Moodle: Subir un documento con el prompt que has creado y la respuesta que te ha dado la IA.",
-    "crumbs": [
-      "Descargar PDF",
-      "Módulo 1 · Fundamentos",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>2. Diferenciando Tipos de IA.qmd</span>"
+      "Información",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Justificación del Proyecto</span>"
     ]
   }
 ]

@@ -1,104 +1,59 @@
 {
-  "about.qmd": {
-    "about.html": "09566084"
-  },
   "index.qmd": {
-    "index.html": "6d27caa4"
-  },
-  "modulo1/fundamentos.qmd": {
-    "fundamentos.html": "91459903"
-  },
-  "modulo2/desafios.qmd": {
-    "desafios.html": "65c2a52b"
-  },
-  "modulo3/practicas.qmd": {
-    "practicas.html": "91df6873"
-  },
-  "recursos.qmd": {
-    "recursos.html": "c758c11f"
+    "index.html": "536d8389"
   },
   "info/info-general.qmd": {
-    "info-general.html": "3b3ce2ca"
-  },
-  "info/calendario.qmd": {
-    "calendario.html": "b42bca28"
-  },
-  "modulo1/Lección 1.1. Introducción a la IA.qmd": {
-    "Lección 1.1. Introducción a la IA.html": "edc20b3e"
-  },
-  "modulo1/1. Introducción a la IA.qmd": {
-    "1. Introducción a la IA.html": "0d4323c5"
-  },
-  "modulo1/2. Tipos de Inteligencia Artificial.qmd": {
-    "2. Tipos de Inteligencia Artificial.html": "16456ba0"
-  },
-  "modulo1/2. Tipos de IA.qmd": {
-    "2. Tipos de IA.html": "d9bc106f"
-  },
-  "modulo1/3. Funcionamiento del ChatGPT.qmd": {
-    "3. Funcionamiento del ChatGPT.html": "806b48ae"
-  },
-  "modulo1/4. Procesamiento del lenguaje natural (NLP).qmd": {
-    "4. Procesamiento del lenguaje natural (NLP).html": "02369320"
-  },
-  "modulo1/5. Entrenamiento y fine-tuning de modelos.qmd": {
-    "5. Entrenamiento y fine-tuning de modelos.html": "ac220e16"
-  },
-  "modulo1/4. Procesamiento del (NLP).qmd": {
-    "4. Procesamiento del (NLP).html": "b20b364c"
-  },
-  "modulo1/5. Entrenamiento y fine-tuning.qmd": {
-    "5. Entrenamiento y fine-tuning.html": "cb2333ca"
-  },
-  "modulo1/1. Introducción.qmd": {
-    "1. Introducción.html": "6f88d6a8"
-  },
-  "modulo1/Inteligencia A.qmd": {
-    "Inteligencia A.html": "db97761e"
-  },
-  "modulo1/1. Introducción a la Inteligencia Artificial.qmd": {
-    "1. Introducción a la Inteligencia Artificial.html": "1c01cfee"
-  },
-  "modulo1/2. Diferenciando Tipos de IA.qmd": {
-    "2. Diferenciando Tipos de IA.html": "6fced178"
-  },
-  "info/justificacion.qmd": {
-    "justificacion.html": "5497caf2"
-  },
-  "info/objetivos-competencias.qmd": {
-    "objetivos-competencias.html": "ffc4af84"
-  },
-  "info/metodologia.qmd": {
-    "metodologia.html": "1f97fa66"
+    "info-general.html": "fcc98a4f"
   },
   "info/guia-docente.qmd": {
-    "guia-docente.html": "35ebf080"
+    "guia-docente.html": "63608867"
   },
-  "practicas/lab-modulo1.qmd": {
-    "lab-modulo1.html": "8714f7b7"
+  "info/justificacion.qmd": {
+    "justificacion.html": "547d029c"
   },
-  "practicas/lab-modulo2.qmd": {
-    "lab-modulo2.html": "4f867f58"
+  "info/objetivos-competencias.qmd": {
+    "objetivos-competencias.html": "b83e8154"
   },
-  "practicas/lab-modulo3.qmd": {
-    "lab-modulo3.html": "18709e2a"
+  "info/metodologia.qmd": {
+    "metodologia.html": "9f67035b"
   },
-  "practicas/proyecto-final.qmd": {
-    "proyecto-final.html": "4d77823c"
+  "info/calendario.qmd": {
+    "calendario.html": "0a551a7a"
   },
   "modulo1/1-introduccion-ia.qmd": {
-    "1-introduccion-ia.html": "62782277"
+    "1-introduccion-ia.html": "b022d7bf"
   },
   "modulo1/2-tipos-ia.qmd": {
-    "2-tipos-ia.html": "4aa9f5b5"
+    "2-tipos-ia.html": "0de01399"
   },
   "modulo1/3-funcionamiento-chatgpt.qmd": {
-    "3-funcionamiento-chatgpt.html": "7956c3aa"
+    "3-funcionamiento-chatgpt.html": "f931e89a"
   },
   "modulo1/4-procesamiento-nlp.qmd": {
-    "4-procesamiento-nlp.html": "73a1bf12"
+    "4-procesamiento-nlp.html": "890a5a48"
   },
   "modulo1/5-Entrenamiento-fine-tuning.qmd": {
-    "5-Entrenamiento-fine-tuning.html": "65d665bb"
+    "5-Entrenamiento-fine-tuning.html": "da3851ac"
+  },
+  "modulo2/desafios.qmd": {
+    "desafios.html": "c99101da"
+  },
+  "modulo3/practicas.qmd": {
+    "practicas.html": "643f6b15"
+  },
+  "practicas/lab-modulo1.qmd": {
+    "lab-modulo1.html": "1c0832fd"
+  },
+  "practicas/lab-modulo2.qmd": {
+    "lab-modulo2.html": "7b65dd93"
+  },
+  "practicas/lab-modulo3.qmd": {
+    "lab-modulo3.html": "54a9eb58"
+  },
+  "practicas/proyecto-final.qmd": {
+    "proyecto-final.html": "54ab02df"
+  },
+  "recursos.qmd": {
+    "recursos.html": "a2f3cd64"
   }
 }

@@ -2,15 +2,33 @@
 title: "Información general"
 ---
 
-# Información general
+##  Proyecto ECO-IA. Rediseño metodológico transversal para la alfabetización en IA generativa mediante entornos interactivos Quarto y computación en la nube sostenible"
 
-Este curso se enmarca dentro del **Catálogo de Especialidades Formativas** (código: IFCT0049), con una duración de **60 horas**.
 
-**Objetivo general:**  
-Aplicar ChatGPT y la Inteligencia Artificial a diversos sectores productivos, optimizando el rendimiento con enfoque ético.
+## ¿Qué aprenderás en este curso?
 
-**Modalidades:**  
-- Presencial  
-- Teleformación  
+Este recurso  está estructurado para llevarte desde los conceptos más básicos hasta el desarrollo de un pensamiento crítico avanzado sobre la los diferentes modelos de IA.
 
-**Nivel de cualificación:** 2
+### Los Tres Pilares de este recurso:
+
+1.  **Interactividad (IA Transparente):** A diferencia de un libro de texto estático, aquí utilizarás laboratorios interactivos que t eperititán entender que la IA no es magia.
+2.  **Sostenibilidad (Green AI):** Aprenderás que cada prompt tiene un coste energético. Nuestro objetivo es la máxima eficiencia: obtener el mejor resultado con el menor número de interacciones.
+3.  **Pensamiento Computacional:** Utilizarás el método **R-T-C (Rol-Tarea-Contexto)** para dominar la ingeniería de prompts, transformando la IA en una aliada estratégica para tu aprendizaje.
+
+## Metodología del Recurso
+
+Este sitio web es un **Recurso Educativo Abierto (REA)** construido con **Quarto**. Esto significa que:
+- El contenido es dinámico y ejecutable.
+- Puedes descargar la versión en PDF para estudiar desconectado.
+- El código es abierto, fomentando la colaboración y la transparencia.
+
+::: {.callout-note}
+### Para quién es este curso
+Este curso está diseñado para estudiantes de Formación Profesional y Educación Secundaria, pero su enfoque práctico lo hace útil para cualquier persona interesada en una alfabetización digital profunda y responsable.
+:::
+
+## Estructura del curso
+El curso se organiza en tres bloques principales:
+- **Módulo 1:** Fundamentos y funcionamiento interno de la IA.
+- **Módulo 2:** Desafíos éticos y el impacto de la "Green AI".
+- **Módulo 3:** Aplicaciones prácticas y proyectos finales.
