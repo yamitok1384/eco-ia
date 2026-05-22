@@ -1,169 +1,693 @@
----
-title: "Laboratorio 1: El Problema de Monty Hall"
-subtitle: "Probabilidad, simulación e intuición"
-format:
-  html:
-    theme: cosmo
-    toc: true
-execute:
-  echo: false
----
+##  El problema de Monty Hall 
 
-# ¿Podrás vencer a la probabilidad?
-
-Este experimento muestra por qué la IA y la estadística se basan en datos y no en “corazonadas”.
-
-::: {.callout-note}
-## Cómo jugar
-
-1. Elige el número de puertas (3 es el caso clásico).
-2. Elige tu estrategia:
-   - **Quedarse** con la primera puerta.
-   - **Cambiar** después de que el presentador abra puertas vacías.
-3. Pulsa el botón para simular 1.000 partidas.
+::: {.callout-note appearance="simple"}
+Este experimento demuestra por qué la IA y la ciencia de datos se basan en probabilidades y no en “corazonadas”.
 :::
 
-```{ojs}
-//| panel: sidebar
-//| label: controles
+<div id="monty-hall-lab"></div>
 
-viewof puertas = Inputs.range(
-  [3, 15],
-  {
-    label: "Número de puertas:",
-    step: 1,
-    value: 3
-  }
-)
+<style>
 
-viewof estrategia = Inputs.radio(
-  ["Quedarse", "Cambiar"],
-  {
-    label: "Estrategia:",
-    value: "Cambiar"
-  }
-)
-
-viewof ejecutar = Inputs.button("Simular 1.000 partidas")
-```
-
-## Resultados de la simulación
-
-```{ojs}
-//| label: simulacion
-
-ejecutar
-
-const partidas = 1000
-let victorias = 0
-
-for (let i = 0; i < partidas; i++) {
-
-  // Puerta con premio
-  const premio = Math.floor(Math.random() * puertas)
-
-  // Primera elección del jugador
-  const eleccion = Math.floor(Math.random() * puertas)
-
-  // Estrategia
-  if (estrategia === "Quedarse") {
-    if (eleccion === premio) victorias++
-  } else {
-    // Cambiar gana siempre que la elección inicial NO fuera correcta
-    if (eleccion !== premio) victorias++
-  }
+#monty-hall-lab{
+background:
+radial-gradient(circle at top left,#0f3b82 0%,#07111f 40%),
+#07111f;
+border-radius:24px;
+padding:18px;
+color:white;
+font-family:Inter,Arial,sans-serif;
+margin:1rem 0;
+overflow:hidden;
+box-shadow:0 0 40px rgba(0,0,0,.35);
 }
 
-const porcentaje_simulado = (victorias / partidas) * 100
+#monty-hall-lab *{
+box-sizing:border-box;
+}
 
-const porcentaje_teorico =
-  estrategia === "Quedarse"
-    ? (1 / puertas) * 100
-    : ((puertas - 1) / puertas) * 100
+.mh-title{
+font-size:1.9rem;
+font-weight:800;
+margin-bottom:8px;
+}
 
-display({
-  simulado: porcentaje_simulado,
-  teorico: porcentaje_teorico
-})
-```
+.mh-sub{
+font-size:.9rem;
+line-height:1.6;
+color:#dbeafe;
+margin-bottom:18px;
+}
 
-```{ojs}
-//| label: grafico
+.mh-grid{
+display:grid;
+grid-template-columns:1fr 1fr 1fr;
+gap:14px;
+align-items:start;
+}
 
-Plot.plot({
-  title: "Simulación vs Probabilidad Teórica",
-  width: 700,
-  height: 450,
+.panel{
+background:rgba(255,255,255,.03);
+border:1px solid rgba(255,255,255,.08);
+border-radius:18px;
+padding:16px;
+min-height:520px;
+}
 
-  marks: [
-    Plot.barY(
-      [
-        {
-          tipo: "Simulación",
-          valor: simulado
-        },
-        {
-          tipo: "Teoría",
-          valor: teorico
-        }
-      ],
-      {
-        x: "tipo",
-        y: "valor"
-      }
-    ),
+.panel-title{
+font-size:1.2rem;
+font-weight:700;
+color:#38bdf8;
+margin-bottom:8px;
+}
 
-    Plot.text(
-      [
-        {
-          tipo: "Simulación",
-          valor: simulado
-        },
-        {
-          tipo: "Teoría",
-          valor: teorico
-        }
-      ],
-      {
-        x: "tipo",
-        y: "valor",
-        text: d => `${d.valor.toFixed(1)}%`,
-        dy: -10
-      }
-    ),
+.panel-sub{
+font-size:.8rem;
+line-height:1.5;
+color:#dbeafe;
+margin-bottom:14px;
+}
 
-    Plot.ruleY([0])
-  ],
+.doors{
+display:flex;
+justify-content:center;
+gap:14px;
+margin-top:16px;
+}
 
-  y: {
-    domain: [0, 100],
-    label: "% de victorias",
-    grid: true
-  }
-})
-```
+.door{
+width:95px;
+height:150px;
+background:linear-gradient(145deg,#1e293b,#0f172a);
+border-radius:14px;
+border:2px solid rgba(255,255,255,.08);
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:2.4rem;
+cursor:pointer;
+transition:.3s;
+position:relative;
+}
 
-## ¿Qué está ocurriendo?
+.door:hover{
+transform:translateY(-4px);
+border-color:#38bdf8;
+}
 
-Cuando eliges una puerta al inicio:
+.door.selected{
+border-color:#38bdf8;
+box-shadow:0 0 20px rgba(56,189,248,.4);
+}
 
-- Tu probabilidad inicial de acertar es:
+.door.open{
+background:#111827;
+transform:rotateY(65deg);
+opacity:.5;
+}
 
-$$
-\frac{1}{n}
-$$
+.door.win{
+border-color:#22c55e;
+box-shadow:0 0 22px rgba(34,197,94,.5);
+}
 
-- La probabilidad de que el premio esté en alguna de las otras puertas es:
+.status-box{
+background:#0f172a;
+border-radius:14px;
+padding:14px;
+margin-top:18px;
+font-size:.82rem;
+line-height:1.7;
+min-height:110px;
+}
 
-$$
-\frac{n-1}{n}
-$$
+.action-buttons{
+display:flex;
+gap:10px;
+margin-top:14px;
+}
 
-Al abrir puertas vacías, esa probabilidad se concentra en la puerta restante.
+.btn{
+flex:1;
+border:none;
+border-radius:12px;
+padding:12px;
+font-weight:700;
+font-size:.82rem;
+cursor:pointer;
+transition:.25s;
+}
 
-### Caso clásico: 3 puertas
+.btn-primary{
+background:linear-gradient(135deg,#2563eb,#38bdf8);
+color:white;
+}
 
-- Quedarse → 33.3%
-- Cambiar → 66.6%
+.btn-secondary{
+background:#111827;
+color:white;
+border:1px solid rgba(255,255,255,.08);
+}
 
-Por eso **cambiar de puerta duplica la probabilidad de ganar**.
+.btn:hover{
+transform:translateY(-2px);
+}
+
+.tree{
+margin-top:12px;
+display:flex;
+flex-direction:column;
+gap:12px;
+}
+
+.node{
+background:#0f172a;
+border-radius:12px;
+padding:12px;
+border-left:4px solid #38bdf8;
+font-size:.8rem;
+line-height:1.6;
+opacity:.45;
+transition:.4s;
+}
+
+.node.active{
+opacity:1;
+transform:translateX(4px);
+}
+
+.node.win{
+border-left-color:#22c55e;
+}
+
+.node.lose{
+border-left-color:#ef4444;
+}
+
+.results{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:12px;
+margin-top:16px;
+}
+
+.metric{
+background:#0f172a;
+border-radius:14px;
+padding:14px;
+text-align:center;
+}
+
+.metric-title{
+font-size:.72rem;
+color:#cbd5e1;
+margin-bottom:8px;
+}
+
+.metric-value{
+font-size:1.5rem;
+font-weight:800;
+}
+
+.blue{
+color:#38bdf8;
+}
+
+.green{
+color:#22c55e;
+}
+
+.red{
+color:#ef4444;
+}
+
+.sim-bar{
+height:12px;
+background:#111827;
+border-radius:999px;
+overflow:hidden;
+margin-top:10px;
+}
+
+.sim-fill{
+height:100%;
+width:0%;
+transition:1s;
+}
+
+.fill-stay{
+background:linear-gradient(to right,#ef4444,#f87171);
+}
+
+.fill-switch{
+background:linear-gradient(to right,#22c55e,#4ade80);
+}
+
+.final-box{
+margin-top:18px;
+background:#0f172a;
+padding:14px;
+border-radius:14px;
+font-size:.85rem;
+line-height:1.7;
+border-left:4px solid #38bdf8;
+}
+
+@media(max-width:1100px){
+
+.mh-grid{
+grid-template-columns:1fr;
+}
+
+.panel{
+min-height:auto;
+}
+
+}
+
+</style>
+
+<script>
+
+const app = document.getElementById("monty-hall-lab");
+
+app.innerHTML = `
+
+<div class="mh-title">
+
+🎲 ¿Puede tu intuición vencer a las probabilidades?
+
+</div>
+
+<div class="mh-sub">
+
+¿Tu intuición puede vencer a las matemáticas?
+
+<br>
+
+La mayoría de personas creen que cambiar de puerta no importa…
+pero las probabilidades dicen otra cosa.
+
+</div>
+
+<div class="mh-grid">
+
+<!-- PANEL JUEGO -->
+
+<div class="panel">
+
+<div class="panel-title">
+
+1. El juego
+
+</div>
+
+<div class="panel-sub">
+
+Selecciona una puerta.
+Detrás de una hay un premio 🏆 y detrás de las otras cabras 🐐.
+
+</div>
+
+<div class="doors">
+
+<div class="door" id="door0" onclick="selectDoor(0)">
+🚪
+</div>
+
+<div class="door" id="door1" onclick="selectDoor(1)">
+🚪
+</div>
+
+<div class="door" id="door2" onclick="selectDoor(2)">
+🚪
+</div>
+
+</div>
+
+<div class="status-box" id="status">
+
+Esperando selección...
+
+</div>
+
+<div class="action-buttons">
+
+<button class="btn btn-primary" onclick="switchDoor()">
+
+🔄 Cambiar puerta
+
+</button>
+
+<button class="btn btn-secondary" onclick="resetGame()">
+
+⟳ Reiniciar
+
+</button>
+
+</div>
+
+</div>
+
+<!-- PANEL PROBABILIDADES -->
+
+<div class="panel">
+
+<div class="panel-title">
+
+2. Árbol de probabilidades
+
+</div>
+
+<div class="panel-sub">
+
+Visualiza por qué cambiar de puerta tiene mayor probabilidad de éxito.
+
+</div>
+
+<div class="tree">
+
+<div class="node" id="node1">
+
+🎯 Elegiste la puerta correcta inicialmente
+<br>
+Probabilidad: <b>1/3</b>
+
+<br><br>
+
+Si cambias → ❌ pierdes
+
+</div>
+
+<div class="node" id="node2">
+
+🐐 Elegiste una puerta incorrecta
+<br>
+Probabilidad: <b>2/3</b>
+
+<br><br>
+
+Si cambias → ✅ ganas
+
+</div>
+
+<div class="node" id="node3">
+
+🧠 El presentador siempre abre una puerta con cabra.
+
+<br><br>
+
+La probabilidad NO se reinicia a 50%-50%.
+
+</div>
+
+</div>
+
+<div class="final-box">
+
+💡 La clave matemática:
+
+<br><br>
+
+Tu primera elección tiene solo <b>33%</b> de probabilidad de acertar.
+
+<br><br>
+
+Las otras dos puertas juntas tenían <b>67%</b>.
+Cuando el presentador elimina una incorrecta,
+esa probabilidad se concentra en la puerta restante.
+
+</div>
+
+</div>
+
+<!-- PANEL RESULTADOS -->
+
+<div class="panel">
+
+<div class="panel-title">
+
+3. Simulación estadística
+
+</div>
+
+<div class="panel-sub">
+
+Ejecuta muchas partidas y compara estrategias.
+
+</div>
+
+<div class="action-buttons">
+
+<button class="btn btn-primary" onclick="simulate(1000)">
+
+⚡ Simular 1000 partidas
+
+</button>
+
+</div>
+
+<div class="results">
+
+<div class="metric">
+
+<div class="metric-title">
+
+Quedarse
+
+</div>
+
+<div class="metric-value red" id="stayPct">
+
+33%
+
+</div>
+
+<div class="sim-bar">
+
+<div class="sim-fill fill-stay" id="stayBar"></div>
+
+</div>
+
+</div>
+
+<div class="metric">
+
+<div class="metric-title">
+
+Cambiar
+
+</div>
+
+<div class="metric-value green" id="switchPct">
+
+67%
+
+</div>
+
+<div class="sim-bar">
+
+<div class="sim-fill fill-switch" id="switchBar"></div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="final-box" id="conclusion">
+
+🧠 La IA y la ciencia de datos no usan intuición.
+
+<br><br>
+
+Usan probabilidades calculadas a partir de evidencia.
+
+</div>
+
+</div>
+
+</div>
+
+`;
+
+let selected = null;
+let prizeDoor = Math.floor(Math.random()*3);
+let openedDoor = null;
+
+function selectDoor(index){
+
+if(selected !== null) return;
+
+selected = index;
+
+document.getElementById("door"+index)
+.classList.add("selected");
+
+let options = [0,1,2].filter(
+d => d !== prizeDoor && d !== selected
+);
+
+openedDoor = options[Math.floor(Math.random()*options.length)];
+
+document.getElementById("door"+openedDoor)
+.classList.add("open");
+
+document.getElementById("door"+openedDoor)
+.innerHTML = "🐐";
+
+document.getElementById("status").innerHTML = `
+
+Elegiste la puerta ${selected+1}.
+
+<br><br>
+
+Monty abrió la puerta ${openedDoor+1} mostrando una cabra 🐐.
+
+<br><br>
+
+¿Deseas cambiar?
+
+`;
+
+document.getElementById("node1").classList.add("active");
+document.getElementById("node2").classList.add("active");
+document.getElementById("node3").classList.add("active");
+
+}
+
+function switchDoor(){
+
+if(selected === null) return;
+
+let remaining = [0,1,2].find(
+d => d !== selected && d !== openedDoor
+);
+
+selected = remaining;
+
+finishGame();
+
+}
+
+function finishGame(){
+
+const doors = document.querySelectorAll(".door");
+
+doors[prizeDoor].innerHTML = "🏆";
+doors[prizeDoor].classList.add("win");
+
+if(selected === prizeDoor){
+
+document.getElementById("status").innerHTML = `
+
+ ¡Ganaste!
+
+<br><br>
+
+Cambiar funcionó porque la probabilidad mayor estaba en las otras puertas.
+
+`;
+
+document.getElementById("node2").classList.add("win");
+
+}else{
+
+document.getElementById("status").innerHTML = `
+
+ Perdiste.
+
+<br><br>
+
+Tu primera elección tenía solo 1/3 de probabilidad.
+
+`;
+
+document.getElementById("node1").classList.add("lose");
+
+}
+
+}
+
+function resetGame(){
+
+selected = null;
+openedDoor = null;
+prizeDoor = Math.floor(Math.random()*3);
+
+document.querySelectorAll(".door").forEach(d=>{
+
+d.className = "door";
+d.innerHTML = "🚪";
+
+});
+
+document.querySelectorAll(".node").forEach(n=>{
+
+n.classList.remove("active","win","lose");
+
+});
+
+document.getElementById("status").innerHTML =
+"Esperando selección...";
+
+}
+
+function simulate(n){
+
+let stayWins = 0;
+let switchWins = 0;
+
+for(let i=0;i<n;i++){
+
+const prize = Math.floor(Math.random()*3);
+const choice = Math.floor(Math.random()*3);
+
+if(choice === prize){
+
+stayWins++;
+
+}else{
+
+switchWins++;
+
+}
+
+}
+
+const stayPct = Math.round((stayWins/n)*100);
+const switchPct = Math.round((switchWins/n)*100);
+
+document.getElementById("stayPct").innerHTML =
+stayPct + "%";
+
+document.getElementById("switchPct").innerHTML =
+switchPct + "%";
+
+document.getElementById("stayBar").style.width =
+stayPct + "%";
+
+document.getElementById("switchBar").style.width =
+switchPct + "%";
+
+document.getElementById("conclusion").innerHTML = `
+
+📊 Después de ${n} simulaciones:
+
+<br><br>
+
+• Quedarse gana aproximadamente <b>${stayPct}%</b>
+
+<br>
+
+• Cambiar gana aproximadamente <b>${switchPct}%</b>
+
+<br><br>
+
+🔥 La evidencia estadística demuestra que cambiar es mejor.
+
+`;
+
+}
+
+</script>
+::: 

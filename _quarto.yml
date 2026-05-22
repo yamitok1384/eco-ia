@@ -10,23 +10,33 @@ crossref:
 
 
 book:
-  #title: "ChatGPT e Inteligencia Artificial"
-  subtitle: "Programa Formativo IFCT0049"
-  author: "Profesora Yamilka Toca Díaz"
+  # title:"ECO-IA: Alfabetización en IA"
+  subtitle: "Programa Formativo - Innovación Docente"
+  #author: "Profesora Yamilka Toca Díaz"
+  description: "Rediseño metodológico transversal para una IA sostenible y crítica."
   #date: "Abril 2026"
   #cover-image: "img/geralt-banner.jpg"     # Banner superior del curso
   favicon: "img/logo_uz.svg"      # Icono del sitio (pestaña)
   page-navigation: true
-  navbar:
-    right:
-      - icon: file-pdf
-        href: /chatgpt-curso.pdf
-        text: "Descargar PDF"
+  
   sidebar:
     logo: "img/logo_uz.svg"  # Logo en la barra lateral
     style: "docked"                  # Barra lateral fija
     search: true
     background: light
+    collapse-level: 2
+  navbar:
+    right:
+      - icon: github
+        href: https://github.com/yamitok1384/chatgpt-curso
+        target: _blank
+      - icon: file-pdf
+        href: /chatgpt-curso.pdf
+        text: "Descargar PDF"
+          
+      # - icon: pdf
+        # text: "Descargar PDF"
+        # href: chatgpt-curso.pdf
 
   #breadcrumbs: true  # elimina la navegación superior 
   chapters:
@@ -36,10 +46,10 @@ book:
       chapters:
         
         - info/info-general.qmd
-        - info/guia-docente.qmd
-        - info/justificacion.qmd      # Justificación y necesidad (Causas de la intervención)
-        - info/objetivos-competencias.qmd # Objetivos y Competencias clave/Saberes básicos
-        - info/metodologia.qmd        # Metodología (ABP y herramientas utilizadas)
+        # - info/guia-docente.qmd
+        # - info/justificacion.qmd      # Justificación y necesidad (Causas de la intervención)
+        # - info/objetivos-competencias.qmd # Objetivos y Competencias clave/Saberes básicos
+        # - info/metodologia.qmd        # Metodología (ABP y herramientas utilizadas)
         - info/calendario.qmd
     # Módulos formativos
     - part: "Módulo 1 · Fundamentos"
@@ -80,17 +90,25 @@ book:
 
 format:
   html:
-    theme: flatly
+    theme: 
+      light: flatly
+      dark: darkly
     toc: true
+    #code-fold: true # Los profesores pueden ver el código si quieren, o esconderlo
+    #code-tools: true
+    #code-summary: "Ver código fuente"
+    execute:
+      echo: false # Por defecto ocultamos el código para no asustar al alumno
     number-sections: false
     code-copy: true
     css: styles.css
+    title-block-banner: "img/geralt-banner.jpg"
     format-links: [pdf, revealjs] 
     downloads: [pdf]
-  pdf:
-    documentclass: scrreprt
-    number-sections: true
-    keep-tex: false
+  # pdf:
+  #   documentclass: scrreprt
+  #   number-sections: true
+  #   keep-tex: false
    
 
 

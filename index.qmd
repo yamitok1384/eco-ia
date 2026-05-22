@@ -1,13 +1,36 @@
 ---
-#title: "ChatGPT e Inteligencia Artificial"
+title: "Proyecto Eco-IA"
 format: html
 ---
 
-# Bienvenido al Proyecto ECO-IA.
+::: {.portada-premium}
 
-"Rediseño metodológico transversal para la alfabetización en IA generativa mediante entornos interactivos Quarto y computación en la nube sostenible"
+# Proyecto Eco-IA
+## Rediseño Metodológico Transversal
 
-**ECO-IA** es un ecosistema de aprendizaje diseñado para rediseñar la forma en que entendemos y utilizamos la Inteligencia Artificial Generativa. Este proyecto no solo enseña a usar herramientas como ChatGPT, sino que invita a los estudiantes a comprender la tecnología desde su base matemática, ética y sostenible.
+"Materialización del pensamiento crítico a través de entornos interactivos y computación sostenible"
 
-Selecciona un módulo en la barra lateral para comenzar.
+<br>
 
+::: {.autor-centrado}
+Diseño y Autoría: **Profesora Yamilka Toca Díaz**  
+Universidad de Zaragoza (UNIZAR) · IAF
+:::
+
+<br>
+
+## Bienvenido al Ecosistema de Aprendizaje
+
+::: {.callout-note icon=false appearance="simple"}
+
+### 🍃 ¿Por qué ECO-IA? El significado de nuestro acrónimo
+
+Aunque de forma inmediata asociamos **"ECO"** con la ecología y el respeto medioambiental, en este ecosistema formativo el término responde a una visión holística y transversal:
+
+* **E – Ética digital:** responsabilidad y transparencia.
+* **C – Conciencia ambiental:** Green Computing.
+* **O – Operatividad sostenible:** eficiencia energética y económica.
+:::
+
+Nuestra misión es guiarte a través de una ruta de aprendizaje interactiva.
+:::

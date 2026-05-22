@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Rediseño metodológico transversal para una IA sostenible y crítica.">
 
-<title>Laboratorio 1: El Problema de Monty Hall</title>
+<title>El problema de Monty Hall</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -22,41 +23,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -77,10 +43,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-6f4dde0c9b9e53d219e3db410911c9dc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-07e30734078671c0544a85192363c8f4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-b8ca3a48ac547d73024cc80e2810c7c6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-07e30734078671c0544a85192363c8f4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -108,46 +78,184 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Buscar"
   }
 }</script>
-<script type="module" src="../site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
-<link href="../site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
+<style>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
+      .quarto-title-block .quarto-title-banner {
+        background-image: url(../img/geralt-banner.jpg);
+background-size: cover;
       }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
+</style>
+
 
 <link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-sidebar docked nav-fixed quarto-light">
+<body class="nav-sidebar docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
             <div id="quarto-search" class="" title="Buscar"></div>
@@ -156,6 +264,11 @@ window.Quarto = {
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/yamitok1384/chatgpt-curso" target="_blank"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
   <li class="nav-item">
     <a class="nav-link" href="../chatgpt-curso.pdf"> <i class="bi bi-file-pdf" role="img">
 </i> 
@@ -164,6 +277,7 @@ window.Quarto = {
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Alternar modo oscuro"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -172,7 +286,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../practicas/lab-modulo1.html">Laboratorio y Evaluación</a></li><li class="breadcrumb-item"><a href="../practicas/lab-modulo1.html"><span class="chapter-title">Laboratorio 1: El Problema de Monty Hall</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../practicas/lab-modulo1.html">Laboratorio y Evaluación</a></li><li class="breadcrumb-item"><a href="../practicas/lab-modulo1.html"><span class="chapter-title">El problema de Monty Hall</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -182,7 +296,28 @@ window.Quarto = {
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../practicas/lab-modulo1.html">Laboratorio y Evaluación</a></li><li class="breadcrumb-item"><a href="../practicas/lab-modulo1.html"><span class="chapter-title">El problema de Monty Hall</span></a></li></ol></nav>
+      <h1 class="title"><span class="chapter-title">El problema de Monty Hall</span></h1>
+                  <div>
+        <div class="description">
+          Rediseño metodológico transversal para una IA sostenible y crítica.
+        </div>
+      </div>
+                </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
@@ -200,7 +335,7 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Bienvenida</span></a>
+  <a href="../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Proyecto Eco-IA:</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -215,26 +350,6 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../info/info-general.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Información General</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../info/guia-docente.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">guia-docente.html</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../info/justificacion.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Justificación del Proyecto</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../info/objetivos-competencias.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Objetivos y Competencias</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../info/metodologia.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">metodologia.html</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -323,7 +438,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../practicas/lab-modulo1.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Laboratorio 1: El Problema de Monty Hall</span></a>
+  <a href="../practicas/lab-modulo1.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">El problema de Monty Hall</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -353,272 +468,733 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Tabla de contenidos</h2>
-   
-  <ul>
-  <li><a href="#podrás-vencer-a-la-probabilidad" id="toc-podrás-vencer-a-la-probabilidad" class="nav-link active" data-scroll-target="#podrás-vencer-a-la-probabilidad">¿Podrás vencer a la probabilidad?</a>
-  <ul class="collapse">
-  <li><a href="#resultados-de-la-simulación" id="toc-resultados-de-la-simulación" class="nav-link" data-scroll-target="#resultados-de-la-simulación">Resultados de la simulación</a></li>
-  <li><a href="#qué-está-ocurriendo" id="toc-qué-está-ocurriendo" class="nav-link" data-scroll-target="#qué-está-ocurriendo">¿Qué está ocurriendo?</a>
-  <ul class="collapse">
-  <li><a href="#caso-clásico-3-puertas" id="toc-caso-clásico-3-puertas" class="nav-link" data-scroll-target="#caso-clásico-3-puertas">Caso clásico: 3 puertas</a></li>
-  </ul></li>
-  </ul></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../practicas/lab-modulo1.html">Laboratorio y Evaluación</a></li><li class="breadcrumb-item"><a href="../practicas/lab-modulo1.html"><span class="chapter-title">Laboratorio 1: El Problema de Monty Hall</span></a></li></ol></nav>
-<div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Laboratorio 1: El Problema de Monty Hall</span></h1>
-<p class="subtitle lead">Probabilidad, simulación e intuición</p>
-</div>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
 
 
-</header>
 
-
-<section id="podrás-vencer-a-la-probabilidad" class="level1">
-<h1>¿Podrás vencer a la probabilidad?</h1>
-<div class="panel-grid layout-sidebar ms-md-0 layout-sidebar-right">
-<div class="panel-fill g-col-24 g-col-lg-17 pt-3 pt-lg-0">
-<p>Este experimento muestra por qué la IA y la estadística se basan en datos y no en “corazonadas”.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>Cómo jugar
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ol type="1">
-<li>Elige el número de puertas (3 es el caso clásico).</li>
-<li>Elige tu estrategia:
-<ul>
-<li><strong>Quedarse</strong> con la primera puerta.</li>
-<li><strong>Cambiar</strong> después de que el presentador abra puertas vacías.</li>
-</ul></li>
-<li>Pulsa el botón para simular 1.000 partidas.</li>
-</ol>
+<div class="callout-body-container">
+<p>Este experimento demuestra por qué la IA y la ciencia de datos se basan en probabilidades y no en “corazonadas”.</p>
 </div>
 </div>
 </div>
-<div id="controles" class="cell panel-sidebar card bg-light p-2 g-col-24 g-col-lg-7">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb1" data-startfrom="30" data-source-offset="-1"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 29;"><span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>viewof puertas <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>(</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>  [<span class="dv">3</span><span class="op">,</span> <span class="dv">15</span>]<span class="op">,</span></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>  {</span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>    <span class="dt">label</span><span class="op">:</span> <span class="st">"Número de puertas:"</span><span class="op">,</span></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>    <span class="dt">step</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>    <span class="dt">value</span><span class="op">:</span> <span class="dv">3</span></span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>viewof estrategia <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">radio</span>(</span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>  [<span class="st">"Quedarse"</span><span class="op">,</span> <span class="st">"Cambiar"</span>]<span class="op">,</span></span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>  {</span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>    <span class="dt">label</span><span class="op">:</span> <span class="st">"Estrategia:"</span><span class="op">,</span></span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>    <span class="dt">value</span><span class="op">:</span> <span class="st">"Cambiar"</span></span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>viewof ejecutar <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">button</span>(<span class="st">"Simular 1.000 partidas"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display">
-<div id="controles-1">
-<div id="ojs-cell-1-1" data-nodetype="declaration">
+<div id="monty-hall-lab">
 
 </div>
-</div>
-</div>
-<div class="cell-output cell-output-display">
-<div id="controles-2">
-<div id="ojs-cell-1-2" data-nodetype="declaration">
+<style>
+
+#monty-hall-lab{
+background:
+radial-gradient(circle at top left,#0f3b82 0%,#07111f 40%),
+#07111f;
+border-radius:24px;
+padding:18px;
+color:white;
+font-family:Inter,Arial,sans-serif;
+margin:1rem 0;
+overflow:hidden;
+box-shadow:0 0 40px rgba(0,0,0,.35);
+}
+
+#monty-hall-lab *{
+box-sizing:border-box;
+}
+
+.mh-title{
+font-size:1.9rem;
+font-weight:800;
+margin-bottom:8px;
+}
+
+.mh-sub{
+font-size:.9rem;
+line-height:1.6;
+color:#dbeafe;
+margin-bottom:18px;
+}
+
+.mh-grid{
+display:grid;
+grid-template-columns:1fr 1fr 1fr;
+gap:14px;
+align-items:start;
+}
+
+.panel{
+background:rgba(255,255,255,.03);
+border:1px solid rgba(255,255,255,.08);
+border-radius:18px;
+padding:16px;
+min-height:520px;
+}
+
+.panel-title{
+font-size:1.2rem;
+font-weight:700;
+color:#38bdf8;
+margin-bottom:8px;
+}
+
+.panel-sub{
+font-size:.8rem;
+line-height:1.5;
+color:#dbeafe;
+margin-bottom:14px;
+}
+
+.doors{
+display:flex;
+justify-content:center;
+gap:14px;
+margin-top:16px;
+}
+
+.door{
+width:95px;
+height:150px;
+background:linear-gradient(145deg,#1e293b,#0f172a);
+border-radius:14px;
+border:2px solid rgba(255,255,255,.08);
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:2.4rem;
+cursor:pointer;
+transition:.3s;
+position:relative;
+}
+
+.door:hover{
+transform:translateY(-4px);
+border-color:#38bdf8;
+}
+
+.door.selected{
+border-color:#38bdf8;
+box-shadow:0 0 20px rgba(56,189,248,.4);
+}
+
+.door.open{
+background:#111827;
+transform:rotateY(65deg);
+opacity:.5;
+}
+
+.door.win{
+border-color:#22c55e;
+box-shadow:0 0 22px rgba(34,197,94,.5);
+}
+
+.status-box{
+background:#0f172a;
+border-radius:14px;
+padding:14px;
+margin-top:18px;
+font-size:.82rem;
+line-height:1.7;
+min-height:110px;
+}
+
+.action-buttons{
+display:flex;
+gap:10px;
+margin-top:14px;
+}
+
+.btn{
+flex:1;
+border:none;
+border-radius:12px;
+padding:12px;
+font-weight:700;
+font-size:.82rem;
+cursor:pointer;
+transition:.25s;
+}
+
+.btn-primary{
+background:linear-gradient(135deg,#2563eb,#38bdf8);
+color:white;
+}
+
+.btn-secondary{
+background:#111827;
+color:white;
+border:1px solid rgba(255,255,255,.08);
+}
+
+.btn:hover{
+transform:translateY(-2px);
+}
+
+.tree{
+margin-top:12px;
+display:flex;
+flex-direction:column;
+gap:12px;
+}
+
+.node{
+background:#0f172a;
+border-radius:12px;
+padding:12px;
+border-left:4px solid #38bdf8;
+font-size:.8rem;
+line-height:1.6;
+opacity:.45;
+transition:.4s;
+}
+
+.node.active{
+opacity:1;
+transform:translateX(4px);
+}
+
+.node.win{
+border-left-color:#22c55e;
+}
+
+.node.lose{
+border-left-color:#ef4444;
+}
+
+.results{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:12px;
+margin-top:16px;
+}
+
+.metric{
+background:#0f172a;
+border-radius:14px;
+padding:14px;
+text-align:center;
+}
+
+.metric-title{
+font-size:.72rem;
+color:#cbd5e1;
+margin-bottom:8px;
+}
+
+.metric-value{
+font-size:1.5rem;
+font-weight:800;
+}
+
+.blue{
+color:#38bdf8;
+}
+
+.green{
+color:#22c55e;
+}
+
+.red{
+color:#ef4444;
+}
+
+.sim-bar{
+height:12px;
+background:#111827;
+border-radius:999px;
+overflow:hidden;
+margin-top:10px;
+}
+
+.sim-fill{
+height:100%;
+width:0%;
+transition:1s;
+}
+
+.fill-stay{
+background:linear-gradient(to right,#ef4444,#f87171);
+}
+
+.fill-switch{
+background:linear-gradient(to right,#22c55e,#4ade80);
+}
+
+.final-box{
+margin-top:18px;
+background:#0f172a;
+padding:14px;
+border-radius:14px;
+font-size:.85rem;
+line-height:1.7;
+border-left:4px solid #38bdf8;
+}
+
+@media(max-width:1100px){
+
+.mh-grid{
+grid-template-columns:1fr;
+}
+
+.panel{
+min-height:auto;
+}
+
+}
+
+</style>
+<script>
+
+const app = document.getElementById("monty-hall-lab");
+
+app.innerHTML = `
+
+<div class="mh-title">
+
+🎲 ¿Puede tu intuición vencer a las probabilidades?
 
 </div>
-</div>
-</div>
-<div class="cell-output cell-output-display">
-<div id="controles-3">
-<div id="ojs-cell-1-3" data-nodetype="declaration">
+
+<div class="mh-sub">
+
+¿Tu intuición puede vencer a las matemáticas?
+
+<br>
+
+La mayoría de personas creen que cambiar de puerta no importa…
+pero las probabilidades dicen otra cosa.
 
 </div>
-</div>
-</div>
-</div>
-</div>
-<section id="resultados-de-la-simulación" class="level2">
-<h2 class="anchored" data-anchor-id="resultados-de-la-simulación">Resultados de la simulación</h2>
-<div class="quarto-ojs-syntax-error">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" data-startfrom="52" data-syntax-error-position="11" data-source-offset="9"><pre class="sourceCode numberSource numberLines java code-with-copy"><code class="sourceCode java" style="counter-reset: source-line 51;"><span id="cb2-52"><a href="#cb2-52"></a>```<span class="op">{</span>ojs<span class="op">}</span></span>
-<span id="cb2-53"><a href="#cb2-53"></a><span class="co">//| label: simulacion</span></span>
-<span id="cb2-54"><a href="#cb2-54"></a></span>
-<span id="cb2-55"><a href="#cb2-55"></a>ejecutar</span>
-<span id="cb2-56"><a href="#cb2-56"></a></span>
-<span id="cb2-57"><a href="#cb2-57"></a><span class="dt">const</span> partidas <span class="op">=</span> <span class="dv">1000</span></span>
-<span id="cb2-58"><a href="#cb2-58"></a>let victorias <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb2-59"><a href="#cb2-59"></a></span>
-<span id="cb2-60"><a href="#cb2-60"></a><span class="cf">for</span> <span class="op">(</span>let i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> partidas<span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
-<span id="cb2-61"><a href="#cb2-61"></a></span>
-<span id="cb2-62"><a href="#cb2-62"></a>  <span class="co">// Puerta con premio</span></span>
-<span id="cb2-63"><a href="#cb2-63"></a>  <span class="dt">const</span> premio <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">floor</span><span class="op">(</span><span class="bu">Math</span><span class="op">.</span><span class="fu">random</span><span class="op">()</span> <span class="op">*</span> puertas<span class="op">)</span></span>
-<span id="cb2-64"><a href="#cb2-64"></a></span>
-<span id="cb2-65"><a href="#cb2-65"></a>  <span class="co">// Primera elección del jugador</span></span>
-<span id="cb2-66"><a href="#cb2-66"></a>  <span class="dt">const</span> eleccion <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">floor</span><span class="op">(</span><span class="bu">Math</span><span class="op">.</span><span class="fu">random</span><span class="op">()</span> <span class="op">*</span> puertas<span class="op">)</span></span>
-<span id="cb2-67"><a href="#cb2-67"></a></span>
-<span id="cb2-68"><a href="#cb2-68"></a>  <span class="co">// Estrategia</span></span>
-<span id="cb2-69"><a href="#cb2-69"></a>  <span class="cf">if</span> <span class="op">(</span>estrategia <span class="op">===</span> <span class="st">"Quedarse"</span><span class="op">)</span> <span class="op">{</span></span>
-<span id="cb2-70"><a href="#cb2-70"></a>    <span class="cf">if</span> <span class="op">(</span>eleccion <span class="op">===</span> premio<span class="op">)</span> victorias<span class="op">++</span></span>
-<span id="cb2-71"><a href="#cb2-71"></a>  <span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
-<span id="cb2-72"><a href="#cb2-72"></a>    <span class="co">// Cambiar gana siempre que la elección inicial NO fuera correcta</span></span>
-<span id="cb2-73"><a href="#cb2-73"></a>    <span class="cf">if</span> <span class="op">(</span>eleccion <span class="op">!==</span> premio<span class="op">)</span> victorias<span class="op">++</span></span>
-<span id="cb2-74"><a href="#cb2-74"></a>  <span class="op">}</span></span>
-<span id="cb2-75"><a href="#cb2-75"></a><span class="op">}</span></span>
-<span id="cb2-76"><a href="#cb2-76"></a></span>
-<span id="cb2-77"><a href="#cb2-77"></a><span class="dt">const</span> porcentaje_simulado <span class="op">=</span> <span class="op">(</span>victorias <span class="op">/</span> partidas<span class="op">)</span> <span class="op">*</span> <span class="dv">100</span></span>
-<span id="cb2-78"><a href="#cb2-78"></a></span>
-<span id="cb2-79"><a href="#cb2-79"></a><span class="dt">const</span> porcentaje_teorico <span class="op">=</span></span>
-<span id="cb2-80"><a href="#cb2-80"></a>  estrategia <span class="op">===</span> <span class="st">"Quedarse"</span></span>
-<span id="cb2-81"><a href="#cb2-81"></a>    <span class="op">?</span> <span class="op">(</span><span class="dv">1</span> <span class="op">/</span> puertas<span class="op">)</span> <span class="op">*</span> <span class="dv">100</span></span>
-<span id="cb2-82"><a href="#cb2-82"></a>    <span class="op">:</span> <span class="op">((</span>puertas <span class="op">-</span> <span class="dv">1</span><span class="op">)</span> <span class="op">/</span> puertas<span class="op">)</span> <span class="op">*</span> <span class="dv">100</span></span>
-<span id="cb2-83"><a href="#cb2-83"></a></span>
-<span id="cb2-84"><a href="#cb2-84"></a><span class="fu">display</span><span class="op">({</span></span>
-<span id="cb2-85"><a href="#cb2-85"></a>  simulado<span class="op">:</span> porcentaje_simulado<span class="op">,</span></span>
-<span id="cb2-86"><a href="#cb2-86"></a>  teorico<span class="op">:</span> porcentaje_teorico</span>
-<span id="cb2-87"><a href="#cb2-87"></a><span class="op">})</span></span>
-<span id="cb2-88"><a href="#cb2-88"></a>```</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-error">
-<div class="callout callout-style-default callout-important callout-empty-content callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Importante</span>OJS Syntax Error (line 57, column 1)Unexpected token
-</div>
-</div>
-<div class="callout-body-container callout-body">
+
+<div class="mh-grid">
+
+<!-- PANEL JUEGO -->
+
+<div class="panel">
+
+<div class="panel-title">
+
+1. El juego
 
 </div>
-</div>
-</div>
-</div>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb3" data-startfrom="91" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 90;"><span id="cb3-91"><a href="#cb3-91" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
-<span id="cb3-92"><a href="#cb3-92" aria-hidden="true" tabindex="-1"></a>  <span class="dt">title</span><span class="op">:</span> <span class="st">"Simulación vs Probabilidad Teórica"</span><span class="op">,</span></span>
-<span id="cb3-93"><a href="#cb3-93" aria-hidden="true" tabindex="-1"></a>  <span class="dt">width</span><span class="op">:</span> <span class="dv">700</span><span class="op">,</span></span>
-<span id="cb3-94"><a href="#cb3-94" aria-hidden="true" tabindex="-1"></a>  <span class="dt">height</span><span class="op">:</span> <span class="dv">450</span><span class="op">,</span></span>
-<span id="cb3-95"><a href="#cb3-95" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-96"><a href="#cb3-96" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
-<span id="cb3-97"><a href="#cb3-97" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">barY</span>(</span>
-<span id="cb3-98"><a href="#cb3-98" aria-hidden="true" tabindex="-1"></a>      [</span>
-<span id="cb3-99"><a href="#cb3-99" aria-hidden="true" tabindex="-1"></a>        {</span>
-<span id="cb3-100"><a href="#cb3-100" aria-hidden="true" tabindex="-1"></a>          <span class="dt">tipo</span><span class="op">:</span> <span class="st">"Simulación"</span><span class="op">,</span></span>
-<span id="cb3-101"><a href="#cb3-101" aria-hidden="true" tabindex="-1"></a>          <span class="dt">valor</span><span class="op">:</span> simulado</span>
-<span id="cb3-102"><a href="#cb3-102" aria-hidden="true" tabindex="-1"></a>        }<span class="op">,</span></span>
-<span id="cb3-103"><a href="#cb3-103" aria-hidden="true" tabindex="-1"></a>        {</span>
-<span id="cb3-104"><a href="#cb3-104" aria-hidden="true" tabindex="-1"></a>          <span class="dt">tipo</span><span class="op">:</span> <span class="st">"Teoría"</span><span class="op">,</span></span>
-<span id="cb3-105"><a href="#cb3-105" aria-hidden="true" tabindex="-1"></a>          <span class="dt">valor</span><span class="op">:</span> teorico</span>
-<span id="cb3-106"><a href="#cb3-106" aria-hidden="true" tabindex="-1"></a>        }</span>
-<span id="cb3-107"><a href="#cb3-107" aria-hidden="true" tabindex="-1"></a>      ]<span class="op">,</span></span>
-<span id="cb3-108"><a href="#cb3-108" aria-hidden="true" tabindex="-1"></a>      {</span>
-<span id="cb3-109"><a href="#cb3-109" aria-hidden="true" tabindex="-1"></a>        <span class="dt">x</span><span class="op">:</span> <span class="st">"tipo"</span><span class="op">,</span></span>
-<span id="cb3-110"><a href="#cb3-110" aria-hidden="true" tabindex="-1"></a>        <span class="dt">y</span><span class="op">:</span> <span class="st">"valor"</span></span>
-<span id="cb3-111"><a href="#cb3-111" aria-hidden="true" tabindex="-1"></a>      }</span>
-<span id="cb3-112"><a href="#cb3-112" aria-hidden="true" tabindex="-1"></a>    )<span class="op">,</span></span>
-<span id="cb3-113"><a href="#cb3-113" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-114"><a href="#cb3-114" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">text</span>(</span>
-<span id="cb3-115"><a href="#cb3-115" aria-hidden="true" tabindex="-1"></a>      [</span>
-<span id="cb3-116"><a href="#cb3-116" aria-hidden="true" tabindex="-1"></a>        {</span>
-<span id="cb3-117"><a href="#cb3-117" aria-hidden="true" tabindex="-1"></a>          <span class="dt">tipo</span><span class="op">:</span> <span class="st">"Simulación"</span><span class="op">,</span></span>
-<span id="cb3-118"><a href="#cb3-118" aria-hidden="true" tabindex="-1"></a>          <span class="dt">valor</span><span class="op">:</span> simulado</span>
-<span id="cb3-119"><a href="#cb3-119" aria-hidden="true" tabindex="-1"></a>        }<span class="op">,</span></span>
-<span id="cb3-120"><a href="#cb3-120" aria-hidden="true" tabindex="-1"></a>        {</span>
-<span id="cb3-121"><a href="#cb3-121" aria-hidden="true" tabindex="-1"></a>          <span class="dt">tipo</span><span class="op">:</span> <span class="st">"Teoría"</span><span class="op">,</span></span>
-<span id="cb3-122"><a href="#cb3-122" aria-hidden="true" tabindex="-1"></a>          <span class="dt">valor</span><span class="op">:</span> teorico</span>
-<span id="cb3-123"><a href="#cb3-123" aria-hidden="true" tabindex="-1"></a>        }</span>
-<span id="cb3-124"><a href="#cb3-124" aria-hidden="true" tabindex="-1"></a>      ]<span class="op">,</span></span>
-<span id="cb3-125"><a href="#cb3-125" aria-hidden="true" tabindex="-1"></a>      {</span>
-<span id="cb3-126"><a href="#cb3-126" aria-hidden="true" tabindex="-1"></a>        <span class="dt">x</span><span class="op">:</span> <span class="st">"tipo"</span><span class="op">,</span></span>
-<span id="cb3-127"><a href="#cb3-127" aria-hidden="true" tabindex="-1"></a>        <span class="dt">y</span><span class="op">:</span> <span class="st">"valor"</span><span class="op">,</span></span>
-<span id="cb3-128"><a href="#cb3-128" aria-hidden="true" tabindex="-1"></a>        <span class="dt">text</span><span class="op">:</span> d <span class="kw">=&gt;</span> <span class="vs">`</span><span class="sc">${</span>d<span class="op">.</span><span class="at">valor</span><span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">1</span>)<span class="sc">}</span><span class="vs">%`</span><span class="op">,</span></span>
-<span id="cb3-129"><a href="#cb3-129" aria-hidden="true" tabindex="-1"></a>        <span class="dt">dy</span><span class="op">:</span> <span class="op">-</span><span class="dv">10</span></span>
-<span id="cb3-130"><a href="#cb3-130" aria-hidden="true" tabindex="-1"></a>      }</span>
-<span id="cb3-131"><a href="#cb3-131" aria-hidden="true" tabindex="-1"></a>    )<span class="op">,</span></span>
-<span id="cb3-132"><a href="#cb3-132" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-133"><a href="#cb3-133" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">ruleY</span>([<span class="dv">0</span>])</span>
-<span id="cb3-134"><a href="#cb3-134" aria-hidden="true" tabindex="-1"></a>  ]<span class="op">,</span></span>
-<span id="cb3-135"><a href="#cb3-135" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-136"><a href="#cb3-136" aria-hidden="true" tabindex="-1"></a>  <span class="dt">y</span><span class="op">:</span> {</span>
-<span id="cb3-137"><a href="#cb3-137" aria-hidden="true" tabindex="-1"></a>    <span class="dt">domain</span><span class="op">:</span> [<span class="dv">0</span><span class="op">,</span> <span class="dv">100</span>]<span class="op">,</span></span>
-<span id="cb3-138"><a href="#cb3-138" aria-hidden="true" tabindex="-1"></a>    <span class="dt">label</span><span class="op">:</span> <span class="st">"% de victorias"</span><span class="op">,</span></span>
-<span id="cb3-139"><a href="#cb3-139" aria-hidden="true" tabindex="-1"></a>    <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span></span>
-<span id="cb3-140"><a href="#cb3-140" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb3-141"><a href="#cb3-141" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="grafico" class="cell-output cell-output-display">
-<div id="ojs-cell-3" data-nodetype="expression">
+
+<div class="panel-sub">
+
+Selecciona una puerta.
+Detrás de una hay un premio 🏆 y detrás de las otras cabras 🐐.
 
 </div>
+
+<div class="doors">
+
+<div class="door" id="door0" onclick="selectDoor(0)">
+🚪
 </div>
+
+<div class="door" id="door1" onclick="selectDoor(1)">
+🚪
 </div>
-</section>
-<section id="qué-está-ocurriendo" class="level2">
-<h2 class="anchored" data-anchor-id="qué-está-ocurriendo">¿Qué está ocurriendo?</h2>
-<p>Cuando eliges una puerta al inicio:</p>
-<ul>
-<li>Tu probabilidad inicial de acertar es:</li>
-</ul>
-<p><span class="math display">\[
-\frac{1}{n}
-\]</span></p>
-<ul>
-<li>La probabilidad de que el premio esté en alguna de las otras puertas es:</li>
-</ul>
-<p><span class="math display">\[
-\frac{n-1}{n}
-\]</span></p>
-<p>Al abrir puertas vacías, esa probabilidad se concentra en la puerta restante.</p>
-<section id="caso-clásico-3-puertas" class="level3">
-<h3 class="anchored" data-anchor-id="caso-clásico-3-puertas">Caso clásico: 3 puertas</h3>
-<ul>
-<li>Quedarse → 33.3%</li>
-<li>Cambiar → 66.6%</li>
-</ul>
-<p>Por eso <strong>cambiar de puerta duplica la probabilidad de ganar</strong>.</p>
+
+<div class="door" id="door2" onclick="selectDoor(2)">
+🚪
+</div>
+
+</div>
+
+<div class="status-box" id="status">
+
+Esperando selección...
+
+</div>
+
+<div class="action-buttons">
+
+<button class="btn btn-primary" onclick="switchDoor()">
+
+🔄 Cambiar puerta
+
+</button>
+
+<button class="btn btn-secondary" onclick="resetGame()">
+
+⟳ Reiniciar
+
+</button>
+
+</div>
+
+</div>
+
+<!-- PANEL PROBABILIDADES -->
+
+<div class="panel">
+
+<div class="panel-title">
+
+2. Árbol de probabilidades
+
+</div>
+
+<div class="panel-sub">
+
+Visualiza por qué cambiar de puerta tiene mayor probabilidad de éxito.
+
+</div>
+
+<div class="tree">
+
+<div class="node" id="node1">
+
+🎯 Elegiste la puerta correcta inicialmente
+<br>
+Probabilidad: <b>1/3</b>
+
+<br><br>
+
+Si cambias → ❌ pierdes
+
+</div>
+
+<div class="node" id="node2">
+
+🐐 Elegiste una puerta incorrecta
+<br>
+Probabilidad: <b>2/3</b>
+
+<br><br>
+
+Si cambias → ✅ ganas
+
+</div>
+
+<div class="node" id="node3">
+
+🧠 El presentador siempre abre una puerta con cabra.
+
+<br><br>
+
+La probabilidad NO se reinicia a 50%-50%.
+
+</div>
+
+</div>
+
+<div class="final-box">
+
+💡 La clave matemática:
+
+<br><br>
+
+Tu primera elección tiene solo <b>33%</b> de probabilidad de acertar.
+
+<br><br>
+
+Las otras dos puertas juntas tenían <b>67%</b>.
+Cuando el presentador elimina una incorrecta,
+esa probabilidad se concentra en la puerta restante.
+
+</div>
+
+</div>
+
+<!-- PANEL RESULTADOS -->
+
+<div class="panel">
+
+<div class="panel-title">
+
+3. Simulación estadística
+
+</div>
+
+<div class="panel-sub">
+
+Ejecuta muchas partidas y compara estrategias.
+
+</div>
+
+<div class="action-buttons">
+
+<button class="btn btn-primary" onclick="simulate(1000)">
+
+⚡ Simular 1000 partidas
+
+</button>
+
+</div>
+
+<div class="results">
+
+<div class="metric">
+
+<div class="metric-title">
+
+Quedarse
+
+</div>
+
+<div class="metric-value red" id="stayPct">
+
+33%
+
+</div>
+
+<div class="sim-bar">
+
+<div class="sim-fill fill-stay" id="stayBar"></div>
+
+</div>
+
+</div>
+
+<div class="metric">
+
+<div class="metric-title">
+
+Cambiar
+
+</div>
+
+<div class="metric-value green" id="switchPct">
+
+67%
+
+</div>
+
+<div class="sim-bar">
+
+<div class="sim-fill fill-switch" id="switchBar"></div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="final-box" id="conclusion">
+
+🧠 La IA y la ciencia de datos no usan intuición.
+
+<br><br>
+
+Usan probabilidades calculadas a partir de evidencia.
+
+</div>
+
+</div>
+
+</div>
+
+`;
+
+let selected = null;
+let prizeDoor = Math.floor(Math.random()*3);
+let openedDoor = null;
+
+function selectDoor(index){
+
+if(selected !== null) return;
+
+selected = index;
+
+document.getElementById("door"+index)
+.classList.add("selected");
+
+let options = [0,1,2].filter(
+d => d !== prizeDoor && d !== selected
+);
+
+openedDoor = options[Math.floor(Math.random()*options.length)];
+
+document.getElementById("door"+openedDoor)
+.classList.add("open");
+
+document.getElementById("door"+openedDoor)
+.innerHTML = "🐐";
+
+document.getElementById("status").innerHTML = `
+
+Elegiste la puerta ${selected+1}.
+
+<br><br>
+
+Monty abrió la puerta ${openedDoor+1} mostrando una cabra 🐐.
+
+<br><br>
+
+¿Deseas cambiar?
+
+`;
+
+document.getElementById("node1").classList.add("active");
+document.getElementById("node2").classList.add("active");
+document.getElementById("node3").classList.add("active");
+
+}
+
+function switchDoor(){
+
+if(selected === null) return;
+
+let remaining = [0,1,2].find(
+d => d !== selected && d !== openedDoor
+);
+
+selected = remaining;
+
+finishGame();
+
+}
+
+function finishGame(){
+
+const doors = document.querySelectorAll(".door");
+
+doors[prizeDoor].innerHTML = "🏆";
+doors[prizeDoor].classList.add("win");
+
+if(selected === prizeDoor){
+
+document.getElementById("status").innerHTML = `
+
+ ¡Ganaste!
+
+<br><br>
+
+Cambiar funcionó porque la probabilidad mayor estaba en las otras puertas.
+
+`;
+
+document.getElementById("node2").classList.add("win");
+
+}else{
+
+document.getElementById("status").innerHTML = `
+
+ Perdiste.
+
+<br><br>
+
+Tu primera elección tenía solo 1/3 de probabilidad.
+
+`;
+
+document.getElementById("node1").classList.add("lose");
+
+}
+
+}
+
+function resetGame(){
+
+selected = null;
+openedDoor = null;
+prizeDoor = Math.floor(Math.random()*3);
+
+document.querySelectorAll(".door").forEach(d=>{
+
+d.className = "door";
+d.innerHTML = "🚪";
+
+});
+
+document.querySelectorAll(".node").forEach(n=>{
+
+n.classList.remove("active","win","lose");
+
+});
+
+document.getElementById("status").innerHTML =
+"Esperando selección...";
+
+}
+
+function simulate(n){
+
+let stayWins = 0;
+let switchWins = 0;
+
+for(let i=0;i<n;i++){
+
+const prize = Math.floor(Math.random()*3);
+const choice = Math.floor(Math.random()*3);
+
+if(choice === prize){
+
+stayWins++;
+
+}else{
+
+switchWins++;
+
+}
+
+}
+
+const stayPct = Math.round((stayWins/n)*100);
+const switchPct = Math.round((switchWins/n)*100);
+
+document.getElementById("stayPct").innerHTML =
+stayPct + "%";
+
+document.getElementById("switchPct").innerHTML =
+switchPct + "%";
+
+document.getElementById("stayBar").style.width =
+stayPct + "%";
+
+document.getElementById("switchBar").style.width =
+switchPct + "%";
+
+document.getElementById("conclusion").innerHTML = `
+
+📊 Después de ${n} simulaciones:
+
+<br><br>
+
+• Quedarse gana aproximadamente <b>${stayPct}%</b>
+
+<br>
+
+• Cambiar gana aproximadamente <b>${switchPct}%</b>
+
+<br><br>
+
+🔥 La evidencia estadística demuestra que cambiar es mejor.
+
+`;
+
+}
+
+</script>
+<p>:::</p>
 
 
-</section>
-</section>
-</section>
 
 </main> <!-- /main -->
-<script type="ojs-module-contents">
-eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6Ilxudmlld29mIHB1ZXJ0YXMgPSBJbnB1dHMucmFuZ2UoXG4gIFszLCAxNV0sXG4gIHtcbiAgICBsYWJlbDogXCJOw7ptZXJvIGRlIHB1ZXJ0YXM6XCIsXG4gICAgc3RlcDogMSxcbiAgICB2YWx1ZTogM1xuICB9XG4pXG5cbnZpZXdvZiBlc3RyYXRlZ2lhID0gSW5wdXRzLnJhZGlvKFxuICBbXCJRdWVkYXJzZVwiLCBcIkNhbWJpYXJcIl0sXG4gIHtcbiAgICBsYWJlbDogXCJFc3RyYXRlZ2lhOlwiLFxuICAgIHZhbHVlOiBcIkNhbWJpYXJcIlxuICB9XG4pXG5cbnZpZXdvZiBlamVjdXRhciA9IElucHV0cy5idXR0b24oXCJTaW11bGFyIDEuMDAwIHBhcnRpZGFzXCIpXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTMiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJcblBsb3QucGxvdCh7XG4gIHRpdGxlOiBcIlNpbXVsYWNpw7NuIHZzIFByb2JhYmlsaWRhZCBUZcOzcmljYVwiLFxuICB3aWR0aDogNzAwLFxuICBoZWlnaHQ6IDQ1MCxcblxuICBtYXJrczogW1xuICAgIFBsb3QuYmFyWShcbiAgICAgIFtcbiAgICAgICAge1xuICAgICAgICAgIHRpcG86IFwiU2ltdWxhY2nDs25cIixcbiAgICAgICAgICB2YWxvcjogc2ltdWxhZG9cbiAgICAgICAgfSxcbiAgICAgICAge1xuICAgICAgICAgIHRpcG86IFwiVGVvcsOtYVwiLFxuICAgICAgICAgIHZhbG9yOiB0ZW9yaWNvXG4gICAgICAgIH1cbiAgICAgIF0sXG4gICAgICB7XG4gICAgICAgIHg6IFwidGlwb1wiLFxuICAgICAgICB5OiBcInZhbG9yXCJcbiAgICAgIH1cbiAgICApLFxuXG4gICAgUGxvdC50ZXh0KFxuICAgICAgW1xuICAgICAgICB7XG4gICAgICAgICAgdGlwbzogXCJTaW11bGFjacOzblwiLFxuICAgICAgICAgIHZhbG9yOiBzaW11bGFkb1xuICAgICAgICB9LFxuICAgICAgICB7XG4gICAgICAgICAgdGlwbzogXCJUZW9yw61hXCIsXG4gICAgICAgICAgdmFsb3I6IHRlb3JpY29cbiAgICAgICAgfVxuICAgICAgXSxcbiAgICAgIHtcbiAgICAgICAgeDogXCJ0aXBvXCIsXG4gICAgICAgIHk6IFwidmFsb3JcIixcbiAgICAgICAgdGV4dDogZCA9PiBgJHtkLnZhbG9yLnRvRml4ZWQoMSl9JWAsXG4gICAgICAgIGR5OiAtMTBcbiAgICAgIH1cbiAgICApLFxuXG4gICAgUGxvdC5ydWxlWShbMF0pXG4gIF0sXG5cbiAgeToge1xuICAgIGRvbWFpbjogWzAsIDEwMF0sXG4gICAgbGFiZWw6IFwiJSBkZSB2aWN0b3JpYXNcIixcbiAgICBncmlkOiB0cnVlXG4gIH1cbn0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ3B1ZXJ0YXMnKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnZXN0cmF0ZWdpYScpIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdlamVjdXRhcicpIn1dfQ==
-</script>
-<script type="module">
-if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
-window._ojs.paths.runtimeToDoc = "../../practicas";
-window._ojs.paths.runtimeToRoot = "../..";
-window._ojs.paths.docToRoot = "..";
-window._ojs.selfContained = false;
-window._ojs.runtime.interpretFromScriptTags();
-</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {

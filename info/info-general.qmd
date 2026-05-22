@@ -1,34 +1,55 @@
 ---
-title: "Información general"
+title: "Información General"
+title-block-banner: false
+
 ---
 
-##  Proyecto ECO-IA. Rediseño metodológico transversal para la alfabetización en IA generativa mediante entornos interactivos Quarto y computación en la nube sostenible"
-
-
-## ¿Qué aprenderás en este curso?
-
-Este recurso  está estructurado para llevarte desde los conceptos más básicos hasta el desarrollo de un pensamiento crítico avanzado sobre la los diferentes modelos de IA.
-
-### Los Tres Pilares de este recurso:
-
-1.  **Interactividad (IA Transparente):** A diferencia de un libro de texto estático, aquí utilizarás laboratorios interactivos que t eperititán entender que la IA no es magia.
-2.  **Sostenibilidad (Green AI):** Aprenderás que cada prompt tiene un coste energético. Nuestro objetivo es la máxima eficiencia: obtener el mejor resultado con el menor número de interacciones.
-3.  **Pensamiento Computacional:** Utilizarás el método **R-T-C (Rol-Tarea-Contexto)** para dominar la ingeniería de prompts, transformando la IA en una aliada estratégica para tu aprendizaje.
-
-## Metodología del Recurso
-
-Este sitio web es un **Recurso Educativo Abierto (REA)** construido con **Quarto**. Esto significa que:
-- El contenido es dinámico y ejecutable.
-- Puedes descargar la versión en PDF para estudiar desconectado.
-- El código es abierto, fomentando la colaboración y la transparencia.
-
-::: {.callout-note}
-### Para quién es este curso
-Este curso está diseñado para estudiantes de Formación Profesional y Educación Secundaria, pero su enfoque práctico lo hace útil para cualquier persona interesada en una alfabetización digital profunda y responsable.
+::: {style="margin-top: 25px;"}
 :::
 
-## Estructura del curso
-El curso se organiza en tres bloques principales:
-- **Módulo 1:** Fundamentos y funcionamiento interno de la IA.
-- **Módulo 2:** Desafíos éticos y el impacto de la "Green AI".
-- **Módulo 3:** Aplicaciones prácticas y proyectos finales.
+El proyecto **ECO-IA** nace como una respuesta educativa a la necesidad de una alfabetización digital profunda, responsable y adaptada a las demandas tecnológicas actuales. Este entorno ha sido diseñado bajo los principios de la innovación docente, combinando el rigor académico con una experiencia de usuario interactiva y amena.
+
+## 🎯 Los Tres Pilares Metodológicos
+
+Para transformar la experiencia de aprendizaje clásica en un proceso inmersivo, el recurso se articula mediante tres ejes transversales:
+
+::: {.callout-note appearance="minimal" icon=false}
+### 🌐 1. Interactividad Real (IA Transparente)
+A diferencia de los manuales estáticos, este entorno integra laboratorios y simuladores dinámicos que permiten a estudiantes y profesores "abrir la caja negra" de los algoritmos y comprender la probabilidad matemática detrás de los modelos predictivos.
+:::
+
+::: {.callout-tip appearance="minimal" icon=false}
+### 🌿 2. Sostenibilidad Digital (Green AI)
+Cada interacción con un modelo de lenguaje masivo tiene un coste energético oculto. Promovemos la optimización del diseño de consultas para maximizar la eficiencia y reducir de forma directa la huella de carbono digital en los servidores de cómputo.
+:::
+
+::: {.callout-important appearance="minimal" icon=false}
+### 🧠 3. Pensamiento Computacional Avanzado
+Mediante la Ingeniería de Prompts basada en el método **R-T-C (Rol - Tarea - Contexto)**, los alumnos adquieren habilidades de comunicación humano-máquina críticas y estructuradas, mitigando el riesgo de alucinaciones en los modelos generativos.
+:::
+
+## 🛠️ Filosofía REA y Enfoque Tecnológico
+
+Este entorno web es un **Recurso Educativo Abierto (REA)** construido en su totalidad con **Quarto** y desplegado en la nube. Esto garantiza ventajas críticas tanto para la comunidad docente como para el alumnado:
+
+* **Portabilidad Universal:** El material se adapta a cualquier dispositivo móvil, tablet o PC.
+* **Inclusión y Accesibilidad (DUA):** Compatible de forma nativa con lectores de pantalla y estructurado para reducir la carga cognitiva.
+* **Acceso Desconectado:** Dispone de un generador automático en la esquina superior derecha para descargar el itinerario completo en formato **PDF de alta calidad**.
+* **Código Abierto:** Al estar basado en texto plano (`.qmd`) y Git, es completamente modular, escalable y auditable por cualquier centro educativo de Aragón.
+
+::: {.callout-info}
+### 👨‍🏫 Perfil del Alumnado
+Aunque el proyecto está diseñado principalmente para estudiantes de **4º de ESO (Digitalización / Tecnología)** y **Módulos transversales de Formación Profesional (Grados Medio y Superior)**, su diseño escalable lo hace apto para cualquier plan de alfabetización digital.
+:::
+
+## 📋 Estructura General del Itinerario
+
+El programa formativo está dividido de forma secuencial en tres grandes bloques y una sección de experimentación práctica:
+
+| Bloque / Módulo | Componentes Teóricos | Laboratorios Asociados |
+| :--- | :--- | :--- |
+| **Módulo 1: Fundamentos** | Funcionamiento interno de modelos LLM, pesos, sesgos y arquitectura predictiva. | `Simulador Monty Hall` |
+| **Módulo 2: Desafíos** | Ética algorítmica, sesgos de datos y el impacto ambiental (*Green AI*). | `Calculadora de Tokens` |
+| **Módulo 3: Aplicaciones** | Ingeniería de Prompts avanzada, metodología R-T-C y casos de uso en FP. | `Constructor de Prompts` |
+| **Evaluación y Reto** | Proyecto de integración transversal y pruebas de asimilación conceptual. | `Proyecto Final ECO-IA` |
+

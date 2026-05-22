@@ -1,0 +1,545 @@
+---
+title: "1. Introducción a la Inteligencia Artificial"
+description: "Conceptos Básicos y Realidad Actual"
+page-layout: article
+format:
+  html:
+    page-layout: full
+    theme: cosmo
+    toc: true
+    code-fold: true
+# format:
+#   revealjs:
+#     theme: simple
+#     css: plantillas/inaem-presentacion.css
+---
+
+
+
+
+## 1. ¿Qué es la Inteligencia Artificial? 
+
+> "La IA es la ciencia de hacer que las máquinas hagan cosas que requerirían inteligencia si las hiciera un humano." — *Marvin Minsky*
+
+La IA es un campo de la informática que se enfoca en crear sistemas capaces de realizar tareas que normalmente requieren inteligencia humana, como el aprendizaje, la toma de decisiones y la resolución de problemas.
+
+## 📜 Guía de hitos: Línea del tiempo interactiva de la IA
+
+::: {.callout-note}
+Haz clic en cada año para ver qué cambió en la historia de la IA.
+:::
+
+<div id="ia-timeline" class="ia-timeline">
+  <style>
+    .ia-timeline{
+      --azul:#0f172a;
+      --azul2:#1d4ed8;
+      --borde:#dbe4f0;
+      --fondo:#ffffff;
+      --fondo-suave:#f8fafc;
+      font-family: inherit;
+      background: var(--fondo);
+      border: 1px solid var(--borde);
+      border-radius: 18px;
+      padding: 1.25rem;
+      margin: 1.5rem 0 2rem 0;
+      box-shadow: 0 10px 25px rgba(15,23,42,.06);
+    }
+    .ia-timeline .tl-rail{
+      position: relative;
+      height: 110px;
+      margin: 0.5rem 0 1rem 0;
+      border-radius: 14px;
+      background:
+        linear-gradient(to right, transparent 0, transparent 18px, #e2e8f0 18px, #e2e8f0 calc(100% - 18px), transparent calc(100% - 18px));
+      overflow: hidden;
+    }
+    .ia-timeline .tl-rail::before{
+      content:"";
+      position:absolute;
+      left: 18px;
+      right: 18px;
+      top: 50%;
+      height: 4px;
+      transform: translateY(-50%);
+      border-top: 3px dashed #cbd5e1;
+      opacity: .9;
+    }
+    .ia-timeline .tl-nodes{
+      position:absolute;
+      inset:0;
+      display:grid;
+      grid-template-columns: repeat(9, 1fr);
+      align-items:center;
+      padding: 0 18px;
+      gap: .5rem;
+    }
+    .ia-timeline .tl-node{
+      width: 52px;
+      height: 52px;
+      margin: 0 auto;
+      border-radius: 999px;
+      border: 3px solid #e2e8f0;
+      background: #fff;
+      color: var(--azul);
+      font-weight: 800;
+      cursor: pointer;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-shadow: 0 4px 10px rgba(15,23,42,.06);
+      transition: transform .2s ease, background .2s ease, color .2s ease, border-color .2s ease;
+      user-select:none;
+    }
+    .ia-timeline .tl-node:hover{ transform: scale(1.08); border-color: var(--azul2); }
+    .ia-timeline .tl-node.active{
+      background: var(--azul2);
+      border-color: var(--azul2);
+      color:#fff;
+      transform: scale(1.12);
+    }
+    .ia-timeline .tl-labels{
+      display:grid;
+      grid-template-columns: repeat(9, 1fr);
+      gap: .5rem;
+      margin-top: .3rem;
+      font-size: .95rem;
+      font-weight: 700;
+      color:#334155;
+      text-align:center;
+    }
+    .ia-timeline .tl-label{
+      line-height: 1.15;
+      padding-top: .2rem;
+    }
+    .ia-timeline .tl-panel{
+      background: linear-gradient(180deg, #fff, #f8fafc);
+      border: 1px solid var(--borde);
+      border-left: 6px solid var(--azul2);
+      border-radius: 14px;
+      padding: 1.1rem 1.1rem 1rem 1.1rem;
+      margin-top: 1rem;
+      min-height: 180px;
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 1rem;
+      align-items:start;
+    }
+    .ia-timeline .badge{
+      display:inline-block;
+      background:#e0f2fe;
+      color:#075985;
+      border-radius:999px;
+      padding:.25rem .65rem;
+      font-size:.8rem;
+      font-weight:800;
+      margin-bottom:.5rem;
+    }
+    .ia-timeline h3{
+      margin: 0 0 .35rem 0;
+      color:#0f172a;
+      font-size: 1.35rem;
+    }
+    .ia-timeline p{ margin: .35rem 0; color:#334155; }
+    .ia-timeline ul{
+      margin:.55rem 0 0 1.1rem;
+      color:#334155;
+    }
+    .ia-timeline .meta{
+      background: #fff;
+      border: 1px solid var(--borde);
+      border-radius: 12px;
+      padding: .9rem;
+    }
+    .ia-timeline .meta strong{ display:block; color:#0f172a; margin-bottom:.25rem; }
+    .ia-timeline .mini{
+      font-size:.95rem;
+      color:#475569;
+      line-height:1.45;
+    }
+    @media (max-width: 900px){
+      .ia-timeline .tl-panel{ grid-template-columns: 1fr; }
+      .ia-timeline .tl-nodes, .ia-timeline .tl-labels{ grid-template-columns: repeat(5, 1fr); }
+      .ia-timeline .tl-rail{ height: 150px; }
+    }
+    @media (max-width: 600px){
+      .ia-timeline .tl-nodes, .ia-timeline .tl-labels{ grid-template-columns: repeat(3, 1fr); }
+      .ia-timeline .tl-rail{ height: 220px; }
+    }
+  </style>
+
+  <div class="tl-rail">
+    <div class="tl-nodes" id="tl-nodes"></div>
+  </div>
+
+  <div class="tl-labels" id="tl-labels"></div>
+
+  <div class="tl-panel" id="tl-panel" aria-live="polite">
+    <div>
+      <div class="badge" id="tl-year-badge">1950</div>
+      <h3 id="tl-title">Test de Turing</h3>
+      <p id="tl-text">
+        Alan Turing propone una pregunta revolucionaria: ¿pueden pensar las máquinas?
+        Su idea abre la puerta a medir la inteligencia artificial con criterios observables.
+      </p>
+      <ul id="tl-list">
+        <li>La IA empieza como una pregunta filosófica y matemática.</li>
+        <li>Se centra en el comportamiento, no en la “magia”.</li>
+      </ul>
+    </div>
+
+    <div class="meta">
+      <strong>Para comentar en clase</strong>
+      <div class="mini" id="tl-meta">
+        La IA no nace de golpe. Avanza por hitos: primero la idea, luego los algoritmos, después la potencia de cálculo y finalmente los datos masivos.
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const hitos = [
+      {
+        year: "1950",
+        title: "Test de Turing",
+        text: "Alan Turing propone una pregunta revolucionaria: ¿pueden pensar las máquinas? Su idea abre la puerta a medir la inteligencia artificial con criterios observables.",
+        list: [
+          "La IA empieza como una pregunta filosófica y matemática.",
+          "Se centra en el comportamiento, no en la “magia”."
+        ],
+        meta: "Es un excelente punto de partida para debatir qué significa “ser inteligente”."
+      },
+      {
+        year: "1956",
+        title: "Conferencia de Dartmouth",
+        text: "Se acuña el término “Inteligencia Artificial”. Nace la disciplina como campo formal de investigación.",
+        list: [
+          "John McCarthy impulsa el nombre del área.",
+          "Se organiza la IA como un campo científico."
+        ],
+        meta: "Aquí puedes explicar por qué los nombres también construyen disciplinas."
+      },
+      {
+        year: "1961",
+        title: "Unimate, el primer robot industrial",
+        text: "Un brazo robótico trabaja en una cadena de montaje y muestra que las máquinas pueden automatizar tareas repetitivas.",
+        list: [
+          "La automatización entra en la industria.",
+          "La IA se relaciona con robots, pero no es lo mismo."
+        ],
+        meta: "Sirve para diferenciar robótica, automatización e inteligencia artificial."
+      },
+      {
+        year: "1966",
+        title: "ELIZA, el primer chatbot",
+        text: "ELIZA simula una conversación humana con reglas simples. Muchas personas pensaron que entendía, aunque solo imitaba patrones.",
+        list: [
+          "El lenguaje es una puerta muy poderosa.",
+          "Imitar no es comprender."
+        ],
+        meta: "Perfecto para hablar de cómo percibimos inteligencia en una máquina."
+      },
+      {
+        year: "1970s",
+        title: "Invierno de la IA",
+        text: "Las expectativas fueron mayores que la tecnología disponible y varios proyectos se frenaron por falta de resultados y financiación.",
+        list: [
+          "La realidad no cumplió las promesas.",
+          "La paciencia científica también importa."
+        ],
+        meta: "Puedes conectar este periodo con la importancia de validar ideas con datos."
+      },
+      {
+        year: "1997",
+        title: "Deep Blue vence a Kasparov",
+        text: "IBM derrota al campeón mundial de ajedrez. La potencia de cálculo muestra que las máquinas pueden superar a humanos en tareas específicas.",
+        list: [
+          "La IA supera a personas expertas en un dominio cerrado.",
+          "No significa inteligencia general."
+        ],
+        meta: "Muy útil para discutir fuerza bruta vs. razonamiento."
+      },
+      {
+        year: "2011",
+        title: "Watson gana Jeopardy!",
+        text: "Watson combina información, búsqueda y análisis del lenguaje para responder preguntas complejas en televisión.",
+        list: [
+          "La IA empieza a trabajar con lenguaje natural.",
+          "Aparecen sistemas capaces de competir con humanos en tiempo real."
+        ],
+        meta: "Buen ejemplo de IA aplicada a preguntas y respuestas."
+      },
+      {
+        year: "2016",
+        title: "AlphaGo derrota al campeón mundial de Go",
+        text: "AlphaGo vence en un juego todavía más complejo que el ajedrez, gracias al aprendizaje profundo y al aprendizaje por refuerzo.",
+        list: [
+          "La IA aprende estrategias nuevas.",
+          "Los datos y la simulación se vuelven cruciales."
+        ],
+        meta: "Aquí puedes introducir la idea de aprender de ejemplos y de experiencia."
+      },
+      {
+        year: "2022–2024",
+        title: "IA generativa",
+        text: "Los modelos de lenguaje y generadores de contenido popularizan la IA en texto, imagen, audio y código.",
+        list: [
+          "La IA deja de solo clasificar y empieza a crear.",
+          "Aparecen usos cotidianos en educación, trabajo y creatividad."
+        ],
+        meta: "Cierra la línea con la etapa que el alumnado reconoce hoy."
+      }
+    ];
+
+    const nodes = document.getElementById('tl-nodes');
+    const labels = document.getElementById('tl-labels');
+    const badge = document.getElementById('tl-year-badge');
+    const title = document.getElementById('tl-title');
+    const text = document.getElementById('tl-text');
+    const list = document.getElementById('tl-list');
+    const meta = document.getElementById('tl-meta');
+
+    function render(index){
+      const h = hitos[index];
+      [...nodes.children].forEach((el, i) => el.classList.toggle('active', i === index));
+
+      badge.textContent = `Año ${h.year}`;
+      title.textContent = h.title;
+      text.textContent = h.text;
+      meta.textContent = h.meta;
+
+      list.innerHTML = h.list.map(item => `<li>${item}</li>`).join('');
+    }
+
+    hitos.forEach((h, i) => {
+      const node = document.createElement('button');
+      node.type = 'button';
+      node.className = 'tl-node' + (i === 0 ? ' active' : '');
+      node.textContent = h.year.replace('2022–2024', '24');
+      node.title = h.title;
+      node.setAttribute('aria-label', `${h.year}: ${h.title}`);
+      node.addEventListener('click', () => render(i));
+      nodes.appendChild(node);
+
+      const lab = document.createElement('div');
+      lab.className = 'tl-label';
+      lab.textContent = h.title;
+      labels.appendChild(lab);
+    });
+
+    render(0);
+  </script>
+</div>
+
+<!-- ![](../img/IAhistoria.png){width="100%" fig-align="center"} -->
+
+**Principales hitos en la evolución de la Inteligencia Artificial (1950–2024)**
+:::
+
+
+
+ Principales hitos en la evolución de la Inteligencia Artificial (1950–2024)
+:::
+
+
+::: {.callout-note collapse="true"}
+### Detalle de los hitos históricos (Click para expandir)
+
+| Año | Hito | Descripción |
+|------|------|-------------|
+| **1950** | Test de Turing | Alan Turing propuso que una máquina podía considerarse “inteligente” si un ser humano, al conversar con ella, no podía distinguirla de otra persona. |
+| **1956** | Conferencia de Dartmouth | Considerada el nacimiento oficial del término *Inteligencia Artificial*. Un grupo de científicos planteó que las máquinas podrían resolver problemas hasta entonces exclusivos de los humanos. |
+| **1961** | Unimate | El primer robot industrial. Trabajaba en la cadena de montaje de General Motors, realizando tareas repetitivas y peligrosas. |
+| **1966** | ELIZA | El primer *chatbot*. Aunque simple y basado en reglas, demostró el poder del lenguaje natural e hizo creer a muchas personas que “tenía sentimientos”. |
+| **1970** | Invierno de la IA | Periodo de frustración (años 70 – 80) donde las expectativas superaron la tecnología disponible; los proyectos se estancaron por falta de resultados. |
+| **1997** | Deep Blue vence a Kasparov | Un momento histórico para la humanidad. Por primera vez una computadora derrotó al campeón mundial de ajedrez, mostrando la capacidad de cálculo de la IA. |
+| **2011** | Watson gana Jeopardy! | IBM creó una IA capaz de entender preguntas, bromas y dobles sentidos, para ganar el famoso un famoso concurso de preguntas en TV. | 
+| **2016** | AlphaGo derrota al campeón mundial de Go | El Go, mucho más complejo que el ajedrez, fue conquistado por la IA de Google DeepMind, que usó estrategias nunca vistas por humanos. |
+| **2024** | IA Generativa | La era actual: La IA ha evolucionado: ya no solo simula el análisis de datos existentes, sino que ahora simula la capacidad creativa para generar imágenes, música y textos desde cero. |
+:::
+
+
+## ¿Sabías que...? (Curiosidades)
+* **Ajedrez:** En 1997, IBM demostró que la fuerza bruta de cálculo podía vencer a la intuición humana.
+* **El término:** La palabra "Inteligencia Artificial" fue acuñado en 1956 por John McCarthy durante la Conferencia de Dartmouth, marcando el inicio formal del campo de estudio.
+
+> "La IA ya no se limita a **simular el análisis** de la información; hoy, **simula la creación** misma, generando contenido original (textos, arte, código) que antes era terreno exclusivo del ser humano."
+
+###  **El futuro – AGI (Inteligencia Artificial General)**
+El gran objetivo: una IA capaz de aprender y realizar cualquier tarea intelectual humana de forma autónoma.
+Aunque aún estamos lejos de lograrlo, el avance hacia la AGI plantea preguntas profundas sobre la naturaleza de la inteligencia y el papel de los humanos en un mundo cada vez más automatizado.
+
+::: {.callout-important}
+### 🧠 Gran Debate: ¿La IA piensa o solo calcula?
+"Si la IA ya simula la creación tan bien que nos cuesta distinguirla, ¿la línea que nos separa de las máquinas está en lo que hacemos o en cómo lo hacemos?"
+:::
+
+
+
+## Dinámica de clase: El Oráculo de la IA
+*¿Qué creéis que la IA NUNCA podrá sustituir en vuestro trabajo diario?*
+(Anotar las respuestas en la pizarra para debatirlas al final de la jornada).
+
+> "La IA ya no se limita a **simular el análisis** de la información; hoy, **simula la creación** misma, generando contenido original (textos, arte, código) que antes era terreno exclusivo del ser humano."
+
+### ¿Qué significa esto en el día a día?
+* **Antes:** La IA nos decía si un correo era Spam.
+* **Ahora:** La IA escribe el correo por nosotros, imitando nuestro estilo.
+
+::: {.fragment .fade-up}
+**Pregunta para la clase:** Si una máquina puede simular perfectamente tu trabajo creativo... ¿cuál es tu nuevo valor añadido como profesional?
+:::
+
+::: {.callout-important}
+### 🧠 Gran Debate: ¿La IA piensa o solo calcula?
+Muchos dicen que la IA ya "piensa". Otros, que es solo una simulación matemática extremadamente avanzada. 
+
+**¿Qué creen ustedes?** ¿Puede una máquina realmente "entender" o solo imita patrones?
+:::
+
+## 1.1. La IA como Herramienta de Predicción 
+La IA se basa en algoritmos que analizan grandes cantidades de datos para identificar patrones y hacer predicciones. Esto es fundamental para aplicaciones como la predicción del clima, recomendaciones de productos y detección de fraudes.
+
+
+::: {layout-ncol=2}
+![Neurona Biológica](../img/neurona_bio.png)
+
+![Neurona Artificial](../img/neurona_art.png)
+:::
+
+* **Ejemplo:** Predicción del clima, recomendaciones de productos, detección de fraudes.
+
+## 2. La IA como Herramienta de Predicción {#sec-prediccion}
+
+[cite_start]La Inteligencia Artificial moderna no opera mediante reglas rígidas, sino que se basa en algoritmos que analizan grandes volúmenes de datos para identificar patrones y generar **predicciones** probabilísticas[cite: 26]. [cite_start]Este enfoque es el que permite aplicaciones críticas como la detección de fraudes, recomendaciones personalizadas o la predicción climática[cite: 27, 28].
+
+### El Modelo Fundacional: La Neurona Artificial
+
+[cite_start]Para comprender cómo predice una máquina, debemos observar su unidad básica de cálculo, la cual imita el comportamiento de las neuronas biológicas[cite: 32].
+
+::: {.column-page}
+![Comparación entre la estructura de una neurona biológica y el modelo matemático de un perceptrón (neurona artificial).](../img/comparativa_neuronas.png){#fig-neuronas fig-align="center"}
+:::
+
+#### ¿Cómo funciona este proceso?
+
+[cite_start]Una neurona artificial es una unidad de cálculo que procesa información siguiendo estos pasos lógicos[cite: 32]:
+
+1.  [cite_start]**Entradas ($x$):** Recibe un vector de datos provenientes del exterior o de otras neuronas[cite: 32].
+2.  [cite_start]**Pesos ($w$):** Cada entrada tiene un peso asociado que indica su importancia relativa en el proceso de decisión[cite: 32].
+3.  [cite_start]**Regla de Propagación:** El sistema multiplica cada entrada por su peso, suma todos los resultados y añade un **sesgo ($b$)** para ajustar la sensibilidad del modelo[cite: 32].
+4.  [cite_start]**Función de Activación ($f$):** El resultado final se pasa por una función que decide si la neurona se "excita" (genera una salida activa) o permanece inactiva[cite: 32]. [cite_start]Este resultado final es lo que conocemos como **activación**[cite: 32].
+
+::: {.callout-important}
+### Concepto Clave: Aprendizaje vs. Reglas
+A diferencia de la programación tradicional, la IA **aprende de ejemplos**. [cite_start]No se le dictan reglas fijas; el sistema ajusta automáticamente sus **pesos ($w$)** hasta que sus predicciones coinciden con la realidad[cite: 29, 36, 37].
+:::
+
+---
+
+### Aplicación Práctica: De las Reglas a la Predicción
+
+[cite_start]Para visualizar este "salto tecnológico", comparamos un sistema de tasación inmobiliaria basado en reglas manuales frente a uno que utiliza aprendizaje automático[cite: 31, 32].
+
+::: {.panel-tabset}
+
+### 💻 Programación Tradicional (Rígida)
+Se basa en sentencias `if-else`. [cite_start]Si el programador olvida incluir una variable (como "vistas al mar"), el sistema es incapaz de valorar esa característica por sí solo[cite: 31].
+
+```{python}
+#| echo: true
+def tasador_manual(metros, zona):
+    precio_base = metros * 1500
+    if zona == "Centro":
+        return precio_base + 50000
+    elif zona == "Playa":
+        return precio_base + 80000
+    else:
+        return precio_base
+
+print(f"Precio (Reglas): {tasador_manual(80, 'Centro')}€")
+
+```
+
+:::
+
+
+::: {.note}
+💡 **Nota:** La IA aprende de ejemplos, no de reglas fijas.
+:::
+
+.....
+## 3. Algoritmos Tradicionales vs. Modelos de Aprendizaje ⚙️
+### 💻 Recurso Interactivo: El Salto Tecnológico
+
+Observad la diferencia entre dar una orden rígida y dejar que el sistema aprenda.
+
+#### 1. Programación Tradicional (Reglas fijas)
+En este modelo, si el programador olvida una regla (ej. "vistas al mar"), el precio nunca cambiará aunque la casa sea preciosa.
+
+###  Recurso Interactivo: El Salto Tecnológico
+Aquí compararemos un sistema basado en reglas (If-Else) frente a uno predictivo.
+
+🛠️ Recurso Práctico: De las Reglas a la Predicción
+Para experimentar con estos conceptos, utilizaremos Google Colab, una herramienta que te permite ejecutar código en la nube sin instalar nada en tu ordenador.
+```{python}
+# Ejemplo de programación tradicional
+def tasador_manual(metros, zona):
+    precio_base = metros * 1500
+    
+    # Aquí definimos las "reglas"
+    if zona == "Centro":
+        return precio_base + 50000
+    elif zona == "Playa":
+        return precio_base + 80000
+    else:
+        return precio_base
+
+# Prueba cambiando los valores abajo:
+resultado = tasador_manual(80, "Centro")
+print(f"Precio calculado por reglas: {resultado}€")
+```
+
+En este ejemplo, el modelo de aprendizaje puede ajustar su predicción basándose en los datos, mientras que la programación tradicional no puede adaptarse a nuevas situaciones sin modificar el código.
+
+2. El modelo de "IA" (Aprendizaje Automático) 🧠
+Ahora, en lugar de escribir reglas, vamos a darle ejemplos a la IA para que ella "deduzca" cuánto vale cada característica. Verás que no es magia, sino un ajuste matemático de pesos.
+```{python}
+import numpy as np
+from sklearn.linear_model import LinearRegression
+# Datos de ejemplo: metros cuadrados, zona (0=Interior, 1=Playa), precio
+X = np.array([[80, 0], [80, 1], [100, 0], [100, 1], [120, 0], [120, 1]])
+y = np.array([120000, 200000, 150000, 250000, 180000, 300000])      
+# Entrenamos el modelo
+modelo = LinearRegression() 
+modelo.fit(X, y)
+# Prueba con nuevos datos
+nueva_casa = np.array([[90, 1]])  # 90 metros en zona de playa
+prediccion = modelo.predict(nueva_casa)
+print(f"Precio predicho por IA: {prediccion[0]:.2f}€")
+```
+
+## 4. IA de Película vs. IA de Bolsillo 
+
+* **IA General (Ficción):** El mito de Terminator.
+* **IA Estrecha (Realidad):** Netflix, Google Maps y ChatGPT.
+
+## 5. Cierre: Tu primer Prompt efectivo 
+
+Para que la IA pase de darnos respuestas genéricas a soluciones brillantes, usaremos la fórmula **R-T-C**:
+
+1.  **R**ol: Dile quién debe ser (ej: "Actúa como un experto en...")
+2.  **T**area: Qué quieres que haga exactamente (ej: "Escribe un resumen de...")
+3.  **C**ontexto: Detalles que limitan o guían (ej: "Para un público principiante y en menos de 100 palabras").
+
+### 🚀 ¡Pruébalo ahora!
+Copia y completa este ejemplo en ChatGPT:
+> *"Actúa como un **[Rol: Profesor de secundaria]**. Explica **[Tarea: qué es una neurona artificial]** usando una analogía sobre **[Contexto: el funcionamiento de una fábrica]**."*
+
+## 6. Evaluación ✍️
+
+### Ejercicio práctico: Crea tu propio Prompt
+
+
+## 7. Entraga de la solución
+
+### A través de Moodle: Subir un documento con el prompt que has creado y la respuesta que te ha dado la IA.    

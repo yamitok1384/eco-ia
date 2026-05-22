@@ -2,9 +2,15 @@
 title: "1. Introducción a la Inteligencia Artificial"
 description: "Conceptos Básicos y Realidad Actual"
 page-layout: article
+
 format:
-    pdf:
-        output-ext: "pdf"
+  html:
+    page-layout: full
+    theme: cosmo
+    toc: true
+    code-fold: true
+execute:
+  echo: false    
 # format:
 #   revealjs:
 #     theme: simple
@@ -14,20 +20,196 @@ format:
 
 
 
-## 1. ¿Qué es la Inteligencia Artificial? 
+##  ¿Qué es la Inteligencia Artificial? 
 
 > "La IA es la ciencia de hacer que las máquinas hagan cosas que requerirían inteligencia si las hiciera un humano." — *Marvin Minsky*
 
 La IA es un campo de la informática que se enfoca en crear sistemas capaces de realizar tareas que normalmente requieren inteligencia humana, como el aprendizaje, la toma de decisiones y la resolución de problemas.
 
-## 📜 Guía de hitos: Línea del tiempo de la IA
+## Principales hitos en la evolución de la IA (1950–2024)
 
-::: {#fig-historia}
 
-![](../img/IAhistoria.png){width="100%" fig-align="center"}
 
- Principales hitos en la evolución de la Inteligencia Artificial (1950–2024)
-:::
+<div id="timeline"></div>
+
+<style>
+#timeline{
+  background:#f8fafc;
+  border-radius:16px;
+  padding:2rem;
+  margin:2rem 0;
+  border:1px solid #e2e8f0;
+}
+
+.timeline-line{
+  display:flex;
+  justify-content:space-between;
+  position:relative;
+  margin-bottom:2rem;
+}
+
+.timeline-line::before{
+  content:'';
+  position:absolute;
+  top:25px;
+  left:0;
+  right:0;
+  height:4px;
+  background:#cbd5e1;
+  z-index:1;
+}
+
+.node{
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  background:white;
+  border:3px solid #94a3b8;
+  z-index:2;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.node:hover{
+  transform:scale(1.1);
+}
+
+.node.active{
+  background:#2563eb;
+  color:white;
+  border-color:#2563eb;
+}
+
+.card{
+  background:white;
+  padding:1.5rem;
+  border-radius:12px;
+  border-left:6px solid #2563eb;
+  box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+
+.card h3{
+  margin-top:0;
+}
+</style>
+
+<script>
+
+const eventos = [
+
+{
+  year:"1950",
+  title:"Test de Turing",
+  text:"Alan Turing propuso que una máquina podía considerarse inteligente si un ser humano, al conversar con ella, no podía distinguirla de otra persona."
+},
+
+{
+  year:"1956",
+  title:"Conferencia de Dartmouth",
+  text:"Considerada el nacimiento oficial de la Inteligencia Artificial. Un grupo de científicos planteó que las máquinas podrían resolver problemas exclusivos de los humanos."
+},
+
+{
+  year:"1961",
+  title:"Unimate",
+  text:"El primer robot industrial. Trabajaba en la cadena de montaje de General Motors realizando tareas repetitivas y peligrosas."
+},
+
+{
+  year:"1966",
+  title:"ELIZA",
+  text:"El primer chatbot. Aunque simple y basado en reglas, demostró el poder del lenguaje natural e hizo creer a muchas personas que tenía sentimientos."
+},
+
+{
+  year:"1970",
+  title:"Invierno de la IA",
+  text:"Periodo de frustración durante los años 70 y 80 donde las expectativas superaron la tecnología disponible y muchos proyectos quedaron estancados."
+},
+
+{
+  year:"1997",
+  title:"Deep Blue vence a Kasparov",
+  text:"Por primera vez una computadora derrotó al campeón mundial de ajedrez, demostrando el enorme poder computacional de la IA."
+},
+
+{
+  year:"2011",
+  title:"Watson gana Jeopardy!",
+  text:"IBM creó una IA capaz de entender preguntas, bromas y dobles sentidos para ganar un famoso concurso de televisión."
+},
+
+{
+  year:"2016",
+  title:"AlphaGo derrota al campeón mundial de Go",
+  text:"La IA de Google DeepMind derrotó al campeón mundial del juego Go usando estrategias nunca vistas por humanos."
+},
+
+{
+  year:"2024",
+  title:"IA Generativa",
+  text:"La IA actual ya no solo analiza datos: ahora puede generar imágenes, música, texto y código desde cero."
+}
+
+];
+
+const container = document.getElementById("timeline");
+
+const line = document.createElement("div");
+line.className = "timeline-line";
+
+const card = document.createElement("div");
+card.className = "card";
+
+function render(index){
+
+  document.querySelectorAll(".node")
+    .forEach(n => n.classList.remove("active"));
+
+  document.getElementById("node-"+index)
+    .classList.add("active");
+
+  card.innerHTML = `
+    <h2>${eventos[index].title}</h2>
+    <h3>${eventos[index].year}</h3>
+    <p>${eventos[index].text}</p>
+  `;
+}
+
+eventos.forEach((e,i)=>{
+
+  const node = document.createElement("div");
+
+  node.className = "node";
+  node.id = "node-"+i;
+
+  node.innerText = e.year;
+
+  node.onclick = ()=> render(i);
+
+  line.appendChild(node);
+
+});
+
+container.appendChild(line);
+container.appendChild(card);
+
+render(0);
+
+</script>
+
+
+
+
+
+<!-- ![](../img/IAhistoria.png){width="100%" fig-align="center"} -->
+
+
 
 
 ::: {.callout-note collapse="true"}
@@ -87,6 +269,685 @@ Muchos dicen que la IA ya "piensa". Otros, que es solo una simulación matemáti
 
 ## 1.1. La IA como Herramienta de Predicción 
 La IA se basa en algoritmos que analizan grandes cantidades de datos para identificar patrones y hacer predicciones. Esto es fundamental para aplicaciones como la predicción del clima, recomendaciones de productos y detección de fraudes.
+
+
+
+#### ¿Cómo funciona este proceso?
+
+Una neurona artificial es una unidad de cálculo que procesa información siguiendo estos pasos lógicos:
+
+1. **Entradas (x):** Recibe un vector de datos provenientes del exterior o de otras neuronas.
+2. **Pesos (w):** Cada entrada tiene un peso asociado que indica su importancia relativa en el proceso de decisión.
+3. **Regla de Propagación:** El sistema multiplica cada entrada por su peso, suma todos los resultados y añade un **sesgo (b)** para ajustar la sensibilidad del modelo.
+4. **Función de Activación (f):** El resultado final se pasa por una función que decide si la neurona se "excita" (genera una salida activa) o permanece inactiva. Este resultado final es lo que conocemos como **activación**.
+
+---
+
+#### ¿Cómo funciona este proceso? De la Biología al Algoritmo
+
+Para entender la IA, primero debemos mirar a la naturaleza. Las redes neuronales artificiales son una inspiración matemática de nuestro propio cerebro:
+
+| 🧠 Neurona Biológica | 💻 Neurona Artificial | Función en el sistema |
+| :--- | :--- | :--- |
+| **Dendritas** | **Entradas ($x$)** | Reciben los datos del exterior (ej. los píxeles de una imagen). |
+| **Sinapsis** | **Pesos ($w$)** | Fuerza o importancia de la conexión. Es lo que la red "aprende". |
+| **Soma (Núcleo)** | **Suma + Sesgo ($b$)** | Procesa la información acumulada. |
+| **Axón** | **Activación (Salida)** | Transmite la decisión o predicción final. |
+
+---
+
+### 🔬 Laboratorio: Entrenamiento vs. Inferencia
+
+En la programación tradicional, nosotros escribimos las reglas. En la IA, **la máquina descubre las reglas ajustando sus pesos**. Vamos a simular las dos fases críticas de este proceso.
+
+
+## 🧠 Entrena tu primera neurona IA
+
+
+<div id="ai-neural-lab"></div>
+
+<style>
+#ai-neural-lab{
+  background:
+    radial-gradient(circle at top left, #0f3b82 0%, #07111f 42%),
+    #07111f;
+  border-radius: 22px;
+  padding: 14px;
+  color: white;
+  font-family: Inter, Arial, sans-serif;
+  overflow: hidden;
+  box-shadow: 0 0 40px rgba(0,0,0,.45);
+  margin: 1rem 0;
+}
+
+#ai-neural-lab *{
+  box-sizing: border-box;
+}
+
+.ai-header{
+  display:flex;
+  gap:14px;
+  align-items:flex-start;
+  margin-bottom:18px;
+}
+
+.ai-icon{
+  font-size:42px;
+  color:#38bdf8;
+  filter:drop-shadow(0 0 10px #38bdf8);
+  line-height:1;
+}
+
+.ai-title{
+  font-size:1.8rem;
+  font-weight:800;
+  margin:0 0 6px 0;
+}
+
+.ai-desc{
+  font-size:.88rem;
+  line-height:1.6;
+  color:#dbeafe;
+  max-width:1100px;
+}
+
+.ai-grid{
+  display:grid;
+  grid-template-columns:0.9fr 1.4fr 0.9fr;
+  gap:12px;
+  align-items:start;
+}
+
+.ai-card{
+  background:rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:18px;
+  padding:16px;
+  min-height:620px;
+  backdrop-filter: blur(10px);
+}
+
+.card-title{
+  font-size:1.25rem;
+  font-weight:700;
+  color:#38bdf8;
+  margin-bottom:6px;
+}
+
+.card-sub{
+  font-size:.8rem;
+  color:#dbeafe;
+  margin-bottom:14px;
+  line-height:1.4;
+}
+
+.dataset{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+
+.animal-card{
+  background:#081222;
+  border-radius:14px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.05);
+  transition:.25s;
+}
+
+.animal-card.active{
+  border-color:#38bdf8;
+  box-shadow:0 0 20px rgba(56,189,248,.45);
+  transform:scale(1.02);
+}
+
+.animal-card img{
+  width:100%;
+  height:120px;
+  object-fit:cover;
+  display:block;
+}
+
+.animal-label{
+  padding:8px 10px;
+  font-size:.82rem;
+  font-weight:600;
+}
+
+.blue{ color:#38bdf8; }
+.purple{ color:#a855f7; }
+.green{ color:#22c55e; }
+.orange{ color:#f59e0b; }
+
+.learning-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+  margin-top:10px;
+}
+
+.step{
+  text-align:center;
+  opacity:.35;
+  transition:.45s;
+}
+
+.step.active{
+  opacity:1;
+  transform:translateY(-4px);
+}
+
+.step-title{
+  font-size:.8rem;
+  color:#38bdf8;
+  margin-bottom:8px;
+  font-weight:700;
+}
+
+.step-box{
+  background:#081222;
+  border-radius:12px;
+  padding:10px;
+  border:2px solid rgba(56,189,248,.15);
+}
+
+.step.active .step-box{
+  border-color:#38bdf8;
+  box-shadow:0 0 20px rgba(56,189,248,.35);
+}
+
+.step-image{
+  position:relative;
+  height:100px;
+  border-radius:10px;
+  overflow:hidden;
+  margin-bottom:10px;
+}
+
+.step-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  filter:grayscale(1);
+}
+
+.pixel-overlay{
+  position:absolute;
+  inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.12) 1px, transparent 1px);
+  background-size:12px 12px;
+}
+
+.pixel-values{
+  font-size:.6rem;
+  line-height:1.5;
+  color:#cbd5e1;
+  margin-bottom:10px;
+}
+
+.brain{
+  font-size:42px;
+  margin:8px 0;
+  animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+  0%{ transform:scale(1); }
+  50%{ transform:scale(1.08); }
+  100%{ transform:scale(1); }
+}
+
+.pred{
+  background:#0f172a;
+  border-radius:10px;
+  padding:8px;
+  font-size:.75rem;
+  line-height:1.6;
+}
+
+.progress-area{
+  margin-top:18px;
+}
+
+.progress-top{
+  display:flex;
+  justify-content:space-between;
+  font-size:.72rem;
+  margin-bottom:6px;
+  color:#dbeafe;
+}
+
+.progress{
+  height:10px;
+  background:#111827;
+  border-radius:999px;
+  overflow:hidden;
+}
+
+.progress-fill{
+  height:100%;
+  width:0%;
+  background:linear-gradient(to right,#2563eb,#38bdf8);
+  transition:1s;
+}
+
+.metrics{
+  display:grid;
+  grid-template-columns:.8fr .8fr 2fr;
+  gap:10px;
+  margin-top:14px;
+}
+
+.metric{
+  background:#081222;
+  border-radius:12px;
+  padding:10px;
+  border:1px solid rgba(255,255,255,.05);
+}
+
+.metric small{
+  font-size:.62rem;
+  color:#cbd5e1;
+}
+
+.metric-value{
+  margin-top:4px;
+  font-size:.95rem;
+  font-weight:700;
+}
+
+.weights-title{
+  font-size:.78rem;
+  margin-bottom:10px;
+}
+
+.weight{
+  margin-bottom:8px;
+}
+
+.weight-top{
+  display:flex;
+  justify-content:space-between;
+  font-size:.62rem;
+  margin-bottom:3px;
+}
+
+.bar{
+  height:7px;
+  background:#111827;
+  border-radius:999px;
+  overflow:hidden;
+}
+
+.fill{
+  height:100%;
+  width:10%;
+  background:linear-gradient(to right,#38bdf8,#2563eb);
+  transition:1s;
+}
+
+.controls{
+  display:flex;
+  gap:10px;
+  margin-top:18px;
+}
+
+.btn{
+  flex:1;
+  border:none;
+  border-radius:12px;
+  padding:12px;
+  font-size:.85rem;
+  font-weight:700;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.btn-primary{
+  background:linear-gradient(135deg,#2563eb,#3b82f6);
+  color:white;
+}
+
+.btn-secondary{
+  background:#0f172a;
+  color:white;
+  border:1px solid rgba(255,255,255,.08);
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+}
+
+.inference{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.inf-card{
+  display:flex;
+  gap:10px;
+  background:#081222;
+  border-radius:14px;
+  padding:5px;
+  cursor:pointer;
+  transition:.3s;
+  border:1px solid rgba(255,255,255,.05);
+}
+
+.inf-card:hover{
+  transform:translateY(-2px);
+  border-color:#38bdf8;
+}
+
+.inf-card img{
+  width:50px;
+  height:50px;
+  object-fit:cover;
+  border-radius:12px;
+}
+
+.inf-text{
+  font-size:.8rem;
+  line-height:1.7;
+}
+
+.result{
+  font-size:1.8rem;
+  font-weight:800;
+  margin:4px 0;
+}
+
+@media(max-width:1200px){
+  .ai-grid{
+    grid-template-columns:1fr;
+  }
+
+  .ai-card{
+    min-height:auto;
+  }
+
+  .learning-grid{
+    grid-template-columns:1fr 1fr;
+  }
+}
+</style>
+
+<script>
+const app = document.getElementById("ai-neural-lab");
+
+app.innerHTML = `
+  <div class="ai-header">
+    <div class="ai-icon">🧠</div>
+    <div>
+      <div class="ai-title">¿Cómo aprende una red neuronal a reconocer imágenes?</div>
+      <div class="ai-desc">
+        Durante el entrenamiento, la red neuronal analiza miles de píxeles y aprende patrones visuales:
+        bordes, texturas, formas y contrastes.
+        <br>
+        Cada imagen se convierte en números de entrada:
+        <b>x₁, x₂, x₃ ... xₙ</b>
+      </div>
+    </div>
+  </div>
+
+  <div class="ai-grid">
+    <div class="ai-card">
+      <div class="card-title">1. Dataset de entrenamiento</div>
+      <div class="card-sub">Ejemplos usados para enseñar a la red.</div>
+
+      <div class="dataset">
+        <div class="animal-card" id="dataset1">
+          <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?q=80&w=600&auto=format&fit=crop" alt="Perro 1">
+          <div class="animal-label blue">● Perro</div>
+        </div>
+
+        <div class="animal-card" id="dataset2">
+          <img src="https://images.unsplash.com/photo-1537151625747-768eb6cf92b2?q=80&w=600&auto=format&fit=crop" alt="Perro 2">
+          <div class="animal-label blue">● Perro</div>
+        </div>
+
+        <div class="animal-card" id="dataset3">
+          <img src="https://images.unsplash.com/photo-1519052537078-e6302a4968d4?q=80&w=600&auto=format&fit=crop" alt="Gato 1">
+          <div class="animal-label purple">● Gato</div>
+        </div>
+
+        <div class="animal-card" id="dataset4">
+          <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?q=80&w=600&auto=format&fit=crop" alt="Gato 2">
+          <div class="animal-label purple">● Gato</div>
+        </div>
+        <div class="controls">
+        <button class="btn btn-primary" onclick="trainNetwork()">▶ Entrenar red</button>
+        <button class="btn btn-secondary" onclick="resetNetwork()">⟳ Reiniciar</button>
+      </div>
+      </div>
+    </div>
+
+    <div class="ai-card">
+      <div class="card-title">2. Aprendizaje de la red neuronal</div>
+      <div class="card-sub">La red ve una imagen, calcula, comete errores y ajusta sus pesos.</div>
+
+      <div class="learning-grid">
+        <div class="step" id="step1">
+          <div class="step-title">Paso 1</div>
+          <div class="step-box">
+            <div class="step-image">
+              <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?q=80&w=600&auto=format&fit=crop" alt="Paso 1 perro">
+              <div class="pixel-overlay"></div>
+            </div>
+            
+            <div class="brain">🧠</div>
+            <div class="pred">Perro: 0.82<br>Gato: 0.18</div>
+          </div>
+        </div>
+
+        <div class="step" id="step2">
+          <div class="step-title">Paso 2</div>
+          <div class="step-box">
+            <div class="step-image">
+              <img src="https://images.unsplash.com/photo-1519052537078-e6302a4968d4?q=80&w=600&auto=format&fit=crop" alt="Paso 2 gato">
+              <div class="pixel-overlay"></div>
+            </div>
+            
+            <div class="brain">🧠</div>
+            <div class="pred">Perro: 0.21<br>Gato: 0.79</div>
+          </div>
+        </div>
+
+        <div class="step" id="step3">
+          <div class="step-title">Paso 3</div>
+          <div class="step-box">
+            <div class="step-image">
+              <img src="https://images.unsplash.com/photo-1537151625747-768eb6cf92b2?q=80&w=600&auto=format&fit=crop" alt="Paso 3 perro">
+              <div class="pixel-overlay"></div>
+            </div>
+            
+            <div class="brain">🧠</div>
+            <div class="pred">Perro: 0.91<br>Gato: 0.09</div>
+          </div>
+        </div>
+
+        <div class="step" id="step4">
+          <div class="step-title">Paso 4</div>
+          <div class="step-box">
+            <div class="step-image">
+              <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?q=80&w=600&auto=format&fit=crop" alt="Paso 4 gato">
+              <div class="pixel-overlay"></div>
+            </div>
+            
+            <div class="brain">🧠</div>
+            <div class="pred">Perro: 0.12<br>Gato: 0.88</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="progress-area">
+        <div class="progress-top">
+          <div>Época <span id="epoch">0</span> / 10</div>
+          <div id="trainstatus">Esperando...</div>
+        </div>
+        <div class="progress">
+          <div class="progress-fill" id="progressfill"></div>
+        </div>
+      </div>
+
+      <div class="metrics">
+        <div class="metric">
+          <small>Accuracy</small>
+          <div class="metric-value" id="acc">0%</div>
+        </div>
+
+        <div class="metric">
+          <small>Error</small>
+          <div class="metric-value purple" id="loss">1.00</div>
+        </div>
+
+        <div class="metric">
+          <div class="weights-title">Pesos aprendidos</div>
+
+          <div class="weight">
+            <div class="weight-top"><span>Bordes</span><span>0.78</span></div>
+            <div class="bar"><div class="fill" id="w1"></div></div>
+          </div>
+
+          <div class="weight">
+            <div class="weight-top"><span>Texturas</span><span>0.65</span></div>
+            <div class="bar"><div class="fill" id="w2"></div></div>
+          </div>
+
+          <div class="weight">
+            <div class="weight-top"><span>Formas</span><span>0.82</span></div>
+            <div class="bar"><div class="fill" id="w3"></div></div>
+          </div>
+
+          <div class="weight">
+            <div class="weight-top"><span>Contrastes</span><span>0.67</span></div>
+            <div class="bar"><div class="fill" id="w4"></div></div>
+          </div>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div class="ai-card">
+      <div class="card-title">3. Inferencia (imágenes nuevas)</div>
+      <div class="card-sub">La red usa lo aprendido para predecir.</div>
+
+      <div class="inference">
+        <div class="inf-card" onclick="predictAnimal('dog')">
+          <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?q=80&w=600&auto=format&fit=crop" alt="Perro nuevo">
+          <div class="inf-text">
+            Predicción:
+            <div class="result blue" style="font-size:15px;">Perro</div>
+            Perro: 0.93<br>
+            Gato: 0.07
+          </div>
+          <div class="green" style="font-size:15px;">✓</div>
+        </div>
+
+        <div class="inf-card" onclick="predictAnimal('cat')">
+          <img src="https://images.unsplash.com/photo-1511044568932-338cba0ad803?q=80&w=600&auto=format&fit=crop" alt="Gato nuevo">
+          <div class="inf-text">
+            Predicción:
+            <div class="result purple" style="font-size:15px;">Gato</div>
+            Perro: 0.06<br>
+            Gato: 0.94
+          </div>
+          <div class="green" style="font-size:15px;">✓</div>
+        </div>
+
+        <div class="inf-card" onclick="predictAnimal('rabbit')">
+          <img src="https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?q=80&w=600&auto=format&fit=crop" alt="Conejo">
+          <div class="inf-text">
+            Predicción:
+            <div class="result orange" style="font-size:15px;">Conejo </div>
+            Perro: 0.48<br>
+            Gato: 0.52
+          </div>
+          <div class="orange" style="font-size:15px;">?</div>
+        </div>
+      </div>
+
+      <div style="margin-top:12px;font-size:.72rem;line-height:1.6;color:#cbd5e1;">
+        La red no fue entrenada con conejos.<br>
+        Es una imagen fuera del conjunto de entrenamiento.
+      </div>
+    </div>
+  </div>
+`;
+
+async function trainNetwork(){
+  const steps = [
+    document.getElementById("step1"),
+    document.getElementById("step2"),
+    document.getElementById("step3"),
+    document.getElementById("step4")
+  ];
+
+  const datasets = [
+    document.getElementById("dataset1"),
+    document.getElementById("dataset2"),
+    document.getElementById("dataset3"),
+    document.getElementById("dataset4")
+  ];
+
+  for(let i = 0; i < steps.length; i++){
+    steps.forEach(s => s.classList.remove("active"));
+    datasets.forEach(d => d.classList.remove("active"));
+
+    steps[i].classList.add("active");
+    datasets[i].classList.add("active");
+
+    document.getElementById("epoch").innerHTML = String(i + 1);
+    document.getElementById("progressfill").style.width = ((i + 1) * 22) + "%";
+    document.getElementById("acc").innerHTML = (60 + i * 10) + "%";
+    document.getElementById("loss").innerHTML = (0.82 - i * 0.16).toFixed(2);
+    document.getElementById("trainstatus").innerHTML = "Entrenando...";
+
+    document.getElementById("w1").style.width = (30 + i * 14) + "%";
+    document.getElementById("w2").style.width = (20 + i * 16) + "%";
+    document.getElementById("w3").style.width = (35 + i * 12) + "%";
+    document.getElementById("w4").style.width = (25 + i * 13) + "%";
+
+    await new Promise(r => setTimeout(r, 1300));
+  }
+
+  document.getElementById("trainstatus").innerHTML = "Entrenamiento completado";
+}
+
+function resetNetwork(){
+  document.querySelectorAll(".step").forEach(s => s.classList.remove("active"));
+  document.querySelectorAll(".animal-card").forEach(s => s.classList.remove("active"));
+
+  document.getElementById("epoch").innerHTML = "0";
+  document.getElementById("progressfill").style.width = "0%";
+  document.getElementById("acc").innerHTML = "0%";
+  document.getElementById("loss").innerHTML = "1.00";
+  document.getElementById("trainstatus").innerHTML = "Esperando...";
+
+  document.getElementById("w1").style.width = "0%";
+  document.getElementById("w2").style.width = "0%";
+  document.getElementById("w3").style.width = "0%";
+  document.getElementById("w4").style.width = "0%";
+}
+
+function predictAnimal(type){
+  if(type === "rabbit"){
+    alert("La IA nunca vio conejos durante el entrenamiento. Esta imagen está fuera del dataset.");
+  }
+}
+</script>
+
+
+
+::: {.callout-important}
+### Concepto Clave: Aprendizaje vs. Reglas
+A diferencia de la programación tradicional, la IA **aprende de ejemplos**. No se le dictan reglas fijas; el sistema ajusta automáticamente sus **pesos ($w$)** hasta que sus predicciones coinciden con la realidad.
+:::
+
 
 
 ::: {layout-ncol=2}

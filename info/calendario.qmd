@@ -1,12 +1,50 @@
 ---
 title: "Calendario"
+title-block-banner: false
 ---
+::: {style="margin-top: 25px;"}
+:::
+A continuación se detalla la planificación temporal, la carga horaria y la distribución de los bloques formativos del proyecto **ECO-IA**. Esta estructura modular garantiza un avance progresivo, permitiendo compaginar la teoría conceptual con los laboratorios interactivos en el navegador.
 
-# Calendario del curso
+::: {.callout-note}
+### ⏳ Duración Total del Programa
+El curso consta de una carga lectiva total de **60 horas**, distribuidas estratégicamente a lo largo de 4 semanas de aprendizaje inmersivo.
+:::
 
-| Módulo | Contenido principal | Duración | Fechas aproximadas |
-| ------- | ------------------ | -------- | ------------------- |
-| Módulo 1 | Fundamentos de IA y ChatGPT | 10 h | Semana 1 |
-| Módulo 2 | Avances y desafíos en IA | 30 h | Semanas 2–3 |
-| Módulo 3 | Aplicaciones prácticas | 20 h | Semana 4 |
-**Nota:** Las fechas exactas se confirmarán al inicio del curso. Se recomienda a los participantes revisar el calendario regularmente para estar al tanto de cualquier actualización.
+## 📅 Itinerario Temporal y Carga Horaria
+
+::: {.panel-tabset}
+
+### 📐 Vista de Bloques (Semana a Semana)
+
+#### 🔹 Semana 1: Módulo 1 · Fundamentos de la IA (10 Horas)
+* **Contenidos:** Funcionamiento interno de modelos LLM, pesos, sesgos y arquitectura predictiva.
+* **Hito Práctico:** Desmitificación de la "Caja Negra" mediante el simulador interactivo de Monty Hall.
+* **Dedicación:** 2 horas diarias de experimentación interactiva.
+
+#### 🔹 Semanas 2 y 3: Módulo 2 · Avances y Desafíos (30 Horas)
+* **Contenidos:** Ética algorítmica, sesgos de datos e impacto medioambiental masivo (*Green AI*).
+* **Hito Práctico:** Auditoría energética de consultas mediante la Calculadora de Tokens integrada en el ecosistema.
+* **Dedicación:** Bloque de alta carga conceptual y de análisis crítico.
+
+#### 🔹 Semana 4: Módulo 3 · Ingeniería de Prompts Avanzada (20 Horas)
+* **Contenidos:** Diseño avanzado de instrucciones, el método **R-T-C (Rol-Tarea-Contexto)** y mitigación de alucinaciones en entornos profesionales.
+* **Hito Práctico:** Despliegue del Constructor de Prompts Eficientes y entrega del Proyecto Final ECO-IA.
+
+### 📊 Tabla de Especificación Académica
+
+Si prefieres una organización matricial clásica de la dedicación horaria, consulta los pesos del programa en la siguiente tabla:
+
+| Unidad Formativa | Componente Teórico | Laboratorio Práctico | Duración Estimada |
+| :--- | :--- | :--- | :---: |
+| **Módulo 1** | Fundamentos y Redes Predictivas | Simulador Monty Hall | **10 horas** |
+| **Módulo 2** | Sesgos, Ética y Huella de Carbono (*Green AI*) | Calculadora de Tokens | **30 horas** |
+| **Módulo 3** | Ingeniería de Prompts (Método R-T-C) | Constructor de Prompts | **20 horas** |
+| **Cierre** | Integración del Portafolio de Evidencias | Reto Final de Aplicación | *Evaluación Continua* |
+
+:::
+
+::: {.callout-tip appearance="minimal"}
+### 📢 Recomendación para el Alumnado
+Las fechas exactas y los plazos de entrega se sincronizan de manera flexible según las necesidades de cada centro educativo de la Comunidad Autónoma de Aragón. Te recomendamos revisar de forma periódica las alertas de la barra superior.
+:::

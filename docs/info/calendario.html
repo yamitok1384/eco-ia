@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Rediseño metodológico transversal para una IA sostenible y crítica.">
 
 <title>Calendario</title>
 <style>
@@ -34,7 +35,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../modulo1/1-introduccion-ia.html" rel="next">
-<link href="../info/metodologia.html" rel="prev">
+<link href="../info/info-general.html" rel="prev">
 <link href="../img/logo_uz.svg" rel="icon" type="image/svg+xml">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -42,10 +43,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-07e30734078671c0544a85192363c8f4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-07e30734078671c0544a85192363c8f4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-b8ca3a48ac547d73024cc80e2810c7c6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-07e30734078671c0544a85192363c8f4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -78,7 +83,169 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-sidebar docked nav-fixed quarto-light">
+<body class="nav-sidebar docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -90,6 +257,11 @@ ul.task-list li input[type="checkbox"] {
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/yamitok1384/chatgpt-curso" target="_blank"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
   <li class="nav-item">
     <a class="nav-link" href="../chatgpt-curso.pdf"> <i class="bi bi-file-pdf" role="img">
 </i> 
@@ -98,6 +270,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Alternar modo oscuro"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -134,7 +307,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Bienvenida</span></a>
+  <a href="../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Proyecto Eco-IA</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -149,26 +322,6 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../info/info-general.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Información General</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../info/guia-docente.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">guia-docente.html</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../info/justificacion.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Justificación del Proyecto</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../info/objetivos-competencias.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Objetivos y Competencias</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../info/metodologia.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">metodologia.html</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -257,7 +410,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../practicas/lab-modulo1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Laboratorio 1: El Problema de Monty Hall</span></a>
+  <a href="../practicas/lab-modulo1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">El problema de Monty Hall</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -292,12 +445,13 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
-  <li><a href="#calendario-del-curso" id="toc-calendario-del-curso" class="nav-link active" data-scroll-target="#calendario-del-curso">Calendario del curso</a></li>
+  <li><a href="#itinerario-temporal-y-carga-horaria" id="toc-itinerario-temporal-y-carga-horaria" class="nav-link active" data-scroll-target="#itinerario-temporal-y-carga-horaria">📅 Itinerario Temporal y Carga Horaria</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
+
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../info/info-general.html">Información</a></li><li class="breadcrumb-item"><a href="../info/calendario.html"><span class="chapter-title">Calendario</span></a></li></ol></nav>
 <div class="quarto-title">
@@ -318,39 +472,113 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="calendario-del-curso" class="level1">
-<h1>Calendario del curso</h1>
+<div style="margin-top: 25px;">
+
+</div>
+<p>A continuación se detalla la planificación temporal, la carga horaria y la distribución de los bloques formativos del proyecto <strong>ECO-IA</strong>. Esta estructura modular garantiza un avance progresivo, permitiendo compaginar la teoría conceptual con los laboratorios interactivos en el navegador.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>⏳ Duración Total del Programa
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>El curso consta de una carga lectiva total de <strong>60 horas</strong>, distribuidas estratégicamente a lo largo de 4 semanas de aprendizaje inmersivo.</p>
+</div>
+</div>
+<section id="itinerario-temporal-y-carga-horaria" class="level2">
+<h2 class="anchored" data-anchor-id="itinerario-temporal-y-carga-horaria">📅 Itinerario Temporal y Carga Horaria</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">📐 Vista de Bloques (Semana a Semana)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">📊 Tabla de Especificación Académica</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<section id="semana-1-módulo-1-fundamentos-de-la-ia-10-horas" class="level4">
+<h4 class="anchored" data-anchor-id="semana-1-módulo-1-fundamentos-de-la-ia-10-horas">🔹 Semana 1: Módulo 1 · Fundamentos de la IA (10 Horas)</h4>
+<ul>
+<li><strong>Contenidos:</strong> Funcionamiento interno de modelos LLM, pesos, sesgos y arquitectura predictiva.</li>
+<li><strong>Hito Práctico:</strong> Desmitificación de la “Caja Negra” mediante el simulador interactivo de Monty Hall.</li>
+<li><strong>Dedicación:</strong> 2 horas diarias de experimentación interactiva.</li>
+</ul>
+</section>
+<section id="semanas-2-y-3-módulo-2-avances-y-desafíos-30-horas" class="level4">
+<h4 class="anchored" data-anchor-id="semanas-2-y-3-módulo-2-avances-y-desafíos-30-horas">🔹 Semanas 2 y 3: Módulo 2 · Avances y Desafíos (30 Horas)</h4>
+<ul>
+<li><strong>Contenidos:</strong> Ética algorítmica, sesgos de datos e impacto medioambiental masivo (<em>Green AI</em>).</li>
+<li><strong>Hito Práctico:</strong> Auditoría energética de consultas mediante la Calculadora de Tokens integrada en el ecosistema.</li>
+<li><strong>Dedicación:</strong> Bloque de alta carga conceptual y de análisis crítico.</li>
+</ul>
+</section>
+<section id="semana-4-módulo-3-ingeniería-de-prompts-avanzada-20-horas" class="level4">
+<h4 class="anchored" data-anchor-id="semana-4-módulo-3-ingeniería-de-prompts-avanzada-20-horas">🔹 Semana 4: Módulo 3 · Ingeniería de Prompts Avanzada (20 Horas)</h4>
+<ul>
+<li><strong>Contenidos:</strong> Diseño avanzado de instrucciones, el método <strong>R-T-C (Rol-Tarea-Contexto)</strong> y mitigación de alucinaciones en entornos profesionales.</li>
+<li><strong>Hito Práctico:</strong> Despliegue del Constructor de Prompts Eficientes y entrega del Proyecto Final ECO-IA.</li>
+</ul>
+</section>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p>Si prefieres una organización matricial clásica de la dedicación horaria, consulta los pesos del programa en la siguiente tabla:</p>
 <table class="caption-top table">
+<colgroup>
+<col style="width: 23%">
+<col style="width: 23%">
+<col style="width: 23%">
+<col style="width: 29%">
+</colgroup>
 <thead>
 <tr class="header">
-<th>Módulo</th>
-<th>Contenido principal</th>
-<th>Duración</th>
-<th>Fechas aproximadas</th>
+<th style="text-align: left;">Unidad Formativa</th>
+<th style="text-align: left;">Componente Teórico</th>
+<th style="text-align: left;">Laboratorio Práctico</th>
+<th style="text-align: center;">Duración Estimada</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Módulo 1</td>
-<td>Fundamentos de IA y ChatGPT</td>
-<td>10 h</td>
-<td>Semana 1</td>
+<td style="text-align: left;"><strong>Módulo 1</strong></td>
+<td style="text-align: left;">Fundamentos y Redes Predictivas</td>
+<td style="text-align: left;">Simulador Monty Hall</td>
+<td style="text-align: center;"><strong>10 horas</strong></td>
 </tr>
 <tr class="even">
-<td>Módulo 2</td>
-<td>Avances y desafíos en IA</td>
-<td>30 h</td>
-<td>Semanas 2–3</td>
+<td style="text-align: left;"><strong>Módulo 2</strong></td>
+<td style="text-align: left;">Sesgos, Ética y Huella de Carbono (<em>Green AI</em>)</td>
+<td style="text-align: left;">Calculadora de Tokens</td>
+<td style="text-align: center;"><strong>30 horas</strong></td>
 </tr>
 <tr class="odd">
-<td>Módulo 3</td>
-<td>Aplicaciones prácticas</td>
-<td>20 h</td>
-<td>Semana 4</td>
+<td style="text-align: left;"><strong>Módulo 3</strong></td>
+<td style="text-align: left;">Ingeniería de Prompts (Método R-T-C)</td>
+<td style="text-align: left;">Constructor de Prompts</td>
+<td style="text-align: center;"><strong>20 horas</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Cierre</strong></td>
+<td style="text-align: left;">Integración del Portafolio de Evidencias</td>
+<td style="text-align: left;">Reto Final de Aplicación</td>
+<td style="text-align: center;"><em>Evaluación Continua</em></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Nota:</strong> Las fechas exactas se confirmarán al inicio del curso. Se recomienda a los participantes revisar el calendario regularmente para estar al tanto de cualquier actualización.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>📢 Recomendación para el Alumnado
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Las fechas exactas y los plazos de entrega se sincronizan de manera flexible según las necesidades de cada centro educativo de la Comunidad Autónoma de Aragón. Te recomendamos revisar de forma periódica las alertas de la barra superior.</p>
+</div>
+</div>
 
 
 </section>
@@ -358,6 +586,19 @@ ul.task-list li input[type="checkbox"] {
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {
@@ -758,8 +999,8 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../info/metodologia.html" class="pagination-link" aria-label="metodologia.html">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">metodologia.html</span></span>
+      <a href="../info/info-general.html" class="pagination-link" aria-label="Información General">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Información General</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

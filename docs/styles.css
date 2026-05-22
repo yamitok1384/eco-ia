@@ -13,13 +13,31 @@ body {
 }
 
 /* ======== BANNER SUPERIOR ======== */
-#title-block-header {
+/* #title-block-header {
   background: url("img/geralt-banner.jpg") center/cover no-repeat;
   color: white;
   text-align: center;
   padding: 3.5rem 2rem;
   margin: 0;
   position: relative;
+} */
+
+
+#title-block-header {
+  padding: 0;
+  margin: 0;
+  background: transparent !important;
+  position: relative;
+  text-align: center;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Forzamos que los textos de la cabecera sean blancos sobre tu imagen */
+#title-block-header.quarto-title-block.has-image .title,
+#title-block-header.quarto-title-block.has-image .subtitle,
+#title-block-header.quarto-title-block.has-image .description {
+  color: #ffffff !important;
 }
 
 /* Logo del INAEM arriba a la derecha */
@@ -146,4 +164,103 @@ footer {
 footer a {
   color: #fff;
   text-decoration: underline;
+}
+
+
+/* ======== MEJORAS PORTADA ECO-IA ======== */
+
+/* Contenedor centralizado y elegante */
+.portada-premium {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: radial-gradient(circle at top, rgba(0, 51, 102, 0.03) 0%, transparent 70%);
+  border-radius: 16px;
+  margin-bottom: 2.5rem;
+}
+
+/* Efecto de degradado moderno para el título principal */
+.titulo-animado {
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  background: linear-gradient(135deg, #003366 30%, #0077b6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5rem;
+}
+
+/* Subtítulo académico estilizado */
+.subtitulo-academico {
+  font-size: 0.75rem;
+  color: #666;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+}
+
+/* Bloque centralizado del Autor */
+.autor-centrado {
+  font-size: 1.25rem;
+  color: #222;
+  margin: 1.5rem 0;
+  padding: 0.8rem 2rem;
+  display: inline-block;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.autor-centrado span {
+  font-weight: 700;
+  color: #003366; /* Tu azul INAEM */
+}
+
+/* Badge o etiqueta para el año/convocatoria */
+.badge-fecha span {
+  background-color: #003366; /* Azul oscuro institucional para el fondo */
+  color: #ffffff !important;  /* Forzamos el texto a blanco puro */
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  display: inline-block;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Un sutil borde claro para darle relieve */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* ===================================================
+   COMPONENTE CALENDARIO EXCLUSIVO PORTADA
+   =================================================== */
+.portada-premium .calendario-box {
+  width: 120px !important;
+  background-color: #ffffff !important;
+  border-radius: 10px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+  overflow: hidden !important;
+  display: inline-block !important;
+  margin: 1.5rem auto !important;
+  border: 1px solid #e2e8f0 !important;
+}
+
+.portada-premium .calendario-box .cal-mes {
+  background-color: #003366 !important; /* Azul oscuro institucional */
+  color: #ffffff !important;              /* Letras blancas */
+  font-size: 0.85rem !important;
+  font-weight: 700 !important;
+  padding: 6px 0 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  text-align: center !important;
+  display: block !important;
+}
+
+.portada-premium .calendario-box .cal-ano {
+  background-color: #ffffff !important; /* Fondo blanco nuclear */
+  font-size: 1.6rem !important;
+  font-weight: 800 !important;
+  color: #333333 !important;            /* Número en gris oscuro */
+  padding: 12px 0 !important;
+  line-height: 1 !important;
+  text-align: center !important;
+  display: block !important;
 }
